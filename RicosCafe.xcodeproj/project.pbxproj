@@ -8,12 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		A863A41321AF07E500E73566 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A863A41221AF07E500E73566 /* AppDelegate.swift */; };
-		A863A41521AF07E500E73566 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A863A41421AF07E500E73566 /* ViewController.swift */; };
-		A863A41821AF07E500E73566 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A863A41621AF07E500E73566 /* Main.storyboard */; };
 		A863A41A21AF07E700E73566 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A863A41921AF07E700E73566 /* Assets.xcassets */; };
 		A863A41D21AF07E700E73566 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A863A41B21AF07E700E73566 /* LaunchScreen.storyboard */; };
-		A863A42821AF07E700E73566 /* RicosCafeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A863A42721AF07E700E73566 /* RicosCafeTests.swift */; };
 		A863A43321AF07E700E73566 /* RicosCafeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A863A43221AF07E700E73566 /* RicosCafeUITests.swift */; };
+		A863A44821AF0D1900E73566 /* Assembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A863A44721AF0D1900E73566 /* Assembler.swift */; };
+		A863A44A21AF0D9200E73566 /* AppAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A863A44921AF0D9200E73566 /* AppAssembler.swift */; };
+		A863A44C21AF0E2900E73566 /* TabBarAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A863A44B21AF0E2900E73566 /* TabBarAssembler.swift */; };
+		A863A44E21AF100A00E73566 /* AppAssemblerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A863A44D21AF100A00E73566 /* AppAssemblerTests.swift */; };
+		A863A45221AF127E00E73566 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A863A45121AF127E00E73566 /* Main.storyboard */; };
+		A863A45421AF138500E73566 /* TabBarAssemblerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A863A45321AF138500E73566 /* TabBarAssemblerTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,17 +39,20 @@
 /* Begin PBXFileReference section */
 		A863A40F21AF07E500E73566 /* RicosCafe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RicosCafe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A863A41221AF07E500E73566 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A863A41421AF07E500E73566 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		A863A41721AF07E500E73566 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A863A41921AF07E700E73566 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A863A41C21AF07E700E73566 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A863A41E21AF07E700E73566 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A863A42321AF07E700E73566 /* RicosCafeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RicosCafeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A863A42721AF07E700E73566 /* RicosCafeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RicosCafeTests.swift; sourceTree = "<group>"; };
 		A863A42921AF07E700E73566 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A863A42E21AF07E700E73566 /* RicosCafeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RicosCafeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A863A43221AF07E700E73566 /* RicosCafeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RicosCafeUITests.swift; sourceTree = "<group>"; };
 		A863A43421AF07E700E73566 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A863A44721AF0D1900E73566 /* Assembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assembler.swift; sourceTree = "<group>"; };
+		A863A44921AF0D9200E73566 /* AppAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAssembler.swift; sourceTree = "<group>"; };
+		A863A44B21AF0E2900E73566 /* TabBarAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarAssembler.swift; sourceTree = "<group>"; };
+		A863A44D21AF100A00E73566 /* AppAssemblerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAssemblerTests.swift; sourceTree = "<group>"; };
+		A863A45121AF127E00E73566 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		A863A45321AF138500E73566 /* TabBarAssemblerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarAssemblerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,12 +103,14 @@
 		A863A41121AF07E500E73566 /* RicosCafe */ = {
 			isa = PBXGroup;
 			children = (
+				A863A44421AF0BDB00E73566 /* App */,
+				A863A44521AF0BE500E73566 /* Tab */,
+				A863A44021AF0AA800E73566 /* Scenes */,
+				A863A44621AF0C0A00E73566 /* Shared */,
 				A863A41221AF07E500E73566 /* AppDelegate.swift */,
-				A863A41421AF07E500E73566 /* ViewController.swift */,
-				A863A41621AF07E500E73566 /* Main.storyboard */,
 				A863A41921AF07E700E73566 /* Assets.xcassets */,
-				A863A41B21AF07E700E73566 /* LaunchScreen.storyboard */,
 				A863A41E21AF07E700E73566 /* Info.plist */,
+				A863A45121AF127E00E73566 /* Main.storyboard */,
 			);
 			path = RicosCafe;
 			sourceTree = "<group>";
@@ -110,8 +118,9 @@
 		A863A42621AF07E700E73566 /* RicosCafeTests */ = {
 			isa = PBXGroup;
 			children = (
-				A863A42721AF07E700E73566 /* RicosCafeTests.swift */,
 				A863A42921AF07E700E73566 /* Info.plist */,
+				A863A44D21AF100A00E73566 /* AppAssemblerTests.swift */,
+				A863A45321AF138500E73566 /* TabBarAssemblerTests.swift */,
 			);
 			path = RicosCafeTests;
 			sourceTree = "<group>";
@@ -123,6 +132,62 @@
 				A863A43421AF07E700E73566 /* Info.plist */,
 			);
 			path = RicosCafeUITests;
+			sourceTree = "<group>";
+		};
+		A863A44021AF0AA800E73566 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				A863A44121AF0AA800E73566 /* Drinks */,
+				A863A44221AF0AA800E73566 /* Desserts */,
+				A863A44321AF0AA800E73566 /* Food */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		A863A44121AF0AA800E73566 /* Drinks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Drinks;
+			sourceTree = "<group>";
+		};
+		A863A44221AF0AA800E73566 /* Desserts */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Desserts;
+			sourceTree = "<group>";
+		};
+		A863A44321AF0AA800E73566 /* Food */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Food;
+			sourceTree = "<group>";
+		};
+		A863A44421AF0BDB00E73566 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				A863A41B21AF07E700E73566 /* LaunchScreen.storyboard */,
+				A863A44721AF0D1900E73566 /* Assembler.swift */,
+				A863A44921AF0D9200E73566 /* AppAssembler.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		A863A44521AF0BE500E73566 /* Tab */ = {
+			isa = PBXGroup;
+			children = (
+				A863A44B21AF0E2900E73566 /* TabBarAssembler.swift */,
+			);
+			path = Tab;
+			sourceTree = "<group>";
+		};
+		A863A44621AF0C0A00E73566 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Shared;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -196,6 +261,7 @@
 					};
 					A863A42221AF07E700E73566 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 						TestTargetID = A863A40E21AF07E500E73566;
 					};
 					A863A42D21AF07E700E73566 = {
@@ -229,9 +295,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A863A45221AF127E00E73566 /* Main.storyboard in Resources */,
 				A863A41D21AF07E700E73566 /* LaunchScreen.storyboard in Resources */,
 				A863A41A21AF07E700E73566 /* Assets.xcassets in Resources */,
-				A863A41821AF07E500E73566 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,8 +322,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A863A41521AF07E500E73566 /* ViewController.swift in Sources */,
+				A863A44821AF0D1900E73566 /* Assembler.swift in Sources */,
 				A863A41321AF07E500E73566 /* AppDelegate.swift in Sources */,
+				A863A44C21AF0E2900E73566 /* TabBarAssembler.swift in Sources */,
+				A863A44A21AF0D9200E73566 /* AppAssembler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,7 +333,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A863A42821AF07E700E73566 /* RicosCafeTests.swift in Sources */,
+				A863A45421AF138500E73566 /* TabBarAssemblerTests.swift in Sources */,
+				A863A44E21AF100A00E73566 /* AppAssemblerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,14 +362,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		A863A41621AF07E500E73566 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A863A41721AF07E500E73566 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		A863A41B21AF07E700E73566 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -433,7 +494,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 462PHCYTGY;
+				DEVELOPMENT_TEAM = K6R8L8WN5N;
 				INFOPLIST_FILE = RicosCafe/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -451,7 +512,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 462PHCYTGY;
+				DEVELOPMENT_TEAM = K6R8L8WN5N;
 				INFOPLIST_FILE = RicosCafe/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -469,6 +530,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 462PHCYTGY;
 				INFOPLIST_FILE = RicosCafeTests/Info.plist;
@@ -479,6 +541,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.tiguer.RicosCafeTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RicosCafe.app/RicosCafe";
@@ -490,6 +553,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 462PHCYTGY;
 				INFOPLIST_FILE = RicosCafeTests/Info.plist;
