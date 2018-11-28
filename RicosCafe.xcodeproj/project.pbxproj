@@ -1,0 +1,591 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A863A41321AF07E500E73566 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A863A41221AF07E500E73566 /* AppDelegate.swift */; };
+		A863A41521AF07E500E73566 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A863A41421AF07E500E73566 /* ViewController.swift */; };
+		A863A41821AF07E500E73566 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A863A41621AF07E500E73566 /* Main.storyboard */; };
+		A863A41A21AF07E700E73566 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A863A41921AF07E700E73566 /* Assets.xcassets */; };
+		A863A41D21AF07E700E73566 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A863A41B21AF07E700E73566 /* LaunchScreen.storyboard */; };
+		A863A42821AF07E700E73566 /* RicosCafeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A863A42721AF07E700E73566 /* RicosCafeTests.swift */; };
+		A863A43321AF07E700E73566 /* RicosCafeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A863A43221AF07E700E73566 /* RicosCafeUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A863A42421AF07E700E73566 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A863A40721AF07E500E73566 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A863A40E21AF07E500E73566;
+			remoteInfo = RicosCafe;
+		};
+		A863A42F21AF07E700E73566 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A863A40721AF07E500E73566 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A863A40E21AF07E500E73566;
+			remoteInfo = RicosCafe;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A863A40F21AF07E500E73566 /* RicosCafe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RicosCafe.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A863A41221AF07E500E73566 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A863A41421AF07E500E73566 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A863A41721AF07E500E73566 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A863A41921AF07E700E73566 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A863A41C21AF07E700E73566 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A863A41E21AF07E700E73566 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A863A42321AF07E700E73566 /* RicosCafeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RicosCafeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A863A42721AF07E700E73566 /* RicosCafeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RicosCafeTests.swift; sourceTree = "<group>"; };
+		A863A42921AF07E700E73566 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A863A42E21AF07E700E73566 /* RicosCafeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RicosCafeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A863A43221AF07E700E73566 /* RicosCafeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RicosCafeUITests.swift; sourceTree = "<group>"; };
+		A863A43421AF07E700E73566 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A863A40C21AF07E500E73566 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A863A42021AF07E700E73566 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A863A42B21AF07E700E73566 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A863A40621AF07E500E73566 = {
+			isa = PBXGroup;
+			children = (
+				A863A41121AF07E500E73566 /* RicosCafe */,
+				A863A42621AF07E700E73566 /* RicosCafeTests */,
+				A863A43121AF07E700E73566 /* RicosCafeUITests */,
+				A863A41021AF07E500E73566 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A863A41021AF07E500E73566 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A863A40F21AF07E500E73566 /* RicosCafe.app */,
+				A863A42321AF07E700E73566 /* RicosCafeTests.xctest */,
+				A863A42E21AF07E700E73566 /* RicosCafeUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A863A41121AF07E500E73566 /* RicosCafe */ = {
+			isa = PBXGroup;
+			children = (
+				A863A41221AF07E500E73566 /* AppDelegate.swift */,
+				A863A41421AF07E500E73566 /* ViewController.swift */,
+				A863A41621AF07E500E73566 /* Main.storyboard */,
+				A863A41921AF07E700E73566 /* Assets.xcassets */,
+				A863A41B21AF07E700E73566 /* LaunchScreen.storyboard */,
+				A863A41E21AF07E700E73566 /* Info.plist */,
+			);
+			path = RicosCafe;
+			sourceTree = "<group>";
+		};
+		A863A42621AF07E700E73566 /* RicosCafeTests */ = {
+			isa = PBXGroup;
+			children = (
+				A863A42721AF07E700E73566 /* RicosCafeTests.swift */,
+				A863A42921AF07E700E73566 /* Info.plist */,
+			);
+			path = RicosCafeTests;
+			sourceTree = "<group>";
+		};
+		A863A43121AF07E700E73566 /* RicosCafeUITests */ = {
+			isa = PBXGroup;
+			children = (
+				A863A43221AF07E700E73566 /* RicosCafeUITests.swift */,
+				A863A43421AF07E700E73566 /* Info.plist */,
+			);
+			path = RicosCafeUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A863A40E21AF07E500E73566 /* RicosCafe */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A863A43721AF07E700E73566 /* Build configuration list for PBXNativeTarget "RicosCafe" */;
+			buildPhases = (
+				A863A40B21AF07E500E73566 /* Sources */,
+				A863A40C21AF07E500E73566 /* Frameworks */,
+				A863A40D21AF07E500E73566 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RicosCafe;
+			productName = RicosCafe;
+			productReference = A863A40F21AF07E500E73566 /* RicosCafe.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A863A42221AF07E700E73566 /* RicosCafeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A863A43A21AF07E700E73566 /* Build configuration list for PBXNativeTarget "RicosCafeTests" */;
+			buildPhases = (
+				A863A41F21AF07E700E73566 /* Sources */,
+				A863A42021AF07E700E73566 /* Frameworks */,
+				A863A42121AF07E700E73566 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A863A42521AF07E700E73566 /* PBXTargetDependency */,
+			);
+			name = RicosCafeTests;
+			productName = RicosCafeTests;
+			productReference = A863A42321AF07E700E73566 /* RicosCafeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		A863A42D21AF07E700E73566 /* RicosCafeUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A863A43D21AF07E700E73566 /* Build configuration list for PBXNativeTarget "RicosCafeUITests" */;
+			buildPhases = (
+				A863A42A21AF07E700E73566 /* Sources */,
+				A863A42B21AF07E700E73566 /* Frameworks */,
+				A863A42C21AF07E700E73566 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A863A43021AF07E700E73566 /* PBXTargetDependency */,
+			);
+			name = RicosCafeUITests;
+			productName = RicosCafeUITests;
+			productReference = A863A42E21AF07E700E73566 /* RicosCafeUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A863A40721AF07E500E73566 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = tiguer;
+				TargetAttributes = {
+					A863A40E21AF07E500E73566 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					A863A42221AF07E700E73566 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = A863A40E21AF07E500E73566;
+					};
+					A863A42D21AF07E700E73566 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = A863A40E21AF07E500E73566;
+					};
+				};
+			};
+			buildConfigurationList = A863A40A21AF07E500E73566 /* Build configuration list for PBXProject "RicosCafe" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A863A40621AF07E500E73566;
+			productRefGroup = A863A41021AF07E500E73566 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A863A40E21AF07E500E73566 /* RicosCafe */,
+				A863A42221AF07E700E73566 /* RicosCafeTests */,
+				A863A42D21AF07E700E73566 /* RicosCafeUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A863A40D21AF07E500E73566 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A863A41D21AF07E700E73566 /* LaunchScreen.storyboard in Resources */,
+				A863A41A21AF07E700E73566 /* Assets.xcassets in Resources */,
+				A863A41821AF07E500E73566 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A863A42121AF07E700E73566 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A863A42C21AF07E700E73566 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A863A40B21AF07E500E73566 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A863A41521AF07E500E73566 /* ViewController.swift in Sources */,
+				A863A41321AF07E500E73566 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A863A41F21AF07E700E73566 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A863A42821AF07E700E73566 /* RicosCafeTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A863A42A21AF07E700E73566 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A863A43321AF07E700E73566 /* RicosCafeUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A863A42521AF07E700E73566 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A863A40E21AF07E500E73566 /* RicosCafe */;
+			targetProxy = A863A42421AF07E700E73566 /* PBXContainerItemProxy */;
+		};
+		A863A43021AF07E700E73566 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A863A40E21AF07E500E73566 /* RicosCafe */;
+			targetProxy = A863A42F21AF07E700E73566 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A863A41621AF07E500E73566 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A863A41721AF07E500E73566 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A863A41B21AF07E700E73566 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A863A41C21AF07E700E73566 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A863A43521AF07E700E73566 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A863A43621AF07E700E73566 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A863A43821AF07E700E73566 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 462PHCYTGY;
+				INFOPLIST_FILE = RicosCafe/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.tiguer.RicosCafe;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A863A43921AF07E700E73566 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 462PHCYTGY;
+				INFOPLIST_FILE = RicosCafe/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.tiguer.RicosCafe;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		A863A43B21AF07E700E73566 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 462PHCYTGY;
+				INFOPLIST_FILE = RicosCafeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.tiguer.RicosCafeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RicosCafe.app/RicosCafe";
+			};
+			name = Debug;
+		};
+		A863A43C21AF07E700E73566 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 462PHCYTGY;
+				INFOPLIST_FILE = RicosCafeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.tiguer.RicosCafeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RicosCafe.app/RicosCafe";
+			};
+			name = Release;
+		};
+		A863A43E21AF07E700E73566 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 462PHCYTGY;
+				INFOPLIST_FILE = RicosCafeUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.tiguer.RicosCafeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = RicosCafe;
+			};
+			name = Debug;
+		};
+		A863A43F21AF07E700E73566 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 462PHCYTGY;
+				INFOPLIST_FILE = RicosCafeUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.tiguer.RicosCafeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = RicosCafe;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A863A40A21AF07E500E73566 /* Build configuration list for PBXProject "RicosCafe" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A863A43521AF07E700E73566 /* Debug */,
+				A863A43621AF07E700E73566 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A863A43721AF07E700E73566 /* Build configuration list for PBXNativeTarget "RicosCafe" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A863A43821AF07E700E73566 /* Debug */,
+				A863A43921AF07E700E73566 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A863A43A21AF07E700E73566 /* Build configuration list for PBXNativeTarget "RicosCafeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A863A43B21AF07E700E73566 /* Debug */,
+				A863A43C21AF07E700E73566 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A863A43D21AF07E700E73566 /* Build configuration list for PBXNativeTarget "RicosCafeUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A863A43E21AF07E700E73566 /* Debug */,
+				A863A43F21AF07E700E73566 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A863A40721AF07E500E73566 /* Project object */;
+}
