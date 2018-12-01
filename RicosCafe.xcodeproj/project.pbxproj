@@ -11,7 +11,7 @@
 		A863A41A21AF07E700E73566 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A863A41921AF07E700E73566 /* Assets.xcassets */; };
 		A863A41D21AF07E700E73566 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A863A41B21AF07E700E73566 /* LaunchScreen.storyboard */; };
 		A863A43321AF07E700E73566 /* RicosCafeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A863A43221AF07E700E73566 /* RicosCafeUITests.swift */; };
-		A863A44821AF0D1900E73566 /* Assembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A863A44721AF0D1900E73566 /* Assembler.swift */; };
+		A863A44821AF0D1900E73566 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A863A44721AF0D1900E73566 /* Coordinator.swift */; };
 		A863A44A21AF0D9200E73566 /* AppAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A863A44921AF0D9200E73566 /* AppAssembler.swift */; };
 		A863A44C21AF0E2900E73566 /* TabBarAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A863A44B21AF0E2900E73566 /* TabBarAssembler.swift */; };
 		A863A44E21AF100A00E73566 /* AppAssemblerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A863A44D21AF100A00E73566 /* AppAssemblerTests.swift */; };
@@ -47,7 +47,7 @@
 		A863A42E21AF07E700E73566 /* RicosCafeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RicosCafeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A863A43221AF07E700E73566 /* RicosCafeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RicosCafeUITests.swift; sourceTree = "<group>"; };
 		A863A43421AF07E700E73566 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A863A44721AF0D1900E73566 /* Assembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assembler.swift; sourceTree = "<group>"; };
+		A863A44721AF0D1900E73566 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		A863A44921AF0D9200E73566 /* AppAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAssembler.swift; sourceTree = "<group>"; };
 		A863A44B21AF0E2900E73566 /* TabBarAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarAssembler.swift; sourceTree = "<group>"; };
 		A863A44D21AF100A00E73566 /* AppAssemblerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAssemblerTests.swift; sourceTree = "<group>"; };
@@ -169,7 +169,7 @@
 			isa = PBXGroup;
 			children = (
 				A863A41B21AF07E700E73566 /* LaunchScreen.storyboard */,
-				A863A44721AF0D1900E73566 /* Assembler.swift */,
+				A863A44721AF0D1900E73566 /* Coordinator.swift */,
 				A863A44921AF0D9200E73566 /* AppAssembler.swift */,
 			);
 			path = App;
@@ -322,7 +322,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A863A44821AF0D1900E73566 /* Assembler.swift in Sources */,
+				A863A44821AF0D1900E73566 /* Coordinator.swift in Sources */,
 				A863A41321AF07E500E73566 /* AppDelegate.swift in Sources */,
 				A863A44C21AF0E2900E73566 /* TabBarAssembler.swift in Sources */,
 				A863A44A21AF0D9200E73566 /* AppAssembler.swift in Sources */,
