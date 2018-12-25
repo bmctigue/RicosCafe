@@ -1,5 +1,5 @@
 //
-//  AppAssemblerTests.swift
+//  AppBuilderTests.swift
 //  RicosCafeTests
 //
 //  Created by Bruce McTigue on 11/28/18.
@@ -9,22 +9,22 @@
 import XCTest
 @testable import RicosCafe
 
-class AppAssemblerTests: XCTestCase {
+class AppBuilderTests: XCTestCase {
     
-    func testAppAssembler() {
+    func testAppBuilder() {
         let window = UIWindow(frame: UIScreen.main.bounds)
-        let assembler = AppAssembler(with: window)
-        assembler.run()
-        let tabBarAssembler = assembler.getTabBarAssembler()
-        let tabBar = tabBarAssembler.getTabBar()
-        let assemblers = tabBarAssembler.getAssemblers()
+        let builder = AppBuilder(with: window)
+        builder.run()
+        let tabBarBuilder = builder.getTabBarBuilder()
+        let tabBar = tabBarBuilder.getTabBar()
+        let builders = tabBarBuilder.getBuilders()
         let controllersCount = tabBar.viewControllers?.count ?? 0
-        XCTAssert(controllersCount == assemblers.count)
+        XCTAssert(controllersCount == builders.count)
     }
 }
 
-extension AppAssembler {
-    func getTabBarAssembler() -> TabBarAssembler {
-        return tabBarAssembler
+extension AppBuilder {
+    func getTabBarBuilder() -> TabBarBuilder {
+        return tabBarBuilder
     }
 }

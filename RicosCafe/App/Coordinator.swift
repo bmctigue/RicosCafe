@@ -1,5 +1,5 @@
 //
-//  Assembler.swift
+//  Builder.swift
 //  RicosCafe
 //
 //  Created by Bruce McTigue on 11/28/18.
@@ -8,16 +8,16 @@
 
 import UIKit
 
-typealias AssemblerBlock = ((UIViewController) -> Void)
+typealias BuilderBlock = ((UIViewController) -> Void)
 
-protocol BaseAssembler: class {
+protocol BaseBuilder: class {
     func run()
 }
 
-protocol Assembler: class {
-    func run(completionHandler: AssemblerBlock)
+protocol Builder: class {
+    func run(completionHandler: BuilderBlock)
 }
 
-protocol TabAssembler: Assembler {
+protocol TabBuilder: Builder {
     func getImageName() -> String
 }

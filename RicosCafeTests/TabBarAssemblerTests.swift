@@ -1,5 +1,5 @@
 //
-//  TabBarAssemblerTests.swift
+//  TabBarBuilderTests.swift
 //  RicosCafeTests
 //
 //  Created by Bruce McTigue on 11/28/18.
@@ -9,13 +9,13 @@
 import XCTest
 @testable import RicosCafe
 
-class TabBarAssemblerTests: XCTestCase {
+class TabBarBuilderTests: XCTestCase {
     
-    func testAssemblerNoViewControllers() {
-        let assemblers: [TabAssembler] =  []
-        let tabBarAssembler = TabBarAssembler(with: assemblers)
-        tabBarAssembler.run()
-        let tabBarController = tabBarAssembler.getTabBar()
+    func testBuilderNoViewControllers() {
+        let builders: [TabBuilder] =  []
+        let tabBarBuilder = TabBarBuilder(with: builders)
+        tabBarBuilder.run()
+        let tabBarController = tabBarBuilder.getTabBar()
         var controllersCount = 0
         if let controllers = tabBarController.viewControllers {
             controllersCount = controllers.count
@@ -24,7 +24,7 @@ class TabBarAssemblerTests: XCTestCase {
             }
         }
         let itemsCount = tabBarController.tabBar.items?.count ?? 0
-        XCTAssert(controllersCount == assemblers.count)
-        XCTAssert(itemsCount == assemblers.count)
+        XCTAssert(controllersCount == builders.count)
+        XCTAssert(itemsCount == builders.count)
     }
 }

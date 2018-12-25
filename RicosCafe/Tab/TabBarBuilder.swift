@@ -1,5 +1,5 @@
 //
-//  TabBarAssembler.swift
+//  TabBarBuilder.swift
 //  RicosCafe
 //
 //  Created by Bruce McTigue on 11/28/18.
@@ -8,30 +8,30 @@
 
 import UIKit
 
-final class TabBarAssembler: BaseAssembler {
+final class TabBarBuilder: BaseBuilder {
     
     private let tabBarController = UITabBarController()
-    private let assemblers: [TabAssembler]
+    private let builders: [TabBuilder]
     private var controllers: [UIViewController] = []
     
-    init(with assemblers: [TabAssembler]) {
-        self.assemblers = assemblers
+    init(with builders: [TabBuilder]) {
+        self.builders = builders
     }
     
     func run() {
-        for assembler in assemblers {
-            addController(assembler: assembler)
+        for builder in builders {
+            addController(builder: builder)
         }
         
         tabBarController.setViewControllers(controllers, animated: false)
         
-        for (index, assembler) in assemblers.enumerated() {
-            updateTabImage(tab: index, imageName: assembler.getImageName())
+        for (index, builder) in builders.enumerated() {
+            updateTabImage(tab: index, imageName: builder.getImageName())
         }
     }
     
-    private func addController(assembler: TabAssembler) {
-        assembler.run(completionHandler: { controller in
+    private func addController(builder: TabBuilder) {
+        builder.run(completionHandler: { controller in
             controllers.append(controller)
         })
     }
@@ -43,12 +43,12 @@ final class TabBarAssembler: BaseAssembler {
 }
 
 // for testing
-extension TabBarAssembler {
+extension TabBarBuilder {
     func getTabBar() -> UITabBarController {
         return tabBarController
     }
     
-    func getAssemblers() -> [TabAssembler] {
-        return assemblers
+    func getBuilders() -> [TabBuilder] {
+        return builders
     }
 }
