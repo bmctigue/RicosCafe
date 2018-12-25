@@ -18,7 +18,6 @@ protocol Assembler: class {
     func run(completionHandler: AssemblerBlock)
 }
 
-protocol TabAssembler: class {
+protocol TabAssembler: Assembler {
     func getImageName() -> String
-    func run(completionHandler: AssemblerBlock)
 }
