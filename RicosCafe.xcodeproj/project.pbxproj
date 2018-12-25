@@ -12,11 +12,11 @@
 		A863A41D21AF07E700E73566 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A863A41B21AF07E700E73566 /* LaunchScreen.storyboard */; };
 		A863A43321AF07E700E73566 /* RicosCafeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A863A43221AF07E700E73566 /* RicosCafeUITests.swift */; };
 		A863A44821AF0D1900E73566 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A863A44721AF0D1900E73566 /* Coordinator.swift */; };
-		A863A44A21AF0D9200E73566 /* AppAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A863A44921AF0D9200E73566 /* AppAssembler.swift */; };
-		A863A44C21AF0E2900E73566 /* TabBarAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A863A44B21AF0E2900E73566 /* TabBarAssembler.swift */; };
-		A863A44E21AF100A00E73566 /* AppAssemblerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A863A44D21AF100A00E73566 /* AppAssemblerTests.swift */; };
+		A863A44A21AF0D9200E73566 /* AppBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A863A44921AF0D9200E73566 /* AppBuilder.swift */; };
+		A863A44C21AF0E2900E73566 /* TabBarBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A863A44B21AF0E2900E73566 /* TabBarBuilder.swift */; };
+		A863A44E21AF100A00E73566 /* AppBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A863A44D21AF100A00E73566 /* AppBuilderTests.swift */; };
 		A863A45221AF127E00E73566 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A863A45121AF127E00E73566 /* Main.storyboard */; };
-		A863A45421AF138500E73566 /* TabBarAssemblerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A863A45321AF138500E73566 /* TabBarAssemblerTests.swift */; };
+		A863A45421AF138500E73566 /* TabBarBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A863A45321AF138500E73566 /* TabBarBuilderTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,11 +48,11 @@
 		A863A43221AF07E700E73566 /* RicosCafeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RicosCafeUITests.swift; sourceTree = "<group>"; };
 		A863A43421AF07E700E73566 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A863A44721AF0D1900E73566 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
-		A863A44921AF0D9200E73566 /* AppAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAssembler.swift; sourceTree = "<group>"; };
-		A863A44B21AF0E2900E73566 /* TabBarAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarAssembler.swift; sourceTree = "<group>"; };
-		A863A44D21AF100A00E73566 /* AppAssemblerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAssemblerTests.swift; sourceTree = "<group>"; };
+		A863A44921AF0D9200E73566 /* AppBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppBuilder.swift; sourceTree = "<group>"; };
+		A863A44B21AF0E2900E73566 /* TabBarBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarBuilder.swift; sourceTree = "<group>"; };
+		A863A44D21AF100A00E73566 /* AppBuilderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppBuilderTests.swift; sourceTree = "<group>"; };
 		A863A45121AF127E00E73566 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		A863A45321AF138500E73566 /* TabBarAssemblerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarAssemblerTests.swift; sourceTree = "<group>"; };
+		A863A45321AF138500E73566 /* TabBarBuilderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarBuilderTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,8 +119,8 @@
 			isa = PBXGroup;
 			children = (
 				A863A42921AF07E700E73566 /* Info.plist */,
-				A863A44D21AF100A00E73566 /* AppAssemblerTests.swift */,
-				A863A45321AF138500E73566 /* TabBarAssemblerTests.swift */,
+				A863A44D21AF100A00E73566 /* AppBuilderTests.swift */,
+				A863A45321AF138500E73566 /* TabBarBuilderTests.swift */,
 			);
 			path = RicosCafeTests;
 			sourceTree = "<group>";
@@ -170,7 +170,7 @@
 			children = (
 				A863A41B21AF07E700E73566 /* LaunchScreen.storyboard */,
 				A863A44721AF0D1900E73566 /* Coordinator.swift */,
-				A863A44921AF0D9200E73566 /* AppAssembler.swift */,
+				A863A44921AF0D9200E73566 /* AppBuilder.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -178,7 +178,7 @@
 		A863A44521AF0BE500E73566 /* Tab */ = {
 			isa = PBXGroup;
 			children = (
-				A863A44B21AF0E2900E73566 /* TabBarAssembler.swift */,
+				A863A44B21AF0E2900E73566 /* TabBarBuilder.swift */,
 			);
 			path = Tab;
 			sourceTree = "<group>";
@@ -324,8 +324,8 @@
 			files = (
 				A863A44821AF0D1900E73566 /* Coordinator.swift in Sources */,
 				A863A41321AF07E500E73566 /* AppDelegate.swift in Sources */,
-				A863A44C21AF0E2900E73566 /* TabBarAssembler.swift in Sources */,
-				A863A44A21AF0D9200E73566 /* AppAssembler.swift in Sources */,
+				A863A44C21AF0E2900E73566 /* TabBarBuilder.swift in Sources */,
+				A863A44A21AF0D9200E73566 /* AppBuilder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -333,8 +333,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A863A45421AF138500E73566 /* TabBarAssemblerTests.swift in Sources */,
-				A863A44E21AF100A00E73566 /* AppAssemblerTests.swift in Sources */,
+				A863A45421AF138500E73566 /* TabBarBuilderTests.swift in Sources */,
+				A863A44E21AF100A00E73566 /* AppBuilderTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
