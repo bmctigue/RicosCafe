@@ -80,6 +80,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A807F78D21D2ECA1009D00B5 /* Binder */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Binder;
+			sourceTree = "<group>";
+		};
+		A807F78E21D2ED2A009D00B5 /* BusinessLogic */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = BusinessLogic;
+			sourceTree = "<group>";
+		};
+		A807F78F21D2ED2A009D00B5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A807F79021D2ED2A009D00B5 /* ApplicationLayer */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ApplicationLayer;
+			sourceTree = "<group>";
+		};
 		A863A40621AF07E500E73566 = {
 			isa = PBXGroup;
 			children = (
@@ -147,6 +175,9 @@
 		A863A44121AF0AA800E73566 /* Drinks */ = {
 			isa = PBXGroup;
 			children = (
+				A807F79021D2ED2A009D00B5 /* ApplicationLayer */,
+				A807F78E21D2ED2A009D00B5 /* BusinessLogic */,
+				A807F78F21D2ED2A009D00B5 /* View */,
 			);
 			path = Drinks;
 			sourceTree = "<group>";
@@ -186,6 +217,7 @@
 		A863A44621AF0C0A00E73566 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				A807F78D21D2ECA1009D00B5 /* Binder */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
