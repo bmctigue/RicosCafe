@@ -10,9 +10,13 @@ import UIKit
 
 final class AppBuilder: BaseBuilder {
     
+    static let drinks = "drinks"
+    static let food = "food"
+    static let dessert = "dessert"
+    
     private var window: UIWindow?
     private (set) var tabBarBuilder: TabBarBuilder!
-    private lazy var builders: [TabBuilder] = []
+    private lazy var builders: [TabBuilder] = [DrinksBuilder(with: AppBuilder.drinks)]
     
     init(with window: UIWindow?) {
         self.window = window

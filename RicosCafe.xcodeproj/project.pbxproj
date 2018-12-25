@@ -7,11 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A807F79221D2EE47009D00B5 /* GenericDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A807F79121D2EE47009D00B5 /* GenericDataSource.swift */; };
+		A807F79421D2EE7D009D00B5 /* DynamicValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = A807F79321D2EE7D009D00B5 /* DynamicValue.swift */; };
+		A807F79621D2F0C7009D00B5 /* DrinksBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A807F79521D2F0C7009D00B5 /* DrinksBuilder.swift */; };
+		A807F79921D2F1FF009D00B5 /* DrinksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A807F79721D2F1FF009D00B5 /* DrinksViewController.swift */; };
+		A807F79A21D2F1FF009D00B5 /* DrinksViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A807F79821D2F1FF009D00B5 /* DrinksViewController.xib */; };
 		A863A41321AF07E500E73566 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A863A41221AF07E500E73566 /* AppDelegate.swift */; };
 		A863A41A21AF07E700E73566 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A863A41921AF07E700E73566 /* Assets.xcassets */; };
 		A863A41D21AF07E700E73566 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A863A41B21AF07E700E73566 /* LaunchScreen.storyboard */; };
 		A863A43321AF07E700E73566 /* RicosCafeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A863A43221AF07E700E73566 /* RicosCafeUITests.swift */; };
-		A863A44821AF0D1900E73566 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A863A44721AF0D1900E73566 /* Coordinator.swift */; };
+		A863A44821AF0D1900E73566 /* Builder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A863A44721AF0D1900E73566 /* Builder.swift */; };
 		A863A44A21AF0D9200E73566 /* AppBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A863A44921AF0D9200E73566 /* AppBuilder.swift */; };
 		A863A44C21AF0E2900E73566 /* TabBarBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A863A44B21AF0E2900E73566 /* TabBarBuilder.swift */; };
 		A863A44E21AF100A00E73566 /* AppBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A863A44D21AF100A00E73566 /* AppBuilderTests.swift */; };
@@ -37,6 +42,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A807F79121D2EE47009D00B5 /* GenericDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericDataSource.swift; sourceTree = "<group>"; };
+		A807F79321D2EE7D009D00B5 /* DynamicValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicValue.swift; sourceTree = "<group>"; };
+		A807F79521D2F0C7009D00B5 /* DrinksBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinksBuilder.swift; sourceTree = "<group>"; };
+		A807F79721D2F1FF009D00B5 /* DrinksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinksViewController.swift; sourceTree = "<group>"; };
+		A807F79821D2F1FF009D00B5 /* DrinksViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DrinksViewController.xib; sourceTree = "<group>"; };
 		A863A40F21AF07E500E73566 /* RicosCafe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RicosCafe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A863A41221AF07E500E73566 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A863A41921AF07E700E73566 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -47,7 +57,7 @@
 		A863A42E21AF07E700E73566 /* RicosCafeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RicosCafeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A863A43221AF07E700E73566 /* RicosCafeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RicosCafeUITests.swift; sourceTree = "<group>"; };
 		A863A43421AF07E700E73566 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A863A44721AF0D1900E73566 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		A863A44721AF0D1900E73566 /* Builder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Builder.swift; sourceTree = "<group>"; };
 		A863A44921AF0D9200E73566 /* AppBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppBuilder.swift; sourceTree = "<group>"; };
 		A863A44B21AF0E2900E73566 /* TabBarBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarBuilder.swift; sourceTree = "<group>"; };
 		A863A44D21AF100A00E73566 /* AppBuilderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppBuilderTests.swift; sourceTree = "<group>"; };
@@ -83,6 +93,8 @@
 		A807F78D21D2ECA1009D00B5 /* Binder */ = {
 			isa = PBXGroup;
 			children = (
+				A807F79121D2EE47009D00B5 /* GenericDataSource.swift */,
+				A807F79321D2EE7D009D00B5 /* DynamicValue.swift */,
 			);
 			path = Binder;
 			sourceTree = "<group>";
@@ -97,6 +109,8 @@
 		A807F78F21D2ED2A009D00B5 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				A807F79721D2F1FF009D00B5 /* DrinksViewController.swift */,
+				A807F79821D2F1FF009D00B5 /* DrinksViewController.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -175,6 +189,7 @@
 		A863A44121AF0AA800E73566 /* Drinks */ = {
 			isa = PBXGroup;
 			children = (
+				A807F79521D2F0C7009D00B5 /* DrinksBuilder.swift */,
 				A807F79021D2ED2A009D00B5 /* ApplicationLayer */,
 				A807F78E21D2ED2A009D00B5 /* BusinessLogic */,
 				A807F78F21D2ED2A009D00B5 /* View */,
@@ -200,7 +215,7 @@
 			isa = PBXGroup;
 			children = (
 				A863A41B21AF07E700E73566 /* LaunchScreen.storyboard */,
-				A863A44721AF0D1900E73566 /* Coordinator.swift */,
+				A863A44721AF0D1900E73566 /* Builder.swift */,
 				A863A44921AF0D9200E73566 /* AppBuilder.swift */,
 			);
 			path = App;
@@ -330,6 +345,7 @@
 				A863A45221AF127E00E73566 /* Main.storyboard in Resources */,
 				A863A41D21AF07E700E73566 /* LaunchScreen.storyboard in Resources */,
 				A863A41A21AF07E700E73566 /* Assets.xcassets in Resources */,
+				A807F79A21D2F1FF009D00B5 /* DrinksViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -354,10 +370,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A863A44821AF0D1900E73566 /* Coordinator.swift in Sources */,
+				A807F79221D2EE47009D00B5 /* GenericDataSource.swift in Sources */,
+				A807F79421D2EE7D009D00B5 /* DynamicValue.swift in Sources */,
+				A863A44821AF0D1900E73566 /* Builder.swift in Sources */,
 				A863A41321AF07E500E73566 /* AppDelegate.swift in Sources */,
 				A863A44C21AF0E2900E73566 /* TabBarBuilder.swift in Sources */,
 				A863A44A21AF0D9200E73566 /* AppBuilder.swift in Sources */,
+				A807F79621D2F0C7009D00B5 /* DrinksBuilder.swift in Sources */,
+				A807F79921D2F1FF009D00B5 /* DrinksViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
