@@ -12,6 +12,7 @@
 		A807F79621D2F0C7009D00B5 /* DrinksBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A807F79521D2F0C7009D00B5 /* DrinksBuilder.swift */; };
 		A807F79921D2F1FF009D00B5 /* DrinksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A807F79721D2F1FF009D00B5 /* DrinksViewController.swift */; };
 		A807F79A21D2F1FF009D00B5 /* DrinksViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A807F79821D2F1FF009D00B5 /* DrinksViewController.xib */; };
+		A807F79C21D2FEDC009D00B5 /* DynamicValueTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A807F79B21D2FEDC009D00B5 /* DynamicValueTests.swift */; };
 		A863A41321AF07E500E73566 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A863A41221AF07E500E73566 /* AppDelegate.swift */; };
 		A863A41A21AF07E700E73566 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A863A41921AF07E700E73566 /* Assets.xcassets */; };
 		A863A41D21AF07E700E73566 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A863A41B21AF07E700E73566 /* LaunchScreen.storyboard */; };
@@ -47,6 +48,7 @@
 		A807F79521D2F0C7009D00B5 /* DrinksBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinksBuilder.swift; sourceTree = "<group>"; };
 		A807F79721D2F1FF009D00B5 /* DrinksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinksViewController.swift; sourceTree = "<group>"; };
 		A807F79821D2F1FF009D00B5 /* DrinksViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DrinksViewController.xib; sourceTree = "<group>"; };
+		A807F79B21D2FEDC009D00B5 /* DynamicValueTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicValueTests.swift; sourceTree = "<group>"; };
 		A863A40F21AF07E500E73566 /* RicosCafe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RicosCafe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A863A41221AF07E500E73566 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A863A41921AF07E700E73566 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -163,6 +165,7 @@
 				A863A42921AF07E700E73566 /* Info.plist */,
 				A863A44D21AF100A00E73566 /* AppBuilderTests.swift */,
 				A863A45321AF138500E73566 /* TabBarBuilderTests.swift */,
+				A807F79B21D2FEDC009D00B5 /* DynamicValueTests.swift */,
 			);
 			path = RicosCafeTests;
 			sourceTree = "<group>";
@@ -385,6 +388,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A807F79C21D2FEDC009D00B5 /* DynamicValueTests.swift in Sources */,
 				A863A45421AF138500E73566 /* TabBarBuilderTests.swift in Sources */,
 				A863A44E21AF100A00E73566 /* AppBuilderTests.swift in Sources */,
 			);
