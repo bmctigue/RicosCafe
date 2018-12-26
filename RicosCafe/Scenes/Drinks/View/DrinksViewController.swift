@@ -12,6 +12,6 @@ final class DrinksViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor.gray
+        self.view.backgroundColor = UIColor.lightGray
     }
 }

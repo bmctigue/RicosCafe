@@ -13,6 +13,8 @@
 		A807F79921D2F1FF009D00B5 /* DrinksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A807F79721D2F1FF009D00B5 /* DrinksViewController.swift */; };
 		A807F79A21D2F1FF009D00B5 /* DrinksViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A807F79821D2F1FF009D00B5 /* DrinksViewController.xib */; };
 		A807F79C21D2FEDC009D00B5 /* DynamicValueTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A807F79B21D2FEDC009D00B5 /* DynamicValueTests.swift */; };
+		A83EC02221D3EFF2001AF8CB /* Drink.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83EC02121D3EFF2001AF8CB /* Drink.swift */; };
+		A83EC02421D3F1E4001AF8CB /* DrinkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83EC02321D3F1E4001AF8CB /* DrinkTests.swift */; };
 		A863A41321AF07E500E73566 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A863A41221AF07E500E73566 /* AppDelegate.swift */; };
 		A863A41A21AF07E700E73566 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A863A41921AF07E700E73566 /* Assets.xcassets */; };
 		A863A41D21AF07E700E73566 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A863A41B21AF07E700E73566 /* LaunchScreen.storyboard */; };
@@ -49,6 +51,8 @@
 		A807F79721D2F1FF009D00B5 /* DrinksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinksViewController.swift; sourceTree = "<group>"; };
 		A807F79821D2F1FF009D00B5 /* DrinksViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DrinksViewController.xib; sourceTree = "<group>"; };
 		A807F79B21D2FEDC009D00B5 /* DynamicValueTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicValueTests.swift; sourceTree = "<group>"; };
+		A83EC02121D3EFF2001AF8CB /* Drink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drink.swift; sourceTree = "<group>"; };
+		A83EC02321D3F1E4001AF8CB /* DrinkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkTests.swift; sourceTree = "<group>"; };
 		A863A40F21AF07E500E73566 /* RicosCafe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RicosCafe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A863A41221AF07E500E73566 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A863A41921AF07E700E73566 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -124,6 +128,14 @@
 			path = ApplicationLayer;
 			sourceTree = "<group>";
 		};
+		A83EC02021D3EFDF001AF8CB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A83EC02121D3EFF2001AF8CB /* Drink.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		A863A40621AF07E500E73566 = {
 			isa = PBXGroup;
 			children = (
@@ -149,6 +161,7 @@
 			children = (
 				A863A44421AF0BDB00E73566 /* App */,
 				A863A44521AF0BE500E73566 /* Tab */,
+				A83EC02021D3EFDF001AF8CB /* Models */,
 				A863A44021AF0AA800E73566 /* Scenes */,
 				A863A44621AF0C0A00E73566 /* Shared */,
 				A863A41221AF07E500E73566 /* AppDelegate.swift */,
@@ -166,6 +179,7 @@
 				A863A44D21AF100A00E73566 /* AppBuilderTests.swift */,
 				A863A45321AF138500E73566 /* TabBarBuilderTests.swift */,
 				A807F79B21D2FEDC009D00B5 /* DynamicValueTests.swift */,
+				A83EC02321D3F1E4001AF8CB /* DrinkTests.swift */,
 			);
 			path = RicosCafeTests;
 			sourceTree = "<group>";
@@ -374,6 +388,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A807F79221D2EE47009D00B5 /* GenericDataSource.swift in Sources */,
+				A83EC02221D3EFF2001AF8CB /* Drink.swift in Sources */,
 				A807F79421D2EE7D009D00B5 /* DynamicValue.swift in Sources */,
 				A863A41321AF07E500E73566 /* AppDelegate.swift in Sources */,
 				A863A44C21AF0E2900E73566 /* TabBarBuilder.swift in Sources */,
@@ -390,6 +405,7 @@
 			files = (
 				A807F79C21D2FEDC009D00B5 /* DynamicValueTests.swift in Sources */,
 				A863A45421AF138500E73566 /* TabBarBuilderTests.swift in Sources */,
+				A83EC02421D3F1E4001AF8CB /* DrinkTests.swift in Sources */,
 				A863A44E21AF100A00E73566 /* AppBuilderTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
