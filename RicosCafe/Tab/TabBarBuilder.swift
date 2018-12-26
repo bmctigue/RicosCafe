@@ -27,6 +27,7 @@ final class TabBarBuilder: BaseBuilder {
         
         for (index, builder) in builders.enumerated() {
             updateTabImage(tab: index, imageName: builder.getImageName())
+            updateTabTitle(tab: index, title: builder.getTitle())
         }
     }
     
@@ -37,8 +38,12 @@ final class TabBarBuilder: BaseBuilder {
     }
     
     private func updateTabImage(tab: Int, imageName: String) {
-        self.tabBarController.tabBar.items?[tab].image = UIImage(named: imageName)?.withRenderingMode(.alwaysOriginal)
-        self.tabBarController.tabBar.items?[tab].selectedImage = UIImage(named: imageName)?.withRenderingMode(.alwaysOriginal)
+        self.tabBarController.tabBar.items?[tab].image = UIImage(named: imageName)?.withRenderingMode(.automatic)
+        self.tabBarController.tabBar.items?[tab].selectedImage = UIImage(named: imageName)?.withRenderingMode(.automatic)
+    }
+    
+    private func updateTabTitle(tab: Int, title: String) {
+        self.tabBarController.tabBar.items?[tab].title = title
     }
 }
 

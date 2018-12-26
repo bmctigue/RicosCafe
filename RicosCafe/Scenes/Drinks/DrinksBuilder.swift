@@ -11,13 +11,19 @@ import Foundation
 final class DrinksBuilder: TabBuilder {
     
     private var imageName: String
+    private var title: String
     
-    init(with imageName: String) {
+    init(with imageName: String, title: String) {
         self.imageName = imageName
+        self.title = title
     }
     
     func getImageName() -> String {
         return imageName
+    }
+    
+    func getTitle() -> String {
+        return title
     }
     
     func run(completionHandler: BuilderBlock) {

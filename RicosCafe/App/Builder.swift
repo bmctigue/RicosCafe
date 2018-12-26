@@ -20,4 +20,5 @@ protocol Builder: class {
 
 protocol TabBuilder: Builder {
     func getImageName() -> String
+    func getTitle() -> String
 }
