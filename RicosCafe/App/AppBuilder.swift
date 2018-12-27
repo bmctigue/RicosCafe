@@ -22,8 +22,8 @@ enum Builder {
         static let drinksBuilder = Drinks.Builder(with: drinksImageName, title: drinksTitle)
         
         private var window: UIWindow?
-        private (set) var tabBarBuilder: Builder.TabBar!
-        private lazy var builders: [TabBuilder] = [Builder.App.drinksBuilder]
+        private var tabBarBuilder: Builder.TabBar!
+        private var builders: [TabBuilder] = [Builder.App.drinksBuilder]
         
         init(with window: UIWindow?) {
             self.window = window
