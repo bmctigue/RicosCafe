@@ -6,7 +6,6 @@
 //  Copyright © 2018 tiguer. All rights reserved.
 //
 
-import Foundation
 import UIKit
 
 enum Drinks {
@@ -45,12 +44,10 @@ enum Drinks {
         func getDisplayedDrinks() -> [DisplayedDrink] {
             return displayedDrinks
         }
-    }
-}
-
-extension Drinks.ViewModel {
-    mutating func updateDisplayedDrinks(_ drinks: [Drink]) {
-        self.drinks = drinks
-        dynamicDrinks.value = displayedDrinks
+        
+        mutating func updateDisplayedDrinks(_ drinks: [Drink]) {
+            self.drinks = drinks
+            dynamicDrinks.value = displayedDrinks
+        }
     }
 }
