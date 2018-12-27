@@ -15,6 +15,9 @@
 		A807F79C21D2FEDC009D00B5 /* DynamicValueTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A807F79B21D2FEDC009D00B5 /* DynamicValueTests.swift */; };
 		A83EC02221D3EFF2001AF8CB /* Drink.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83EC02121D3EFF2001AF8CB /* Drink.swift */; };
 		A83EC02421D3F1E4001AF8CB /* DrinkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83EC02321D3F1E4001AF8CB /* DrinkTests.swift */; };
+		A83EC02621D3F513001AF8CB /* DrinkViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83EC02521D3F513001AF8CB /* DrinkViewModel.swift */; };
+		A83EC02A21D3F7DE001AF8CB /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83EC02921D3F7DE001AF8CB /* Protocols.swift */; };
+		A83EC02C21D41BCC001AF8CB /* DrinksViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83EC02B21D41BCC001AF8CB /* DrinksViewModelTests.swift */; };
 		A863A41321AF07E500E73566 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A863A41221AF07E500E73566 /* AppDelegate.swift */; };
 		A863A41A21AF07E700E73566 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A863A41921AF07E700E73566 /* Assets.xcassets */; };
 		A863A41D21AF07E700E73566 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A863A41B21AF07E700E73566 /* LaunchScreen.storyboard */; };
@@ -53,6 +56,9 @@
 		A807F79B21D2FEDC009D00B5 /* DynamicValueTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicValueTests.swift; sourceTree = "<group>"; };
 		A83EC02121D3EFF2001AF8CB /* Drink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drink.swift; sourceTree = "<group>"; };
 		A83EC02321D3F1E4001AF8CB /* DrinkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkTests.swift; sourceTree = "<group>"; };
+		A83EC02521D3F513001AF8CB /* DrinkViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkViewModel.swift; sourceTree = "<group>"; };
+		A83EC02921D3F7DE001AF8CB /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
+		A83EC02B21D41BCC001AF8CB /* DrinksViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinksViewModelTests.swift; sourceTree = "<group>"; };
 		A863A40F21AF07E500E73566 /* RicosCafe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RicosCafe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A863A41221AF07E500E73566 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A863A41921AF07E700E73566 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -124,6 +130,7 @@
 		A807F79021D2ED2A009D00B5 /* ApplicationLayer */ = {
 			isa = PBXGroup;
 			children = (
+				A83EC02521D3F513001AF8CB /* DrinkViewModel.swift */,
 			);
 			path = ApplicationLayer;
 			sourceTree = "<group>";
@@ -180,6 +187,7 @@
 				A863A45321AF138500E73566 /* TabBarBuilderTests.swift */,
 				A807F79B21D2FEDC009D00B5 /* DynamicValueTests.swift */,
 				A83EC02321D3F1E4001AF8CB /* DrinkTests.swift */,
+				A83EC02B21D41BCC001AF8CB /* DrinksViewModelTests.swift */,
 			);
 			path = RicosCafeTests;
 			sourceTree = "<group>";
@@ -250,6 +258,7 @@
 			children = (
 				A8E7211521D3B995008731C3 /* Builder.swift */,
 				A807F78D21D2ECA1009D00B5 /* Binder */,
+				A83EC02921D3F7DE001AF8CB /* Protocols.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -390,8 +399,10 @@
 				A807F79221D2EE47009D00B5 /* GenericDataSource.swift in Sources */,
 				A83EC02221D3EFF2001AF8CB /* Drink.swift in Sources */,
 				A807F79421D2EE7D009D00B5 /* DynamicValue.swift in Sources */,
+				A83EC02A21D3F7DE001AF8CB /* Protocols.swift in Sources */,
 				A863A41321AF07E500E73566 /* AppDelegate.swift in Sources */,
 				A863A44C21AF0E2900E73566 /* TabBarBuilder.swift in Sources */,
+				A83EC02621D3F513001AF8CB /* DrinkViewModel.swift in Sources */,
 				A863A44A21AF0D9200E73566 /* AppBuilder.swift in Sources */,
 				A807F79621D2F0C7009D00B5 /* DrinksBuilder.swift in Sources */,
 				A807F79921D2F1FF009D00B5 /* DrinksViewController.swift in Sources */,
@@ -404,6 +415,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A807F79C21D2FEDC009D00B5 /* DynamicValueTests.swift in Sources */,
+				A83EC02C21D41BCC001AF8CB /* DrinksViewModelTests.swift in Sources */,
 				A863A45421AF138500E73566 /* TabBarBuilderTests.swift in Sources */,
 				A83EC02421D3F1E4001AF8CB /* DrinkTests.swift in Sources */,
 				A863A44E21AF100A00E73566 /* AppBuilderTests.swift in Sources */,

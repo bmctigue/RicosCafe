@@ -9,9 +9,12 @@
 import UIKit
 
 final class DrinksViewController: UIViewController {
+    
+    lazy var viewModel = Drinks.ViewModel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.lightGray
     }
+
 }
