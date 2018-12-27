@@ -29,7 +29,7 @@
 		A863A44E21AF100A00E73566 /* AppBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A863A44D21AF100A00E73566 /* AppBuilderTests.swift */; };
 		A863A45221AF127E00E73566 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A863A45121AF127E00E73566 /* Main.storyboard */; };
 		A863A45421AF138500E73566 /* TabBarBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A863A45321AF138500E73566 /* TabBarBuilderTests.swift */; };
-		A8A4094321D5101700C8C755 /* drinks.json in Resources */ = {isa = PBXBuildFile; fileRef = A8A4094221D5101700C8C755 /* drinks.json */; };
+		A873021921D522CA009953DC /* DrinksLocalStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A873021821D522CA009953DC /* DrinksLocalStore.swift */; };
 		A8A4094521D51DB000C8C755 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = A8A4094421D51DB000C8C755 /* Podfile */; };
 		A8E7211621D3B995008731C3 /* Builder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E7211521D3B995008731C3 /* Builder.swift */; };
 /* End PBXBuildFile section */
@@ -82,7 +82,7 @@
 		A863A44D21AF100A00E73566 /* AppBuilderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppBuilderTests.swift; sourceTree = "<group>"; };
 		A863A45121AF127E00E73566 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		A863A45321AF138500E73566 /* TabBarBuilderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarBuilderTests.swift; sourceTree = "<group>"; };
-		A8A4094221D5101700C8C755 /* drinks.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = drinks.json; sourceTree = "<group>"; };
+		A873021821D522CA009953DC /* DrinksLocalStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinksLocalStore.swift; sourceTree = "<group>"; };
 		A8A4094421D51DB000C8C755 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; };
 		A8E7211521D3B995008731C3 /* Builder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Builder.swift; sourceTree = "<group>"; };
 		D6B5D51E2A4209FC56C29D3C /* Pods_RicosCafe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RicosCafe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -148,6 +148,7 @@
 		A807F78E21D2ED2A009D00B5 /* BusinessLogic */ = {
 			isa = PBXGroup;
 			children = (
+				A873021821D522CA009953DC /* DrinksLocalStore.swift */,
 			);
 			path = BusinessLogic;
 			sourceTree = "<group>";
@@ -304,7 +305,6 @@
 		A8A4094121D50F9A00C8C755 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				A8A4094221D5101700C8C755 /* drinks.json */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -419,7 +419,6 @@
 			files = (
 				A8A4094521D51DB000C8C755 /* Podfile in Resources */,
 				A863A45221AF127E00E73566 /* Main.storyboard in Resources */,
-				A8A4094321D5101700C8C755 /* drinks.json in Resources */,
 				A863A41D21AF07E700E73566 /* LaunchScreen.storyboard in Resources */,
 				A863A41A21AF07E700E73566 /* Assets.xcassets in Resources */,
 				A807F79A21D2F1FF009D00B5 /* DrinksViewController.xib in Resources */,
@@ -504,6 +503,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A873021921D522CA009953DC /* DrinksLocalStore.swift in Sources */,
 				A807F79221D2EE47009D00B5 /* GenericDataSource.swift in Sources */,
 				A83EC02221D3EFF2001AF8CB /* Drink.swift in Sources */,
 				A807F79421D2EE7D009D00B5 /* DynamicValue.swift in Sources */,

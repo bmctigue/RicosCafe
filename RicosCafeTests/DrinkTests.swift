@@ -13,7 +13,17 @@ class DrinkTests: XCTestCase {
 
     func testInit() {
         let name = "Latte"
-        let drink = Drink(name: name, text: "Coffee with Milk", price: 50, size: 0, temp: 0, imageUrl: "", image: "")
+        let drink = Drink(name: name, text: "Coffee with Milk", price: "1.99", size: .small, temp: .hot, imageUrl: "", image: "")
         XCTAssert(drink.name == name)
+    }
+    
+    func testLocalStore() {
+        var results = [Drink]()
+        let sut = Drinks.LocalStore()
+        sut.fetchItems { drinks in
+            results = drinks
+        }
+        print(results)
+        XCTAssert(results.count > 0)
     }
 }

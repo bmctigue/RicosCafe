@@ -11,8 +11,8 @@ import XCTest
 
 class DrinksViewModelTests: XCTestCase {
     
-    let drink1 = Drink(name: "Drink1", text: "Drink1", price: 100, size: 0, temp: 0, imageUrl: "", image: "")
-    let drink2 = Drink(name: "Drink2", text: "Drink2", price: 50, size: 1, temp: 0, imageUrl: "", image: "")
+    let drink1 = Drink(name: "Drink1", text: "Drink1", price: "1.99", size: .small, temp: .hot, imageUrl: "", image: "")
+    let drink2 = Drink(name: "Drink2", text: "Drink2", price: "2.99", size: .medium, temp: .hot, imageUrl: "", image: "")
     
     func testDisplayedDrinks() {
         let viewModel = Drinks.ViewModel()

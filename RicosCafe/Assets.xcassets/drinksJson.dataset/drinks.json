@@ -1,5 +1,4 @@
-{
-  "drinks": [
+[
     {
       "name": "Black Coffee",
       "text": "Rich and delicious",
@@ -36,5 +35,4 @@
       "image_url": "http://google.com/images/cold_brew",
       "image": ""
     }
-  ]
-}
+]

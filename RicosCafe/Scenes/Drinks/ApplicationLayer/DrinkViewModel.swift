@@ -19,9 +19,9 @@ extension Drinks {
         struct DisplayedDrink {
             let name: String
             let text: String
-            let price: Double
-            let size: Int
-            let temp: Int
+            let price: String
+            let size: DrinkSizeType
+            let temp: DrinkTempType
             let imageUrl: String
             let image: String
         }
@@ -32,7 +32,7 @@ extension Drinks {
         private var displayedDrinks: [DisplayedDrink] {
             var resultDrinks = [DisplayedDrink]()
             for drink in drinks {
-                let displayedDrink = Drinks.ViewModel.DisplayedDrink(name: drink.name, text: drink.text, price: drink.price, size: drink.size, temp: 0, imageUrl: drink.imageUrl, image: drink.image)
+                let displayedDrink = Drinks.ViewModel.DisplayedDrink(name: drink.name, text: drink.text, price: drink.price, size: drink.size, temp: drink.temp, imageUrl: drink.imageUrl, image: drink.image)
                 resultDrinks.append(displayedDrink)
             }
             return resultDrinks
