@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4EEDB8E721DA1C07BC3D20A7 /* Pods_RicosCafe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6B5D51E2A4209FC56C29D3C /* Pods_RicosCafe.framework */; };
+		7EBBF7D68FD3CB1B4B970B1F /* Pods_RicosCafeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93C94E689EF63B6BBFAF10C6 /* Pods_RicosCafeTests.framework */; };
 		A807F79221D2EE47009D00B5 /* GenericDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A807F79121D2EE47009D00B5 /* GenericDataSource.swift */; };
 		A807F79421D2EE7D009D00B5 /* DynamicValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = A807F79321D2EE7D009D00B5 /* DynamicValue.swift */; };
 		A807F79621D2F0C7009D00B5 /* DrinksBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A807F79521D2F0C7009D00B5 /* DrinksBuilder.swift */; };
@@ -28,6 +30,7 @@
 		A863A45221AF127E00E73566 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A863A45121AF127E00E73566 /* Main.storyboard */; };
 		A863A45421AF138500E73566 /* TabBarBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A863A45321AF138500E73566 /* TabBarBuilderTests.swift */; };
 		A8A4094321D5101700C8C755 /* drinks.json in Resources */ = {isa = PBXBuildFile; fileRef = A8A4094221D5101700C8C755 /* drinks.json */; };
+		A8A4094521D51DB000C8C755 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = A8A4094421D51DB000C8C755 /* Podfile */; };
 		A8E7211621D3B995008731C3 /* Builder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E7211521D3B995008731C3 /* Builder.swift */; };
 /* End PBXBuildFile section */
 
@@ -49,6 +52,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6A5B0A76C5973BAAB2DC8928 /* Pods-RicosCafe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RicosCafe.release.xcconfig"; path = "Pods/Target Support Files/Pods-RicosCafe/Pods-RicosCafe.release.xcconfig"; sourceTree = "<group>"; };
+		7A4EB740CD80F10564FCE66F /* Pods-RicosCafe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RicosCafe.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RicosCafe/Pods-RicosCafe.debug.xcconfig"; sourceTree = "<group>"; };
+		8BA05BA28DAF99607C194EAE /* Pods-RicosCafeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RicosCafeTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RicosCafeTests/Pods-RicosCafeTests.release.xcconfig"; sourceTree = "<group>"; };
+		93C94E689EF63B6BBFAF10C6 /* Pods_RicosCafeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RicosCafeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A807F79121D2EE47009D00B5 /* GenericDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericDataSource.swift; sourceTree = "<group>"; };
 		A807F79321D2EE7D009D00B5 /* DynamicValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicValue.swift; sourceTree = "<group>"; };
 		A807F79521D2F0C7009D00B5 /* DrinksBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinksBuilder.swift; sourceTree = "<group>"; };
@@ -76,7 +83,10 @@
 		A863A45121AF127E00E73566 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		A863A45321AF138500E73566 /* TabBarBuilderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarBuilderTests.swift; sourceTree = "<group>"; };
 		A8A4094221D5101700C8C755 /* drinks.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = drinks.json; sourceTree = "<group>"; };
+		A8A4094421D51DB000C8C755 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; };
 		A8E7211521D3B995008731C3 /* Builder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Builder.swift; sourceTree = "<group>"; };
+		D6B5D51E2A4209FC56C29D3C /* Pods_RicosCafe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RicosCafe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F402D9E639BBF7F4619C55AF /* Pods-RicosCafeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RicosCafeTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RicosCafeTests/Pods-RicosCafeTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4EEDB8E721DA1C07BC3D20A7 /* Pods_RicosCafe.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,6 +102,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7EBBF7D68FD3CB1B4B970B1F /* Pods_RicosCafeTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,6 +116,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0A283D9C4FD08AAA40A4004B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7A4EB740CD80F10564FCE66F /* Pods-RicosCafe.debug.xcconfig */,
+				6A5B0A76C5973BAAB2DC8928 /* Pods-RicosCafe.release.xcconfig */,
+				F402D9E639BBF7F4619C55AF /* Pods-RicosCafeTests.debug.xcconfig */,
+				8BA05BA28DAF99607C194EAE /* Pods-RicosCafeTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		3CE6AA2F5B2DC581C7ED71D2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D6B5D51E2A4209FC56C29D3C /* Pods_RicosCafe.framework */,
+				93C94E689EF63B6BBFAF10C6 /* Pods_RicosCafeTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		A807F78D21D2ECA1009D00B5 /* Binder */ = {
 			isa = PBXGroup;
 			children = (
@@ -152,6 +184,8 @@
 				A863A42621AF07E700E73566 /* RicosCafeTests */,
 				A863A43121AF07E700E73566 /* RicosCafeUITests */,
 				A863A41021AF07E500E73566 /* Products */,
+				0A283D9C4FD08AAA40A4004B /* Pods */,
+				3CE6AA2F5B2DC581C7ED71D2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -178,6 +212,7 @@
 				A863A41921AF07E700E73566 /* Assets.xcassets */,
 				A863A41E21AF07E700E73566 /* Info.plist */,
 				A863A45121AF127E00E73566 /* Main.storyboard */,
+				A8A4094421D51DB000C8C755 /* Podfile */,
 			);
 			path = RicosCafe;
 			sourceTree = "<group>";
@@ -281,9 +316,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A863A43721AF07E700E73566 /* Build configuration list for PBXNativeTarget "RicosCafe" */;
 			buildPhases = (
+				E47F0A06FCD6A0D7A66E6885 /* [CP] Check Pods Manifest.lock */,
 				A863A40B21AF07E500E73566 /* Sources */,
 				A863A40C21AF07E500E73566 /* Frameworks */,
 				A863A40D21AF07E500E73566 /* Resources */,
+				95FA3380400A274AAC1F85A4 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -298,6 +335,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A863A43A21AF07E700E73566 /* Build configuration list for PBXNativeTarget "RicosCafeTests" */;
 			buildPhases = (
+				2265C356D8C2E6A480D0E798 /* [CP] Check Pods Manifest.lock */,
 				A863A41F21AF07E700E73566 /* Sources */,
 				A863A42021AF07E700E73566 /* Frameworks */,
 				A863A42121AF07E700E73566 /* Resources */,
@@ -379,6 +417,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A8A4094521D51DB000C8C755 /* Podfile in Resources */,
 				A863A45221AF127E00E73566 /* Main.storyboard in Resources */,
 				A8A4094321D5101700C8C755 /* drinks.json in Resources */,
 				A863A41D21AF07E700E73566 /* LaunchScreen.storyboard in Resources */,
@@ -402,6 +441,63 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2265C356D8C2E6A480D0E798 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RicosCafeTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		95FA3380400A274AAC1F85A4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-RicosCafe/Pods-RicosCafe-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Unbox/Unbox.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Unbox.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RicosCafe/Pods-RicosCafe-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E47F0A06FCD6A0D7A66E6885 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RicosCafe-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A863A40B21AF07E500E73566 /* Sources */ = {
@@ -587,6 +683,7 @@
 		};
 		A863A43821AF07E700E73566 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7A4EB740CD80F10564FCE66F /* Pods-RicosCafe.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -605,6 +702,7 @@
 		};
 		A863A43921AF07E700E73566 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6A5B0A76C5973BAAB2DC8928 /* Pods-RicosCafe.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -623,6 +721,7 @@
 		};
 		A863A43B21AF07E700E73566 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F402D9E639BBF7F4619C55AF /* Pods-RicosCafeTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -646,6 +745,7 @@
 		};
 		A863A43C21AF07E700E73566 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8BA05BA28DAF99607C194EAE /* Pods-RicosCafeTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
