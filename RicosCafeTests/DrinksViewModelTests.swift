@@ -30,11 +30,9 @@ class DrinksViewModelTests: XCTestCase {
             expectation.fulfill()
         }
         waitForExpectations(timeout: 3.0, handler: nil)
-        
         XCTAssert(viewModel.getDisplayedDrinks().count == drinks.count)
         XCTAssert(resultDrinks.count == drinks.count)
     }
-    
 
     func testUpdateDisplayedDrinks() {
         let drinks = [drink1,drink2]
