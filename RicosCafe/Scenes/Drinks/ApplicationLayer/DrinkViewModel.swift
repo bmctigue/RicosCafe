@@ -22,8 +22,8 @@ extension Drinks {
             let price: Double
             let size: Int
             let temp: Int
-            let imageUrl: String?
-            let image: UIImage?
+            let imageUrl: String
+            let image: String
         }
         
         var dynamicDrinks: DynamicValue<[DisplayedDrink]> = DynamicValue([DisplayedDrink]())
