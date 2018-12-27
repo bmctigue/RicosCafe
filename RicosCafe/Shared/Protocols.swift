@@ -8,6 +8,19 @@
 
 import Foundation
 
+protocol BaseBuilder: class {
+    func run()
+}
+
+protocol VCBuilder: class {
+    func run(completionHandler: VCBuilderBlock)
+}
+
+protocol TabBuilder: VCBuilder {
+    func getImageName() -> String
+    func getTitle() -> String
+}
+
 protocol Store {
     func fetchItems<T>(completionHandler: @escaping ([T]) -> Void)
 }

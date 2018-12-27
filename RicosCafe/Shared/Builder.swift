@@ -9,16 +9,3 @@
 import UIKit
 
 typealias VCBuilderBlock = ((UIViewController) -> Void)
-
-protocol BaseBuilder: class {
-    func run()
-}
-
-protocol VCBuilder: class {
-    func run(completionHandler: VCBuilderBlock)
-}
-
-protocol TabBuilder: VCBuilder {
-    func getImageName() -> String
-    func getTitle() -> String
-}
