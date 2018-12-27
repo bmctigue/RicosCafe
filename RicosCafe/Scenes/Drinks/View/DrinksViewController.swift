@@ -8,13 +8,15 @@
 
 import UIKit
 
-final class DrinksViewController: UIViewController {
-    
-    lazy var viewModel = Drinks.ViewModel()
+extension Drinks {
+    final class ViewController: UIViewController {
+        
+        lazy var viewModel = Drinks.ViewModel()
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        self.view.backgroundColor = UIColor.lightGray
+        override func viewDidLoad() {
+            super.viewDidLoad()
+            self.view.backgroundColor = UIColor.lightGray
+        }
+
     }
-
 }

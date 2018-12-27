@@ -8,26 +8,28 @@
 
 import Foundation
 
-final class DrinksBuilder: TabBuilder {
-    
-    private var imageName: String
-    private var title: String
-    
-    init(with imageName: String, title: String) {
-        self.imageName = imageName
-        self.title = title
-    }
-    
-    func getImageName() -> String {
-        return imageName
-    }
-    
-    func getTitle() -> String {
-        return title
-    }
-    
-    func run(completionHandler: BuilderBlock) {
-        let controller = DrinksViewController()
-        completionHandler(controller)
+enum Drinks {
+    final class Builder: TabBuilder {
+        
+        private var imageName: String
+        private var title: String
+        
+        init(with imageName: String, title: String) {
+            self.imageName = imageName
+            self.title = title
+        }
+        
+        func getImageName() -> String {
+            return imageName
+        }
+        
+        func getTitle() -> String {
+            return title
+        }
+        
+        func run(completionHandler: VCBuilderBlock) {
+            let controller = Drinks.ViewController()
+            completionHandler(controller)
+        }
     }
 }

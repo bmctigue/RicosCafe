@@ -7,3 +7,7 @@
 //
 
 import Foundation
+
+protocol Store {
+    func fetchItems<T>(completionHandler: @escaping ([T]) -> Void)
+}

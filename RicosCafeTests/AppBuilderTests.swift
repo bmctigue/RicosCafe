@@ -13,7 +13,7 @@ class AppBuilderTests: XCTestCase {
     
     func testAppBuilder() {
         let window = UIWindow(frame: UIScreen.main.bounds)
-        let builder = AppBuilder(with: window)
+        let builder = Builder.App(with: window)
         builder.run()
         let tabBarBuilder = builder.getTabBarBuilder()
         let tabBar = tabBarBuilder.getTabBar()
@@ -23,8 +23,8 @@ class AppBuilderTests: XCTestCase {
     }
 }
 
-extension AppBuilder {
-    func getTabBarBuilder() -> TabBarBuilder {
+extension Builder.App {
+    func getTabBarBuilder() -> Builder.TabBar {
         return tabBarBuilder
     }
 }

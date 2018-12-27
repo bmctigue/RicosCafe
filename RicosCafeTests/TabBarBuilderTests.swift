@@ -13,7 +13,7 @@ class TabBarBuilderTests: XCTestCase {
     
     func testBuilderNoViewControllers() {
         let builders: [TabBuilder] =  []
-        let tabBarBuilder = TabBarBuilder(with: builders)
+        let tabBarBuilder = Builder.TabBar(with: builders)
         tabBarBuilder.run()
         let tabBarController = tabBarBuilder.getTabBar()
         var controllersCount = 0

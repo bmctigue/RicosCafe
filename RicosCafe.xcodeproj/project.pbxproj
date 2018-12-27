@@ -27,6 +27,7 @@
 		A863A44E21AF100A00E73566 /* AppBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A863A44D21AF100A00E73566 /* AppBuilderTests.swift */; };
 		A863A45221AF127E00E73566 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A863A45121AF127E00E73566 /* Main.storyboard */; };
 		A863A45421AF138500E73566 /* TabBarBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A863A45321AF138500E73566 /* TabBarBuilderTests.swift */; };
+		A8A4094321D5101700C8C755 /* drinks.json in Resources */ = {isa = PBXBuildFile; fileRef = A8A4094221D5101700C8C755 /* drinks.json */; };
 		A8E7211621D3B995008731C3 /* Builder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E7211521D3B995008731C3 /* Builder.swift */; };
 /* End PBXBuildFile section */
 
@@ -74,6 +75,7 @@
 		A863A44D21AF100A00E73566 /* AppBuilderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppBuilderTests.swift; sourceTree = "<group>"; };
 		A863A45121AF127E00E73566 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		A863A45321AF138500E73566 /* TabBarBuilderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarBuilderTests.swift; sourceTree = "<group>"; };
+		A8A4094221D5101700C8C755 /* drinks.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = drinks.json; sourceTree = "<group>"; };
 		A8E7211521D3B995008731C3 /* Builder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Builder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -171,6 +173,7 @@
 				A83EC02021D3EFDF001AF8CB /* Models */,
 				A863A44021AF0AA800E73566 /* Scenes */,
 				A863A44621AF0C0A00E73566 /* Shared */,
+				A8A4094121D50F9A00C8C755 /* Resources */,
 				A863A41221AF07E500E73566 /* AppDelegate.swift */,
 				A863A41921AF07E700E73566 /* Assets.xcassets */,
 				A863A41E21AF07E700E73566 /* Info.plist */,
@@ -261,6 +264,14 @@
 				A83EC02921D3F7DE001AF8CB /* Protocols.swift */,
 			);
 			path = Shared;
+			sourceTree = "<group>";
+		};
+		A8A4094121D50F9A00C8C755 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A8A4094221D5101700C8C755 /* drinks.json */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -369,6 +380,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A863A45221AF127E00E73566 /* Main.storyboard in Resources */,
+				A8A4094321D5101700C8C755 /* drinks.json in Resources */,
 				A863A41D21AF07E700E73566 /* LaunchScreen.storyboard in Resources */,
 				A863A41A21AF07E700E73566 /* Assets.xcassets in Resources */,
 				A807F79A21D2F1FF009D00B5 /* DrinksViewController.xib in Resources */,
