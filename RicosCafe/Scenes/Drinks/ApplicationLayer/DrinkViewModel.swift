@@ -20,6 +20,7 @@ enum Drinks {
             let name: String
             let text: String
             let price: Double
+            let size: Int
             let imageUrl: String?
             let image: UIImage?
         }
@@ -30,7 +31,7 @@ enum Drinks {
         private var displayedDrinks: [DisplayedDrink] {
             var resultDrinks = [DisplayedDrink]()
             for drink in drinks {
-                let displayedDrink = Drinks.ViewModel.DisplayedDrink(name: drink.name, text: drink.text, price: drink.price, imageUrl: drink.imageUrl, image: drink.image)
+                let displayedDrink = Drinks.ViewModel.DisplayedDrink(name: drink.name, text: drink.text, price: drink.price, size: drink.size, imageUrl: drink.imageUrl, image: drink.image)
                 resultDrinks.append(displayedDrink)
             }
             return resultDrinks

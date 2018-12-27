@@ -13,6 +13,7 @@ struct Drink {
     let name: String
     let text: String
     let price: Double
+    let size: Int
     let imageUrl: String?
     let image: UIImage?
 }

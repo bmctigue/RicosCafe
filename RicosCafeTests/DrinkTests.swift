@@ -13,7 +13,7 @@ class DrinkTests: XCTestCase {
 
     func testInit() {
         let name = "Latte"
-        let drink = Drink(name: name, text: "Coffee with Milk", price: 50, imageUrl: nil, image: nil)
+        let drink = Drink(name: name, text: "Coffee with Milk", price: 50, size: 0, imageUrl: nil, image: nil)
         XCTAssert(drink.name == name)
     }
 }
