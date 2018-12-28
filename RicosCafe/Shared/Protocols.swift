@@ -6,7 +6,8 @@
 //  Copyright © 2018 tiguer. All rights reserved.
 //
 
-import Foundation
+import UIKit
+import Unbox
 
 protocol BaseBuilder: class {
     func run()
@@ -22,5 +23,10 @@ protocol TabBuilder: VCBuilder {
 }
 
 protocol Store {
+    associatedtype T
     func fetchItems<T>(completionHandler: @escaping ([T]) -> Void)
+}
+
+protocol Local: Store {
+    func itemsFromBundle(_ assetName: String) -> [T]
 }

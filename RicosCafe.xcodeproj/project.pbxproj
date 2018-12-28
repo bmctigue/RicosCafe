@@ -208,7 +208,6 @@
 				A863A44021AF0AA800E73566 /* Scenes */,
 				A83EC02021D3EFDF001AF8CB /* Models */,
 				A863A44621AF0C0A00E73566 /* Shared */,
-				A8A4094121D50F9A00C8C755 /* Resources */,
 				A863A41221AF07E500E73566 /* AppDelegate.swift */,
 				A863A41921AF07E700E73566 /* Assets.xcassets */,
 				A863A41E21AF07E700E73566 /* Info.plist */,
@@ -295,18 +294,11 @@
 		A863A44621AF0C0A00E73566 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				A83EC02921D3F7DE001AF8CB /* Protocols.swift */,
 				A8E7211521D3B995008731C3 /* Builder.swift */,
 				A807F78D21D2ECA1009D00B5 /* Binder */,
-				A83EC02921D3F7DE001AF8CB /* Protocols.swift */,
 			);
 			path = Shared;
-			sourceTree = "<group>";
-		};
-		A8A4094121D50F9A00C8C755 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
