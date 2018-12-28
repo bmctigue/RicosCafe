@@ -9,14 +9,14 @@
 import XCTest
 @testable import RicosCafe
 
-class DrinkStoreTests: XCTestCase {
+class LocalStoreTests: XCTestCase {
     
     let assetName = "drinksJson"
     var fetchedData: Data?
     
     func testLocalStore() {
         let expectation = self.expectation(description: "fetchData")
-        let sut = Drinks.LocalStore(assetName)
+        let sut = LocalStore(assetName)
         sut.fetchData {[weak self] data in
             self?.fetchedData = data
             expectation.fulfill()
@@ -27,7 +27,7 @@ class DrinkStoreTests: XCTestCase {
     
     func testLocalStoreBadAsset() {
         let expectation = self.expectation(description: "fetchData")
-        let sut = Drinks.LocalStore("badAssetName")
+        let sut = LocalStore("badAssetName")
         sut.fetchData {[weak self] data in
             self?.fetchedData = data
             expectation.fulfill()

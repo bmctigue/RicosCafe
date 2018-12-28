@@ -16,7 +16,7 @@ class DrinksServiceTests: XCTestCase {
     func testService() {
         let expectation = self.expectation(description: "fetchItems")
         var results = [Drink]()
-        let store = Drinks.LocalStore(assetName)
+        let store = LocalStore(assetName)
         let sut = Drinks.Service(store)
         sut.fetchItems { drinks in
             results = drinks as! [Drink]
@@ -29,7 +29,7 @@ class DrinksServiceTests: XCTestCase {
     func testServiceBadAsset() {
         let expectation = self.expectation(description: "fetchItems")
         var results = [Drink]()
-        let store = Drinks.LocalStore("badAssetName")
+        let store = LocalStore("badAssetName")
         let sut = Drinks.Service(store)
         sut.fetchItems { drinks in
             results = drinks as! [Drink]

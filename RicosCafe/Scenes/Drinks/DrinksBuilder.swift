@@ -16,7 +16,7 @@ enum Drinks {
         private var imageName: String
         private var title: String
         
-        private lazy var store = Drinks.LocalStore(Drinks.Builder.assetName)
+        private lazy var store = LocalStore(Drinks.Builder.assetName)
         private lazy var service = Drinks.Service(store)
         private lazy var viewModel = Drinks.ViewModel()
         private lazy var interactor = Drinks.Interactor(service, viewModel: viewModel)
