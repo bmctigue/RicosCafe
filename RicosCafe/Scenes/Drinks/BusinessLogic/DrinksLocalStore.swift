@@ -10,7 +10,7 @@ import UIKit
 import Unbox
 
 extension Drinks {
-    final class LocalStore: Local {
+    final class LocalStore: LocalStoreProtocol {
         typealias T = Drink
         
         func fetchItems<T>(completionHandler: @escaping ([T]) -> Void) {

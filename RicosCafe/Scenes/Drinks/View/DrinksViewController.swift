@@ -11,11 +11,29 @@ import UIKit
 extension Drinks {
     final class ViewController: UIViewController {
         
-        lazy var viewModel = Drinks.ViewModel()
-
+        private var interactor: InteractorProtocol
+        private var viewModel: Drinks.ViewModel
+        
+        init(with interactor: InteractorProtocol, viewModel: Drinks.ViewModel) {
+            self.interactor = interactor
+            self.viewModel = viewModel
+            super.init(nibName: nil, bundle: nil)
+        }
+        
+        required init?(coder aDecoder: NSCoder) {
+            fatalError("init(coder:) has not been implemented")
+        }
+        
         override func viewDidLoad() {
             super.viewDidLoad()
             self.view.backgroundColor = UIColor.lightGray
+            
+            let dynamicDrinks = viewModel.dynamicDrinks
+            dynamicDrinks.addObserver(self) {
+                print(dynamicDrinks.value)
+            }
+            
+            interactor.fetchItems()
         }
 
     }

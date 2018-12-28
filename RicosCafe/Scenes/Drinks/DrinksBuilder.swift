@@ -14,6 +14,10 @@ enum Drinks {
         private var imageName: String
         private var title: String
         
+        private lazy var store = Drinks.LocalStore()
+        private lazy var viewModel = Drinks.ViewModel()
+        private lazy var interactor = Drinks.Interactor(store, viewModel: viewModel)
+        
         init(with imageName: String, title: String) {
             self.imageName = imageName
             self.title = title
@@ -28,7 +32,7 @@ enum Drinks {
         }
         
         func run(completionHandler: VCBuilderBlock) {
-            let controller = Drinks.ViewController()
+            let controller = Drinks.ViewController(with: interactor, viewModel: viewModel)
             completionHandler(controller)
         }
     }

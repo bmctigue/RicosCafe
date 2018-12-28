@@ -22,11 +22,15 @@ protocol TabBuilder: VCBuilder {
     func getTitle() -> String
 }
 
-protocol Store {
+protocol StoreProtocol {
     associatedtype T
     func fetchItems<T>(completionHandler: @escaping ([T]) -> Void)
 }
 
-protocol Local: Store {
+protocol LocalStoreProtocol: StoreProtocol {
     func itemsFromBundle(_ assetName: String) -> [T]
+}
+
+protocol InteractorProtocol {
+    func fetchItems()
 }
