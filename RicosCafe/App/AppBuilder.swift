@@ -11,15 +11,15 @@ import UIKit
 enum Builder {
     final class App: BaseBuilder {
         
-        static let drinksImageName = "drinks"
-        static let foodImageName = "food"
-        static let dessertImageName = "dessert"
+        private static let drinksImageName = "drinks"
+        private static let foodImageName = "food"
+        private static let dessertImageName = "dessert"
         
-        static let drinksTitle = "Drinks"
-        static let foodTitle = "Food"
-        static let dessertTitle = "Dessert"
+        private static let drinksTitle = "Drinks"
+        private static let foodTitle = "Food"
+        private static let dessertTitle = "Dessert"
         
-        static let drinksBuilder = Drinks.Builder(with: drinksImageName, title: drinksTitle)
+        private static let drinksBuilder = Drinks.Builder(with: drinksImageName, title: drinksTitle)
         
         private var window: UIWindow?
         private (set) var tabBarBuilder: Builder.TabBar!
