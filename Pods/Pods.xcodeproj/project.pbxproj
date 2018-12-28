@@ -1,0 +1,908 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		06631A64337E4F87ED7B7A0C74420235 /* Array+Unbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05457B4F3BC47A427EC1AF4E2AAD36E /* Array+Unbox.swift */; };
+		0846F023BEBDF94B2D9B6906F34E1649 /* UInt+Unbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1BB79BDF5B017A303A804E000C538C /* UInt+Unbox.swift */; };
+		0D40BF395D92453B1E85BCB1CD044463 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D433228A9E7E99840866656D9A6D0371 /* Foundation.framework */; };
+		1230D4CD543642CEE43FB5837B55E339 /* Int64+Unbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2415AD44F0C72BF9296D912D64CC4EF7 /* Int64+Unbox.swift */; };
+		169276CDC78772A4D69490BA42C1F761 /* Decimal+Unbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F9C5DC2F5E0B7DA296EF5F41DAD59C /* Decimal+Unbox.swift */; };
+		172425AD4F19A667AFD46DD5EE829214 /* UnboxError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5A9080458B93B64EBDEC402702194F /* UnboxError.swift */; };
+		18D89C1345D8F1A341FEF765315C18D2 /* UnboxPathNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F2825F6B00EE94A0AE7210C3FC0960 /* UnboxPathNode.swift */; };
+		1D9C0716F69B0359A5BCE455542B555D /* Unbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188CFD17B80F13CD7D81EC69A137C789 /* Unbox.swift */; };
+		1F895E151A373BBA720D9973D89B1E50 /* UnboxContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F07D9629449EBFC7B0ED6ACD9F03EBF /* UnboxContainer.swift */; };
+		1FA1FEE8381D6755564FDE43767D9222 /* UnboxableEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC4F6C097FDA9EB6B52AF90118C81A3 /* UnboxableEnum.swift */; };
+		2380C18F76E51EF43610EDA0F4CD5E38 /* Unboxer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA39366120700100CCBD6DBD986F214 /* Unboxer.swift */; };
+		2B3E6D64C170A49BE876D54F3BA86C83 /* Int32+Unbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF648C429965ADF364D2C80EB9A6707 /* Int32+Unbox.swift */; };
+		3364DED9CB70227C36DEA20647CE76EC /* Unbox-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3BAEA5EF8E35634C8914BAE3BAD6B0AA /* Unbox-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		394E8E55D97EDD1250EF075957162164 /* Data+Unbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2165BFB07274A8FE2940F98F7C6BC1AE /* Data+Unbox.swift */; };
+		3C744947D56D55E11EEE03022727977F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D433228A9E7E99840866656D9A6D0371 /* Foundation.framework */; };
+		3E6AD06F9E8E4320FED8F98725A73B8E /* UInt32+Unbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = B969121CB1E5D345C83E2F18CD983FDB /* UInt32+Unbox.swift */; };
+		40B4CED2555D7C3FD1B2303A3AEEA217 /* Unbox-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D4403EE63BF7CCB7C85F2E7C941536C /* Unbox-dummy.m */; };
+		48B02FC0AC1A6EB2CF11DF05C4BAAD42 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D433228A9E7E99840866656D9A6D0371 /* Foundation.framework */; };
+		4BA43249E3003CED69C1536E443F98CD /* UnboxPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2929E7F70237FCCAA7480C475F688667 /* UnboxPath.swift */; };
+		51E104F079B518ABBA593B22C27C3730 /* Pods-RicosCafeTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DE765FC05D90BBA895C4F10DA34DA907 /* Pods-RicosCafeTests-dummy.m */; };
+		528987A18C519068F03F35F01C89D873 /* UnboxCompatible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F80987890FAD002D859CF78B30909FE /* UnboxCompatible.swift */; };
+		5BF6896BFB06A8D769FE2656F71DC661 /* UnboxableByTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0963FB9A111CAA548695F255A99E79 /* UnboxableByTransform.swift */; };
+		605DED8559BAFE93493926EA88CF3974 /* Sequence+Unbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDB916B84362F3E99BC188E291DE2DD /* Sequence+Unbox.swift */; };
+		63F822C557DE1E69E6767056E7666B14 /* String+Unbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819170DF0AB7F8B69E53B22C026594F6 /* String+Unbox.swift */; };
+		65B879D016E07F505BE0E780CBD02203 /* Typealiases.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8B19F57BAFD0C13DF836CA9348952D3 /* Typealiases.swift */; };
+		65E4FB51277630E1A6D48C4E07DB9CBC /* Dictionary+Unbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = F83D3CA2364BF4444B6B7ACA73B21BB1 /* Dictionary+Unbox.swift */; };
+		6726915D1F472D242A498AAE74847A77 /* Int+Unbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52304F18FD9D3E233830C407474D357 /* Int+Unbox.swift */; };
+		71BEE560BA4BF253C023234ED8B72EF4 /* NSArray+Unbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = F166A79EF97A3FC071C90C73E845A948 /* NSArray+Unbox.swift */; };
+		71F8C8DE97444F9FF823A9387B0BA5EE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC4049C3B542D2F6D18A6EABFA6E09E8 /* CoreGraphics.framework */; };
+		757348B9A81DECD19857E01587A99250 /* JSONSerialization+Unbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2DA7B7EDF5492333E8CD86FE971892 /* JSONSerialization+Unbox.swift */; };
+		92116A33747BB6949387ADE55783E6F4 /* Double+Unbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C4D1DCD15CD0FFEA884D32B6F163475 /* Double+Unbox.swift */; };
+		9440A7C148E5A30D54A24201FC2B668C /* Unboxable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA664BD92ADB794209D2869EAFDD1A59 /* Unboxable.swift */; };
+		97EA64D71197FB47DFFB6ED43623EEEA /* Pods-RicosCafeTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C50CA4DD923177491206AFE85356EDAA /* Pods-RicosCafeTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A0E4255CCF0ACADF3A064379538584BF /* UnboxableWithContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34AA88F6822DF2AC57299C5E03B2C7B0 /* UnboxableWithContext.swift */; };
+		A279461610C36B7D7D33A35F0E83AACC /* UnboxableCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65953C09195533AEFACE3844A1E3857F /* UnboxableCollection.swift */; };
+		B4E69E0C16254FD53CC3E2812F48CCC1 /* UInt64+Unbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F7C93D0DB35A44B941F2F5B2DD0AD0 /* UInt64+Unbox.swift */; };
+		B5E2CBDA99DD55B709AFEDA4C146C94C /* URL+Unbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39A923B0CFB13BDD516C27071FE368B6 /* URL+Unbox.swift */; };
+		B92F80937276AF6DBB56D7116EDA3E5D /* UnboxableRawType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89319A85EEF2AAA742226BBED832C0CE /* UnboxableRawType.swift */; };
+		B9BB80B2973F26CD889B7C7B587F274E /* NSDictionary+Unbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E6D1A969B57388A50530A905AA624D /* NSDictionary+Unbox.swift */; };
+		BA85FC59837E68A21BD5FA55FA3E6A15 /* Float+Unbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A77004DC4C1BAE284CB2FF5ED94727A /* Float+Unbox.swift */; };
+		BAD07967B291E5CCA0344DF872A89CFB /* UnboxArrayContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BE7BEB7CBA899593FD11AEA537FADE /* UnboxArrayContainer.swift */; };
+		BC2F8AB1C506D6DEFF99FB1553B71BF2 /* UnboxableKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A44094DD09FE91D4E71AFC091A8EF0 /* UnboxableKey.swift */; };
+		BF040DEBA114FA6BB01E124B620A6629 /* DateFormatter+Unbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75F5D38142811DCDCE1C0F2A556952B /* DateFormatter+Unbox.swift */; };
+		C7E9020462E6C454E1C9C95F4E8E05A8 /* Set+Unbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DF51551E585AE605A1DA9432C7A501 /* Set+Unbox.swift */; };
+		D46729BE0E4A8AA77DE6FF5B3FC3A40C /* Pods-RicosCafe-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A3F95E7C594F78BD653F232605F8880 /* Pods-RicosCafe-dummy.m */; };
+		DD07927742E01A0310C0538196BED7EB /* UnboxFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13187EE9F6DE9FD8271DF5F7B3E34E70 /* UnboxFormatter.swift */; };
+		F2BAD6878A0FC1D40D38839F7B919E68 /* CGFloat+Unbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 335BA526B11CC4DC20F9373CF08D23AA /* CGFloat+Unbox.swift */; };
+		F2C5FDD4C8695FF07C895A1EF801F8AF /* Pods-RicosCafe-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F5A23891B1A215E0AD3D02A67492BFAC /* Pods-RicosCafe-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F60F60F8889CED9D41FCEFC85AC69661 /* UnboxCollectionElementTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71F4AA3BBBD09E97226066EFBCC8125 /* UnboxCollectionElementTransformer.swift */; };
+		F867BE3BB87DCF59B1EC9789950F184B /* UnboxPathError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C34FF5E7A052ECB565C7CCFE97634B /* UnboxPathError.swift */; };
+		FA79B155AB4A732A02E0CCD2ED01577B /* Optional+Unbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = A316971ED77A62068C58F3A4713FAC7E /* Optional+Unbox.swift */; };
+		FD4A9DA150DD14CB2C16189ABAF0D7EB /* Bool+Unbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF486CB1F3FD040049D8BF61009160B /* Bool+Unbox.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		019A1CB4E0D72F304A252506DD76FE36 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C22A557FDA058124557A3BC9E7201D33;
+			remoteInfo = "Pods-RicosCafe";
+		};
+		E959C3FDDA45B075484B3CD63AF2F15A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D983111C9EBD1866E77EA022E19B972A;
+			remoteInfo = Unbox;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		00BE7BEB7CBA899593FD11AEA537FADE /* UnboxArrayContainer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UnboxArrayContainer.swift; path = Sources/UnboxArrayContainer.swift; sourceTree = "<group>"; };
+		0D5A9080458B93B64EBDEC402702194F /* UnboxError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UnboxError.swift; path = Sources/UnboxError.swift; sourceTree = "<group>"; };
+		0E0963FB9A111CAA548695F255A99E79 /* UnboxableByTransform.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UnboxableByTransform.swift; path = Sources/UnboxableByTransform.swift; sourceTree = "<group>"; };
+		13187EE9F6DE9FD8271DF5F7B3E34E70 /* UnboxFormatter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UnboxFormatter.swift; path = Sources/UnboxFormatter.swift; sourceTree = "<group>"; };
+		188CFD17B80F13CD7D81EC69A137C789 /* Unbox.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Unbox.swift; path = Sources/Unbox.swift; sourceTree = "<group>"; };
+		1D4403EE63BF7CCB7C85F2E7C941536C /* Unbox-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Unbox-dummy.m"; sourceTree = "<group>"; };
+		2165BFB07274A8FE2940F98F7C6BC1AE /* Data+Unbox.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Data+Unbox.swift"; path = "Sources/Data+Unbox.swift"; sourceTree = "<group>"; };
+		224E6756974BF3359DDC653CDE801545 /* Pods-RicosCafe.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-RicosCafe.modulemap"; sourceTree = "<group>"; };
+		22C9D2625C5FB78AF3CAC3E74821C107 /* Pods-RicosCafe-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-RicosCafe-acknowledgements.markdown"; sourceTree = "<group>"; };
+		2415AD44F0C72BF9296D912D64CC4EF7 /* Int64+Unbox.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Int64+Unbox.swift"; path = "Sources/Int64+Unbox.swift"; sourceTree = "<group>"; };
+		288870C149E6FAC0F9B0EE61EE18EA71 /* Unbox-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Unbox-prefix.pch"; sourceTree = "<group>"; };
+		28F2825F6B00EE94A0AE7210C3FC0960 /* UnboxPathNode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UnboxPathNode.swift; path = Sources/UnboxPathNode.swift; sourceTree = "<group>"; };
+		2929E7F70237FCCAA7480C475F688667 /* UnboxPath.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UnboxPath.swift; path = Sources/UnboxPath.swift; sourceTree = "<group>"; };
+		2C4B7950E72BF0BB03E698AB9D8ED605 /* Pods-RicosCafeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RicosCafeTests.release.xcconfig"; sourceTree = "<group>"; };
+		335BA526B11CC4DC20F9373CF08D23AA /* CGFloat+Unbox.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "CGFloat+Unbox.swift"; path = "Sources/CGFloat+Unbox.swift"; sourceTree = "<group>"; };
+		34AA88F6822DF2AC57299C5E03B2C7B0 /* UnboxableWithContext.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UnboxableWithContext.swift; path = Sources/UnboxableWithContext.swift; sourceTree = "<group>"; };
+		38B609C6850FFE582624F8EB4769916E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		39A923B0CFB13BDD516C27071FE368B6 /* URL+Unbox.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "URL+Unbox.swift"; path = "Sources/URL+Unbox.swift"; sourceTree = "<group>"; };
+		3BAEA5EF8E35634C8914BAE3BAD6B0AA /* Unbox-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Unbox-umbrella.h"; sourceTree = "<group>"; };
+		3C66B849A1130ACA72E8BB6FFDDB7E20 /* Pods_RicosCafe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RicosCafe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4278F14A41103FD867C1D344019F65D9 /* Unbox.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Unbox.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		48E6D1A969B57388A50530A905AA624D /* NSDictionary+Unbox.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSDictionary+Unbox.swift"; path = "Sources/NSDictionary+Unbox.swift"; sourceTree = "<group>"; };
+		4A77004DC4C1BAE284CB2FF5ED94727A /* Float+Unbox.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Float+Unbox.swift"; path = "Sources/Float+Unbox.swift"; sourceTree = "<group>"; };
+		4D66B26C15777CCB9F8B8CACD749D325 /* Pods-RicosCafeTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-RicosCafeTests-frameworks.sh"; sourceTree = "<group>"; };
+		4E1BB79BDF5B017A303A804E000C538C /* UInt+Unbox.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UInt+Unbox.swift"; path = "Sources/UInt+Unbox.swift"; sourceTree = "<group>"; };
+		570F2A286A1EB960583FCC9745A45B67 /* Pods-RicosCafe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RicosCafe.debug.xcconfig"; sourceTree = "<group>"; };
+		5BF486CB1F3FD040049D8BF61009160B /* Bool+Unbox.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Bool+Unbox.swift"; path = "Sources/Bool+Unbox.swift"; sourceTree = "<group>"; };
+		61504A1D50AAC700814CCAE5EC903AA7 /* Pods-RicosCafe-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-RicosCafe-frameworks.sh"; sourceTree = "<group>"; };
+		65953C09195533AEFACE3844A1E3857F /* UnboxableCollection.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UnboxableCollection.swift; path = Sources/UnboxableCollection.swift; sourceTree = "<group>"; };
+		6AC4F6C097FDA9EB6B52AF90118C81A3 /* UnboxableEnum.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UnboxableEnum.swift; path = Sources/UnboxableEnum.swift; sourceTree = "<group>"; };
+		7C4D1DCD15CD0FFEA884D32B6F163475 /* Double+Unbox.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Double+Unbox.swift"; path = "Sources/Double+Unbox.swift"; sourceTree = "<group>"; };
+		819170DF0AB7F8B69E53B22C026594F6 /* String+Unbox.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "String+Unbox.swift"; path = "Sources/String+Unbox.swift"; sourceTree = "<group>"; };
+		87DF51551E585AE605A1DA9432C7A501 /* Set+Unbox.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Set+Unbox.swift"; path = "Sources/Set+Unbox.swift"; sourceTree = "<group>"; };
+		89319A85EEF2AAA742226BBED832C0CE /* UnboxableRawType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UnboxableRawType.swift; path = Sources/UnboxableRawType.swift; sourceTree = "<group>"; };
+		8A3F95E7C594F78BD653F232605F8880 /* Pods-RicosCafe-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-RicosCafe-dummy.m"; sourceTree = "<group>"; };
+		8D2DA7B7EDF5492333E8CD86FE971892 /* JSONSerialization+Unbox.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "JSONSerialization+Unbox.swift"; path = "Sources/JSONSerialization+Unbox.swift"; sourceTree = "<group>"; };
+		8F80987890FAD002D859CF78B30909FE /* UnboxCompatible.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UnboxCompatible.swift; path = Sources/UnboxCompatible.swift; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		95A44094DD09FE91D4E71AFC091A8EF0 /* UnboxableKey.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UnboxableKey.swift; path = Sources/UnboxableKey.swift; sourceTree = "<group>"; };
+		9747DBBE255F60B927960FA54398F46D /* Pods-RicosCafeTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-RicosCafeTests-resources.sh"; sourceTree = "<group>"; };
+		9DD68ECCBA12A8C4EDFE4515B7D16513 /* Pods-RicosCafeTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-RicosCafeTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		9F07D9629449EBFC7B0ED6ACD9F03EBF /* UnboxContainer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UnboxContainer.swift; path = Sources/UnboxContainer.swift; sourceTree = "<group>"; };
+		A0C34FF5E7A052ECB565C7CCFE97634B /* UnboxPathError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UnboxPathError.swift; path = Sources/UnboxPathError.swift; sourceTree = "<group>"; };
+		A316971ED77A62068C58F3A4713FAC7E /* Optional+Unbox.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Optional+Unbox.swift"; path = "Sources/Optional+Unbox.swift"; sourceTree = "<group>"; };
+		AA6264804262934995E960C09EFA941B /* Pods-RicosCafeTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-RicosCafeTests.modulemap"; sourceTree = "<group>"; };
+		ADDB916B84362F3E99BC188E291DE2DD /* Sequence+Unbox.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Sequence+Unbox.swift"; path = "Sources/Sequence+Unbox.swift"; sourceTree = "<group>"; };
+		AE15F0B7CD26AFE4BE948D0E65FC496A /* Pods-RicosCafeTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-RicosCafeTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		B2F9C5DC2F5E0B7DA296EF5F41DAD59C /* Decimal+Unbox.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Decimal+Unbox.swift"; path = "Sources/Decimal+Unbox.swift"; sourceTree = "<group>"; };
+		B969121CB1E5D345C83E2F18CD983FDB /* UInt32+Unbox.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UInt32+Unbox.swift"; path = "Sources/UInt32+Unbox.swift"; sourceTree = "<group>"; };
+		BDE2599F80E0F4BF0A9033D21DE0AC9F /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C3A338906B491565B9159E5F4F4814DB /* Pods-RicosCafe-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-RicosCafe-acknowledgements.plist"; sourceTree = "<group>"; };
+		C50CA4DD923177491206AFE85356EDAA /* Pods-RicosCafeTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-RicosCafeTests-umbrella.h"; sourceTree = "<group>"; };
+		C77515852EFD634FD40C5624102755B2 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C7F7C93D0DB35A44B941F2F5B2DD0AD0 /* UInt64+Unbox.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UInt64+Unbox.swift"; path = "Sources/UInt64+Unbox.swift"; sourceTree = "<group>"; };
+		C8B19F57BAFD0C13DF836CA9348952D3 /* Typealiases.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Typealiases.swift; path = Sources/Typealiases.swift; sourceTree = "<group>"; };
+		CDF648C429965ADF364D2C80EB9A6707 /* Int32+Unbox.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Int32+Unbox.swift"; path = "Sources/Int32+Unbox.swift"; sourceTree = "<group>"; };
+		D05457B4F3BC47A427EC1AF4E2AAD36E /* Array+Unbox.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Array+Unbox.swift"; path = "Sources/Array+Unbox.swift"; sourceTree = "<group>"; };
+		D433228A9E7E99840866656D9A6D0371 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		D600474DEAE80376280A597C1CE64ED3 /* Unbox.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Unbox.modulemap; sourceTree = "<group>"; };
+		DC4049C3B542D2F6D18A6EABFA6E09E8 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
+		DE765FC05D90BBA895C4F10DA34DA907 /* Pods-RicosCafeTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-RicosCafeTests-dummy.m"; sourceTree = "<group>"; };
+		DF7FA2BB9B13FFCBEB4BB295A5783B7C /* Pods-RicosCafeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RicosCafeTests.debug.xcconfig"; sourceTree = "<group>"; };
+		E10DCEDFDBB2CF60990300524FAF6AB7 /* Unbox.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Unbox.xcconfig; sourceTree = "<group>"; };
+		E52304F18FD9D3E233830C407474D357 /* Int+Unbox.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Int+Unbox.swift"; path = "Sources/Int+Unbox.swift"; sourceTree = "<group>"; };
+		E71F4AA3BBBD09E97226066EFBCC8125 /* UnboxCollectionElementTransformer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UnboxCollectionElementTransformer.swift; path = Sources/UnboxCollectionElementTransformer.swift; sourceTree = "<group>"; };
+		E75F5D38142811DCDCE1C0F2A556952B /* DateFormatter+Unbox.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DateFormatter+Unbox.swift"; path = "Sources/DateFormatter+Unbox.swift"; sourceTree = "<group>"; };
+		E7CD993ECDB35819EDF91332B74FF6F2 /* Pods_RicosCafeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RicosCafeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EFA39366120700100CCBD6DBD986F214 /* Unboxer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Unboxer.swift; path = Sources/Unboxer.swift; sourceTree = "<group>"; };
+		F166A79EF97A3FC071C90C73E845A948 /* NSArray+Unbox.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSArray+Unbox.swift"; path = "Sources/NSArray+Unbox.swift"; sourceTree = "<group>"; };
+		F35E8BFEE5C2219D613627E58055D7B9 /* Pods-RicosCafe-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-RicosCafe-resources.sh"; sourceTree = "<group>"; };
+		F5A23891B1A215E0AD3D02A67492BFAC /* Pods-RicosCafe-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-RicosCafe-umbrella.h"; sourceTree = "<group>"; };
+		F83D3CA2364BF4444B6B7ACA73B21BB1 /* Dictionary+Unbox.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Dictionary+Unbox.swift"; path = "Sources/Dictionary+Unbox.swift"; sourceTree = "<group>"; };
+		FA664BD92ADB794209D2869EAFDD1A59 /* Unboxable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Unboxable.swift; path = Sources/Unboxable.swift; sourceTree = "<group>"; };
+		FFDB8C75D01A09084DDD841B0BDC8B66 /* Pods-RicosCafe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RicosCafe.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		53E1C61F708D5BE6E5DD8F8B2F7C11C3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				48B02FC0AC1A6EB2CF11DF05C4BAAD42 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		556446E613DB55A3D9827A49A5E8CD55 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				71F8C8DE97444F9FF823A9387B0BA5EE /* CoreGraphics.framework in Frameworks */,
+				3C744947D56D55E11EEE03022727977F /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D0DF546E5AA36B2D920BFE469FD1308F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0D40BF395D92453B1E85BCB1CD044463 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A1B60FDF4C4080DE6E10488B9520A2F8 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		52BFEFEE5F3DF501512D2CA3F26D04E8 /* Pods-RicosCafeTests */ = {
+			isa = PBXGroup;
+			children = (
+				BDE2599F80E0F4BF0A9033D21DE0AC9F /* Info.plist */,
+				AA6264804262934995E960C09EFA941B /* Pods-RicosCafeTests.modulemap */,
+				AE15F0B7CD26AFE4BE948D0E65FC496A /* Pods-RicosCafeTests-acknowledgements.markdown */,
+				9DD68ECCBA12A8C4EDFE4515B7D16513 /* Pods-RicosCafeTests-acknowledgements.plist */,
+				DE765FC05D90BBA895C4F10DA34DA907 /* Pods-RicosCafeTests-dummy.m */,
+				4D66B26C15777CCB9F8B8CACD749D325 /* Pods-RicosCafeTests-frameworks.sh */,
+				9747DBBE255F60B927960FA54398F46D /* Pods-RicosCafeTests-resources.sh */,
+				C50CA4DD923177491206AFE85356EDAA /* Pods-RicosCafeTests-umbrella.h */,
+				DF7FA2BB9B13FFCBEB4BB295A5783B7C /* Pods-RicosCafeTests.debug.xcconfig */,
+				2C4B7950E72BF0BB03E698AB9D8ED605 /* Pods-RicosCafeTests.release.xcconfig */,
+			);
+			name = "Pods-RicosCafeTests";
+			path = "Target Support Files/Pods-RicosCafeTests";
+			sourceTree = "<group>";
+		};
+		54C74D4B4045822C7AA70BD42060D7E6 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				57246BD3F5B0B25B170B632A2CE36DB0 /* Pods-RicosCafe */,
+				52BFEFEE5F3DF501512D2CA3F26D04E8 /* Pods-RicosCafeTests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		57246BD3F5B0B25B170B632A2CE36DB0 /* Pods-RicosCafe */ = {
+			isa = PBXGroup;
+			children = (
+				C77515852EFD634FD40C5624102755B2 /* Info.plist */,
+				224E6756974BF3359DDC653CDE801545 /* Pods-RicosCafe.modulemap */,
+				22C9D2625C5FB78AF3CAC3E74821C107 /* Pods-RicosCafe-acknowledgements.markdown */,
+				C3A338906B491565B9159E5F4F4814DB /* Pods-RicosCafe-acknowledgements.plist */,
+				8A3F95E7C594F78BD653F232605F8880 /* Pods-RicosCafe-dummy.m */,
+				61504A1D50AAC700814CCAE5EC903AA7 /* Pods-RicosCafe-frameworks.sh */,
+				F35E8BFEE5C2219D613627E58055D7B9 /* Pods-RicosCafe-resources.sh */,
+				F5A23891B1A215E0AD3D02A67492BFAC /* Pods-RicosCafe-umbrella.h */,
+				570F2A286A1EB960583FCC9745A45B67 /* Pods-RicosCafe.debug.xcconfig */,
+				FFDB8C75D01A09084DDD841B0BDC8B66 /* Pods-RicosCafe.release.xcconfig */,
+			);
+			name = "Pods-RicosCafe";
+			path = "Target Support Files/Pods-RicosCafe";
+			sourceTree = "<group>";
+		};
+		605F1935B76774E72C391F821A58DC9B /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				38B609C6850FFE582624F8EB4769916E /* Info.plist */,
+				D600474DEAE80376280A597C1CE64ED3 /* Unbox.modulemap */,
+				E10DCEDFDBB2CF60990300524FAF6AB7 /* Unbox.xcconfig */,
+				1D4403EE63BF7CCB7C85F2E7C941536C /* Unbox-dummy.m */,
+				288870C149E6FAC0F9B0EE61EE18EA71 /* Unbox-prefix.pch */,
+				3BAEA5EF8E35634C8914BAE3BAD6B0AA /* Unbox-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Unbox";
+			sourceTree = "<group>";
+		};
+		66F4B3BA6ABB13558CD2E622821E7B2D /* Unbox */ = {
+			isa = PBXGroup;
+			children = (
+				D05457B4F3BC47A427EC1AF4E2AAD36E /* Array+Unbox.swift */,
+				5BF486CB1F3FD040049D8BF61009160B /* Bool+Unbox.swift */,
+				335BA526B11CC4DC20F9373CF08D23AA /* CGFloat+Unbox.swift */,
+				2165BFB07274A8FE2940F98F7C6BC1AE /* Data+Unbox.swift */,
+				E75F5D38142811DCDCE1C0F2A556952B /* DateFormatter+Unbox.swift */,
+				B2F9C5DC2F5E0B7DA296EF5F41DAD59C /* Decimal+Unbox.swift */,
+				F83D3CA2364BF4444B6B7ACA73B21BB1 /* Dictionary+Unbox.swift */,
+				7C4D1DCD15CD0FFEA884D32B6F163475 /* Double+Unbox.swift */,
+				4A77004DC4C1BAE284CB2FF5ED94727A /* Float+Unbox.swift */,
+				E52304F18FD9D3E233830C407474D357 /* Int+Unbox.swift */,
+				CDF648C429965ADF364D2C80EB9A6707 /* Int32+Unbox.swift */,
+				2415AD44F0C72BF9296D912D64CC4EF7 /* Int64+Unbox.swift */,
+				8D2DA7B7EDF5492333E8CD86FE971892 /* JSONSerialization+Unbox.swift */,
+				F166A79EF97A3FC071C90C73E845A948 /* NSArray+Unbox.swift */,
+				48E6D1A969B57388A50530A905AA624D /* NSDictionary+Unbox.swift */,
+				A316971ED77A62068C58F3A4713FAC7E /* Optional+Unbox.swift */,
+				ADDB916B84362F3E99BC188E291DE2DD /* Sequence+Unbox.swift */,
+				87DF51551E585AE605A1DA9432C7A501 /* Set+Unbox.swift */,
+				819170DF0AB7F8B69E53B22C026594F6 /* String+Unbox.swift */,
+				C8B19F57BAFD0C13DF836CA9348952D3 /* Typealiases.swift */,
+				4E1BB79BDF5B017A303A804E000C538C /* UInt+Unbox.swift */,
+				B969121CB1E5D345C83E2F18CD983FDB /* UInt32+Unbox.swift */,
+				C7F7C93D0DB35A44B941F2F5B2DD0AD0 /* UInt64+Unbox.swift */,
+				188CFD17B80F13CD7D81EC69A137C789 /* Unbox.swift */,
+				FA664BD92ADB794209D2869EAFDD1A59 /* Unboxable.swift */,
+				0E0963FB9A111CAA548695F255A99E79 /* UnboxableByTransform.swift */,
+				65953C09195533AEFACE3844A1E3857F /* UnboxableCollection.swift */,
+				6AC4F6C097FDA9EB6B52AF90118C81A3 /* UnboxableEnum.swift */,
+				95A44094DD09FE91D4E71AFC091A8EF0 /* UnboxableKey.swift */,
+				89319A85EEF2AAA742226BBED832C0CE /* UnboxableRawType.swift */,
+				34AA88F6822DF2AC57299C5E03B2C7B0 /* UnboxableWithContext.swift */,
+				00BE7BEB7CBA899593FD11AEA537FADE /* UnboxArrayContainer.swift */,
+				E71F4AA3BBBD09E97226066EFBCC8125 /* UnboxCollectionElementTransformer.swift */,
+				8F80987890FAD002D859CF78B30909FE /* UnboxCompatible.swift */,
+				9F07D9629449EBFC7B0ED6ACD9F03EBF /* UnboxContainer.swift */,
+				EFA39366120700100CCBD6DBD986F214 /* Unboxer.swift */,
+				0D5A9080458B93B64EBDEC402702194F /* UnboxError.swift */,
+				13187EE9F6DE9FD8271DF5F7B3E34E70 /* UnboxFormatter.swift */,
+				2929E7F70237FCCAA7480C475F688667 /* UnboxPath.swift */,
+				A0C34FF5E7A052ECB565C7CCFE97634B /* UnboxPathError.swift */,
+				28F2825F6B00EE94A0AE7210C3FC0960 /* UnboxPathNode.swift */,
+				39A923B0CFB13BDD516C27071FE368B6 /* URL+Unbox.swift */,
+				605F1935B76774E72C391F821A58DC9B /* Support Files */,
+			);
+			path = Unbox;
+			sourceTree = "<group>";
+		};
+		69642FCF271866315C660150C427905D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3C66B849A1130ACA72E8BB6FFDDB7E20 /* Pods_RicosCafe.framework */,
+				E7CD993ECDB35819EDF91332B74FF6F2 /* Pods_RicosCafeTests.framework */,
+				4278F14A41103FD867C1D344019F65D9 /* Unbox.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				433CD3331B6C3787F473C941B61FC68F /* Frameworks */,
+				914E13FBBCCBD543F766615BDFE56EE3 /* Pods */,
+				69642FCF271866315C660150C427905D /* Products */,
+				54C74D4B4045822C7AA70BD42060D7E6 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		914E13FBBCCBD543F766615BDFE56EE3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				66F4B3BA6ABB13558CD2E622821E7B2D /* Unbox */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		A1B60FDF4C4080DE6E10488B9520A2F8 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				DC4049C3B542D2F6D18A6EABFA6E09E8 /* CoreGraphics.framework */,
+				D433228A9E7E99840866656D9A6D0371 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		4CF8060322CF9BBFE58C78D72FE7EB61 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				97EA64D71197FB47DFFB6ED43623EEEA /* Pods-RicosCafeTests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AA90DF6BF563480B5415DF2941C0CFA1 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F2C5FDD4C8695FF07C895A1EF801F8AF /* Pods-RicosCafe-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F54C7A2E167CDDEE11AD30E5E4FCBB58 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3364DED9CB70227C36DEA20647CE76EC /* Unbox-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		7B7E531044A6C2BF657CF23C70F9E88D /* Pods-RicosCafeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DC12EB320E108D97855530603FA7E741 /* Build configuration list for PBXNativeTarget "Pods-RicosCafeTests" */;
+			buildPhases = (
+				F894740B2CD8045FA93E0F0101E5C734 /* Sources */,
+				53E1C61F708D5BE6E5DD8F8B2F7C11C3 /* Frameworks */,
+				4CF8060322CF9BBFE58C78D72FE7EB61 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6A9220E5ED1722EDB906B816D4A93EC6 /* PBXTargetDependency */,
+			);
+			name = "Pods-RicosCafeTests";
+			productName = "Pods-RicosCafeTests";
+			productReference = E7CD993ECDB35819EDF91332B74FF6F2 /* Pods_RicosCafeTests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		C22A557FDA058124557A3BC9E7201D33 /* Pods-RicosCafe */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CEADBD7D485883B5875D12E097012B72 /* Build configuration list for PBXNativeTarget "Pods-RicosCafe" */;
+			buildPhases = (
+				0F0D663243527D55C7A00B682B8EF97F /* Sources */,
+				D0DF546E5AA36B2D920BFE469FD1308F /* Frameworks */,
+				AA90DF6BF563480B5415DF2941C0CFA1 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				55005A1D136F49BB976350459B6B76A8 /* PBXTargetDependency */,
+			);
+			name = "Pods-RicosCafe";
+			productName = "Pods-RicosCafe";
+			productReference = 3C66B849A1130ACA72E8BB6FFDDB7E20 /* Pods_RicosCafe.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		D983111C9EBD1866E77EA022E19B972A /* Unbox */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EB518B09D293EEEEC5792BB1A3B38ABF /* Build configuration list for PBXNativeTarget "Unbox" */;
+			buildPhases = (
+				C79AC457100789045F6EB7F9598926BA /* Sources */,
+				556446E613DB55A3D9827A49A5E8CD55 /* Frameworks */,
+				F54C7A2E167CDDEE11AD30E5E4FCBB58 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Unbox;
+			productName = Unbox;
+			productReference = 4278F14A41103FD867C1D344019F65D9 /* Unbox.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 1010;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 69642FCF271866315C660150C427905D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C22A557FDA058124557A3BC9E7201D33 /* Pods-RicosCafe */,
+				7B7E531044A6C2BF657CF23C70F9E88D /* Pods-RicosCafeTests */,
+				D983111C9EBD1866E77EA022E19B972A /* Unbox */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0F0D663243527D55C7A00B682B8EF97F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D46729BE0E4A8AA77DE6FF5B3FC3A40C /* Pods-RicosCafe-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C79AC457100789045F6EB7F9598926BA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				06631A64337E4F87ED7B7A0C74420235 /* Array+Unbox.swift in Sources */,
+				FD4A9DA150DD14CB2C16189ABAF0D7EB /* Bool+Unbox.swift in Sources */,
+				F2BAD6878A0FC1D40D38839F7B919E68 /* CGFloat+Unbox.swift in Sources */,
+				394E8E55D97EDD1250EF075957162164 /* Data+Unbox.swift in Sources */,
+				BF040DEBA114FA6BB01E124B620A6629 /* DateFormatter+Unbox.swift in Sources */,
+				169276CDC78772A4D69490BA42C1F761 /* Decimal+Unbox.swift in Sources */,
+				65E4FB51277630E1A6D48C4E07DB9CBC /* Dictionary+Unbox.swift in Sources */,
+				92116A33747BB6949387ADE55783E6F4 /* Double+Unbox.swift in Sources */,
+				BA85FC59837E68A21BD5FA55FA3E6A15 /* Float+Unbox.swift in Sources */,
+				6726915D1F472D242A498AAE74847A77 /* Int+Unbox.swift in Sources */,
+				2B3E6D64C170A49BE876D54F3BA86C83 /* Int32+Unbox.swift in Sources */,
+				1230D4CD543642CEE43FB5837B55E339 /* Int64+Unbox.swift in Sources */,
+				757348B9A81DECD19857E01587A99250 /* JSONSerialization+Unbox.swift in Sources */,
+				71BEE560BA4BF253C023234ED8B72EF4 /* NSArray+Unbox.swift in Sources */,
+				B9BB80B2973F26CD889B7C7B587F274E /* NSDictionary+Unbox.swift in Sources */,
+				FA79B155AB4A732A02E0CCD2ED01577B /* Optional+Unbox.swift in Sources */,
+				605DED8559BAFE93493926EA88CF3974 /* Sequence+Unbox.swift in Sources */,
+				C7E9020462E6C454E1C9C95F4E8E05A8 /* Set+Unbox.swift in Sources */,
+				63F822C557DE1E69E6767056E7666B14 /* String+Unbox.swift in Sources */,
+				65B879D016E07F505BE0E780CBD02203 /* Typealiases.swift in Sources */,
+				0846F023BEBDF94B2D9B6906F34E1649 /* UInt+Unbox.swift in Sources */,
+				3E6AD06F9E8E4320FED8F98725A73B8E /* UInt32+Unbox.swift in Sources */,
+				B4E69E0C16254FD53CC3E2812F48CCC1 /* UInt64+Unbox.swift in Sources */,
+				40B4CED2555D7C3FD1B2303A3AEEA217 /* Unbox-dummy.m in Sources */,
+				1D9C0716F69B0359A5BCE455542B555D /* Unbox.swift in Sources */,
+				9440A7C148E5A30D54A24201FC2B668C /* Unboxable.swift in Sources */,
+				5BF6896BFB06A8D769FE2656F71DC661 /* UnboxableByTransform.swift in Sources */,
+				A279461610C36B7D7D33A35F0E83AACC /* UnboxableCollection.swift in Sources */,
+				1FA1FEE8381D6755564FDE43767D9222 /* UnboxableEnum.swift in Sources */,
+				BC2F8AB1C506D6DEFF99FB1553B71BF2 /* UnboxableKey.swift in Sources */,
+				B92F80937276AF6DBB56D7116EDA3E5D /* UnboxableRawType.swift in Sources */,
+				A0E4255CCF0ACADF3A064379538584BF /* UnboxableWithContext.swift in Sources */,
+				BAD07967B291E5CCA0344DF872A89CFB /* UnboxArrayContainer.swift in Sources */,
+				F60F60F8889CED9D41FCEFC85AC69661 /* UnboxCollectionElementTransformer.swift in Sources */,
+				528987A18C519068F03F35F01C89D873 /* UnboxCompatible.swift in Sources */,
+				1F895E151A373BBA720D9973D89B1E50 /* UnboxContainer.swift in Sources */,
+				2380C18F76E51EF43610EDA0F4CD5E38 /* Unboxer.swift in Sources */,
+				172425AD4F19A667AFD46DD5EE829214 /* UnboxError.swift in Sources */,
+				DD07927742E01A0310C0538196BED7EB /* UnboxFormatter.swift in Sources */,
+				4BA43249E3003CED69C1536E443F98CD /* UnboxPath.swift in Sources */,
+				F867BE3BB87DCF59B1EC9789950F184B /* UnboxPathError.swift in Sources */,
+				18D89C1345D8F1A341FEF765315C18D2 /* UnboxPathNode.swift in Sources */,
+				B5E2CBDA99DD55B709AFEDA4C146C94C /* URL+Unbox.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F894740B2CD8045FA93E0F0101E5C734 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				51E104F079B518ABBA593B22C27C3730 /* Pods-RicosCafeTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		55005A1D136F49BB976350459B6B76A8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Unbox;
+			target = D983111C9EBD1866E77EA022E19B972A /* Unbox */;
+			targetProxy = E959C3FDDA45B075484B3CD63AF2F15A /* PBXContainerItemProxy */;
+		};
+		6A9220E5ED1722EDB906B816D4A93EC6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-RicosCafe";
+			target = C22A557FDA058124557A3BC9E7201D33 /* Pods-RicosCafe */;
+			targetProxy = 019A1CB4E0D72F304A252506DD76FE36 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		063198AB09B9CDB3A695432FC17AD8CA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		220F5D96C4E69A5A4C0DE0CA703BB367 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E10DCEDFDBB2CF60990300524FAF6AB7 /* Unbox.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Unbox/Unbox-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Unbox/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Unbox/Unbox.modulemap";
+				PRODUCT_MODULE_NAME = Unbox;
+				PRODUCT_NAME = Unbox;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		435C59281809528BFA13EC2788C1C851 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DF7FA2BB9B13FFCBEB4BB295A5783B7C /* Pods-RicosCafeTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-RicosCafeTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-RicosCafeTests/Pods-RicosCafeTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		4F72C12536278BCC5086CA653DCD9189 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E10DCEDFDBB2CF60990300524FAF6AB7 /* Unbox.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Unbox/Unbox-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Unbox/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Unbox/Unbox.modulemap";
+				PRODUCT_MODULE_NAME = Unbox;
+				PRODUCT_NAME = Unbox;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		8541854972DB4975754AC29BC36E6CDA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FFDB8C75D01A09084DDD841B0BDC8B66 /* Pods-RicosCafe.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-RicosCafe/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-RicosCafe/Pods-RicosCafe.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		87EAC867385563488A6D8F1E74AC46B4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		B3CEBE4147C966D1D9924414706E74AC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 570F2A286A1EB960583FCC9745A45B67 /* Pods-RicosCafe.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-RicosCafe/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-RicosCafe/Pods-RicosCafe.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		F0F426E4750EBB41B4AC7A46D2B6B4E8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2C4B7950E72BF0BB03E698AB9D8ED605 /* Pods-RicosCafeTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-RicosCafeTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-RicosCafeTests/Pods-RicosCafeTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				87EAC867385563488A6D8F1E74AC46B4 /* Debug */,
+				063198AB09B9CDB3A695432FC17AD8CA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CEADBD7D485883B5875D12E097012B72 /* Build configuration list for PBXNativeTarget "Pods-RicosCafe" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B3CEBE4147C966D1D9924414706E74AC /* Debug */,
+				8541854972DB4975754AC29BC36E6CDA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DC12EB320E108D97855530603FA7E741 /* Build configuration list for PBXNativeTarget "Pods-RicosCafeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				435C59281809528BFA13EC2788C1C851 /* Debug */,
+				F0F426E4750EBB41B4AC7A46D2B6B4E8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EB518B09D293EEEEC5792BB1A3B38ABF /* Build configuration list for PBXNativeTarget "Unbox" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4F72C12536278BCC5086CA653DCD9189 /* Debug */,
+				220F5D96C4E69A5A4C0DE0CA703BB367 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

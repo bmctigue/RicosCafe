@@ -7,7 +7,8 @@
 //
 
 import UIKit
-import Unbox
+
+typealias VCBuilderBlock = ((UIViewController) -> Void)
 
 protocol BaseBuilder: class {
     func run()
@@ -22,13 +23,12 @@ protocol TabBuilder: VCBuilder {
     func getTitle() -> String
 }
 
-protocol StoreProtocol {
-    associatedtype T
-    func fetchItems<T>(completionHandler: @escaping ([T]) -> Void)
+protocol ServiceProtocol {
+    func fetchItems(completionHandler: @escaping ([Any]) -> Void)
 }
 
-protocol LocalStoreProtocol: StoreProtocol {
-    func itemsFromBundle(_ assetName: String) -> [T]
+protocol StoreProtocol {
+    func fetchData(completionHandler: @escaping (Data?) -> Void)
 }
 
 protocol InteractorProtocol {

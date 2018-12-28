@@ -1,0 +1,6 @@
+framework module Pods_RicosCafe {
+  umbrella header "Pods-RicosCafe-umbrella.h"
+
+  export *
+  module * { export * }
+}

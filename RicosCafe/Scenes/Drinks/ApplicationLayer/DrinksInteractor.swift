@@ -9,19 +9,19 @@
 import Foundation
 
 extension Drinks {
-    final class Interactor<S: StoreProtocol>: InteractorProtocol {
+    final class Interactor: InteractorProtocol {
         
-        private var store: S
+        private var service: ServiceProtocol
         private var viewModel: Drinks.ViewModel
         
-        init(_ store: S, viewModel: Drinks.ViewModel) {
-            self.store = store
+        init(_ service: ServiceProtocol, viewModel: Drinks.ViewModel) {
+            self.service = service
             self.viewModel = viewModel
         }
         
         func fetchItems() {
-            store.fetchItems { [weak self] (drinks: [Drink]) in
-                self?.viewModel.updateDisplayedDrinks(drinks)
+            service.fetchItems { [weak self] drinks in
+                self?.viewModel.updateDisplayedDrinks(drinks as! [Drink])
             }
         }
     }

@@ -7,29 +7,23 @@
 //
 
 import UIKit
-import Unbox
 
 extension Drinks {
-    final class LocalStore: LocalStoreProtocol {
-        typealias T = Drink
+    final class LocalStore: StoreProtocol {
         
-        func fetchItems<T>(completionHandler: @escaping ([T]) -> Void) {
-            let items = itemsFromBundle("drinksJson") as! [T]
-            completionHandler(items)
+        private var assetName: String
+        
+        init(_ assetName: String) {
+            self.assetName = assetName
         }
         
-        func itemsFromBundle(_ assetName: String) -> [T] {
-            var items = [T]()
+        func fetchData(completionHandler: @escaping (Data?) -> Void) {
             if let asset = NSDataAsset(name: assetName, bundle: Bundle.main) {
-                do {
-                    items = try unbox(data: asset.data) as [T]
-                } catch {
-                    print("items json could not be unboxed - \(error.localizedDescription)")
-                }
+                completionHandler(asset.data)
             } else {
-                print("items json asset couldn't be loaded")
+                print("drinks json asset couldn't be loaded")
+                completionHandler(nil)
             }
-            return items
         }
     }
 }
