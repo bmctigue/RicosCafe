@@ -11,19 +11,18 @@ import Foundation
 enum Drinks {
     final class Builder: TabBuilder {
         
-        private static let assetName = "drinksJson"
-        
         private var imageName: String
         private var title: String
         
-        private lazy var store = LocalStore(Drinks.Builder.assetName)
+        private var store: StoreProtocol
         private lazy var service = Drinks.Service(store)
         private lazy var viewModel = Drinks.ViewModel()
         private lazy var interactor = Drinks.Interactor(service, viewModel: viewModel)
         
-        init(with imageName: String, title: String) {
+        init(with imageName: String, title: String, store: StoreProtocol) {
             self.imageName = imageName
             self.title = title
+            self.store = store
         }
         
         func getImageName() -> String {

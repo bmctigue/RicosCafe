@@ -11,6 +11,8 @@ import UIKit
 enum Builder {
     final class App: BaseBuilder {
         
+        private static let assetName = "drinksJson"
+        
         private static let drinksImageName = "drinks"
         private static let foodImageName = "food"
         private static let dessertImageName = "dessert"
@@ -19,14 +21,17 @@ enum Builder {
         private static let foodTitle = "Food"
         private static let dessertTitle = "Dessert"
         
-        private static let drinksBuilder = Drinks.Builder(with: drinksImageName, title: drinksTitle)
+        private let store = LocalStore(assetName)
+        private let drinksBuilder: TabBuilder
         
         private var window: UIWindow?
         private (set) var tabBarBuilder: Builder.TabBar!
-        private var builders: [TabBuilder] = [Builder.App.drinksBuilder]
+        private var builders: [TabBuilder]
         
         init(with window: UIWindow?) {
             self.window = window
+            self.drinksBuilder = Drinks.Builder(with: Builder.App.drinksImageName, title: Builder.App.drinksTitle, store: store)
+            self.builders = [drinksBuilder]
             self.tabBarBuilder = Builder.TabBar(with: builders)
         }
         
