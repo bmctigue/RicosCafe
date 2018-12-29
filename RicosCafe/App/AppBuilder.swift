@@ -11,7 +11,7 @@ import UIKit
 enum Builder {
     final class App: BaseBuilder {
         
-        private let store = LocalStore(assetName)
+        private let store = LocalStore(drinksAssetName)
         
         private var window: UIWindow?
         private (set) var tabBarBuilder: Builder.TabBar!
@@ -30,7 +30,7 @@ enum Builder {
 }
 
 extension Builder.App {
-    private static let assetName = "drinksJson"
+    private static let drinksAssetName = "drinksJson"
     
     private static let drinksImageName = "drinks"
     private static let foodImageName = "food"
