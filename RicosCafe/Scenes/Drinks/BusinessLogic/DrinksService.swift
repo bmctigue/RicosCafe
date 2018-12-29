@@ -19,12 +19,14 @@ extension Drinks {
         }
         
         func fetchItems(completionHandler: @escaping ([Any]) -> Void) {
-            store.fetchData { [weak self] data in
-                if let data = data {
-                    let items = self?.itemsFromData(data) ?? []
-                    completionHandler(items)
-                } else {
-                    completionHandler([])
+            store.fetchData { [weak self] result in
+                switch(result) {
+                    case .success(let data):
+                        let items = self?.itemsFromData(data) ?? []
+                        completionHandler(items)
+                    case .error(let error):
+                        print("drinks error: \(error.localizedDescription)")
+                        completionHandler([])
                 }
             }
         }

@@ -27,8 +27,19 @@ protocol ServiceProtocol {
     func fetchItems(completionHandler: @escaping ([Any]) -> Void)
 }
 
+enum StoreError: Error {
+    case fetchDataFailed
+}
+
+enum Store {
+    enum Result {
+        case success(Data)
+        case error(StoreError)
+    }
+}
+
 protocol StoreProtocol {
-    func fetchData(completionHandler: @escaping (Data?) -> Void)
+    func fetchData(completionHandler: @escaping (Store.Result) -> Void)
 }
 
 protocol InteractorProtocol {

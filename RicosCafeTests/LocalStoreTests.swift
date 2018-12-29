@@ -13,12 +13,18 @@ class LocalStoreTests: XCTestCase {
     
     let assetName = "drinksJson"
     var fetchedData: Data?
+    var error: StoreError?
     
     func testLocalStore() {
         let expectation = self.expectation(description: "fetchData")
         let sut = LocalStore(assetName)
-        sut.fetchData {[weak self] data in
-            self?.fetchedData = data
+        sut.fetchData {[weak self] result in
+            switch(result) {
+            case .success(let data):
+                self?.fetchedData = data
+            case .error(_):
+                XCTFail()
+            }
             expectation.fulfill()
         }
         waitForExpectations(timeout: 3.0, handler: nil)
@@ -28,11 +34,16 @@ class LocalStoreTests: XCTestCase {
     func testLocalStoreBadAsset() {
         let expectation = self.expectation(description: "fetchData")
         let sut = LocalStore("badAssetName")
-        sut.fetchData {[weak self] data in
-            self?.fetchedData = data
+        sut.fetchData {[weak self] result in
+            switch(result) {
+            case .success(let data):
+                self?.fetchedData = data
+            case .error(let error):
+                self?.error = error
+            }
             expectation.fulfill()
         }
         waitForExpectations(timeout: 3.0, handler: nil)
-        XCTAssertNil(fetchedData)
+        XCTAssertNotNil(error)
     }
 }

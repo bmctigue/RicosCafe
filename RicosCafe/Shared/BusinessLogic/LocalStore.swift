@@ -16,12 +16,11 @@ final class LocalStore: StoreProtocol {
         self.assetName = assetName
     }
     
-    func fetchData(completionHandler: @escaping (Data?) -> Void) {
+    func fetchData(completionHandler: @escaping (Store.Result) -> Void) {
         if let asset = NSDataAsset(name: assetName, bundle: Bundle.main) {
-            completionHandler(asset.data)
+            completionHandler(.success(asset.data))
         } else {
-            print("json asset couldn't be loaded")
-            completionHandler(nil)
+            completionHandler(.error(StoreError.fetchDataFailed))
         }
     }
 }
