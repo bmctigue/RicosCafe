@@ -12,11 +12,13 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     private var window: UIWindow?
+    static let drinksAssetName = "drinksJson"
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         self.window = UIWindow(frame: UIScreen.main.bounds)
-        let appBuilder = Builder.App(with: window)
+        let store = LocalStore(AppDelegate.drinksAssetName)
+        let appBuilder = Builder.App(with: window, store: store)
         appBuilder.run()
         
         return true

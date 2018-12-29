@@ -11,13 +11,13 @@ import UIKit
 enum Builder {
     final class App: BaseBuilder {
         
-        private let store = LocalStore(drinksAssetName)
-        
         private var window: UIWindow?
+        private let store: StoreProtocol
         private (set) var tabBarBuilder: Builder.TabBar!
         
-        init(with window: UIWindow?) {
+        init(with window: UIWindow?, store: StoreProtocol) {
             self.window = window
+            self.store = store
             self.tabBarBuilder = Builder.TabBar(with: configureBuilders())
         }
         
@@ -30,7 +30,6 @@ enum Builder {
 }
 
 extension Builder.App {
-    private static let drinksAssetName = "drinksJson"
     
     private static let drinksImageName = "drinks"
     private static let foodImageName = "food"
