@@ -12,12 +12,10 @@ enum Builder {
     final class App: BaseBuilder {
         
         private var window: UIWindow?
-        private let store: StoreProtocol
         private (set) var tabBarBuilder: Builder.TabBar!
         
-        init(with window: UIWindow?, store: StoreProtocol) {
+        init(with window: UIWindow?) {
             self.window = window
-            self.store = store
             self.tabBarBuilder = Builder.TabBar(with: configureBuilders())
         }
         
@@ -31,6 +29,8 @@ enum Builder {
 
 extension Builder.App {
     
+    static let drinksAssetName = "drinksJson"
+    
     private static let drinksImageName = "drinks"
     private static let foodImageName = "food"
     private static let dessertImageName = "dessert"
@@ -40,7 +40,8 @@ extension Builder.App {
     private static let dessertTitle = "Dessert"
     
     func configureBuilders() -> [TabBuilder] {
-        let drinksBuilder = Drinks.Builder(with: Builder.App.drinksImageName, title: Builder.App.drinksTitle, store: store)
+        let drinksStore = LocalStore(Builder.App.drinksAssetName)
+        let drinksBuilder = Drinks.Builder(with: Builder.App.drinksImageName, title: Builder.App.drinksTitle, store: drinksStore)
         return [drinksBuilder]
     }
 }

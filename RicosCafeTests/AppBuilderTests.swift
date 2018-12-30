@@ -13,8 +13,7 @@ class AppBuilderTests: XCTestCase {
     
     func testAppBuilder() {
         let window = UIWindow(frame: UIScreen.main.bounds)
-        let store = LocalStore(AppDelegate.drinksAssetName)
-        let builder = Builder.App(with: window, store: store)
+        let builder = Builder.App(with: window)
         builder.run()
         let tabBarBuilder = builder.getTabBarBuilder()
         let tabBar = tabBarBuilder.getTabBar()

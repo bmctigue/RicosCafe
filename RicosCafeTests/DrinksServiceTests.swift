@@ -11,7 +11,7 @@ import XCTest
 
 class DrinksServiceTests: XCTestCase {
     
-    let assetName = "drinksJson"
+    let assetName = Builder.App.drinksAssetName
 
     func testService() {
         let expectation = self.expectation(description: "fetchItems")

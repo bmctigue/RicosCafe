@@ -35,6 +35,7 @@
 		A8F379CE21D665A9003A03FE /* DrinksService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F379CD21D665A9003A03FE /* DrinksService.swift */; };
 		A8F379D021D67D0E003A03FE /* DrinksServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F379CF21D67D0E003A03FE /* DrinksServiceTests.swift */; };
 		A8F379D321D68E07003A03FE /* LocalStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F379D221D68E06003A03FE /* LocalStore.swift */; };
+		A8FE3E9321D9372D008F8B08 /* DrinksBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FE3E9221D9372D008F8B08 /* DrinksBuilderTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +92,7 @@
 		A8F379CD21D665A9003A03FE /* DrinksService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinksService.swift; sourceTree = "<group>"; };
 		A8F379CF21D67D0E003A03FE /* DrinksServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinksServiceTests.swift; sourceTree = "<group>"; };
 		A8F379D221D68E06003A03FE /* LocalStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalStore.swift; sourceTree = "<group>"; };
+		A8FE3E9221D9372D008F8B08 /* DrinksBuilderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinksBuilderTests.swift; sourceTree = "<group>"; };
 		D6B5D51E2A4209FC56C29D3C /* Pods_RicosCafe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RicosCafe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F402D9E639BBF7F4619C55AF /* Pods-RicosCafeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RicosCafeTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RicosCafeTests/Pods-RicosCafeTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -234,6 +236,7 @@
 				A8F379CB21D664AF003A03FE /* LocalStoreTests.swift */,
 				A8F379CF21D67D0E003A03FE /* DrinksServiceTests.swift */,
 				A84BCE0321D7C9E600FD2362 /* TableViewDataSourceTests.swift */,
+				A8FE3E9221D9372D008F8B08 /* DrinksBuilderTests.swift */,
 			);
 			path = RicosCafeTests;
 			sourceTree = "<group>";
@@ -532,6 +535,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A8FE3E9321D9372D008F8B08 /* DrinksBuilderTests.swift in Sources */,
 				A8F379D021D67D0E003A03FE /* DrinksServiceTests.swift in Sources */,
 				A84BCE0421D7C9E600FD2362 /* TableViewDataSourceTests.swift in Sources */,
 				A807F79C21D2FEDC009D00B5 /* DynamicValueTests.swift in Sources */,
