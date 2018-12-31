@@ -13,10 +13,12 @@ extension Drinks {
         
         private var interactor: InteractorProtocol
         private var viewModel: Drinks.ViewModel
+        private var presenter: Drinks.Presenter
         
-        init(with interactor: InteractorProtocol, viewModel: Drinks.ViewModel) {
+        init(with interactor: InteractorProtocol, viewModel: Drinks.ViewModel, presenter: Drinks.Presenter) {
             self.interactor = interactor
             self.viewModel = viewModel
+            self.presenter = presenter
             super.init(nibName: nil, bundle: nil)
         }
         
@@ -28,9 +30,9 @@ extension Drinks {
             super.viewDidLoad()
             self.view.backgroundColor = UIColor.lightGray
             
-            let dynamicDrinks = viewModel.dynamicDrinks
-            dynamicDrinks.addObserver(self) {
-                print(dynamicDrinks.value)
+            let dynamicModels = presenter.dynamicModels
+            dynamicModels.addObserver(self) {
+                print(dynamicModels.value)
             }
             
             interactor.fetchItems()

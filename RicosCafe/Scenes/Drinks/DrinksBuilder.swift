@@ -18,7 +18,8 @@ enum Drinks {
         private lazy var dataAdapter = UnboxDataAdapter<Drink>()
         private lazy var service = Drinks.Service(store, dataAdapter: dataAdapter)
         private lazy var viewModel = Drinks.ViewModel()
-        private lazy var interactor = Drinks.Interactor(service, viewModel: viewModel)
+        private lazy var presenter = Drinks.Presenter([])
+        private lazy var interactor = Drinks.Interactor(service, viewModel: viewModel, presenter: presenter)
         
         init(with imageName: String, title: String, store: StoreProtocol) {
             self.imageName = imageName
@@ -35,7 +36,7 @@ enum Drinks {
         }
         
         func run(completionHandler: VCBuilderBlock) {
-            let controller = Drinks.ViewController(with: interactor, viewModel: viewModel)
+            let controller = Drinks.ViewController(with: interactor, viewModel: viewModel, presenter: presenter)
             completionHandler(controller)
         }
     }

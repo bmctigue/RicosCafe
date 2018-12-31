@@ -9,14 +9,8 @@
 import UIKit
 
 extension Drinks {
-    struct Request {}
-    
-    struct Response {
-        let drinks: [Drink]
-    }
-    
     struct ViewModel {
-        struct DisplayedDrink {
+        struct DisplayedModel {
             let name: String
             let text: String
             let price: String
@@ -24,32 +18,6 @@ extension Drinks {
             let temp: DrinkTempType
             let imageUrl: String
             let image: String
-        }
-        
-        var dynamicDrinks: DynamicValue<[DisplayedDrink]> = DynamicValue([DisplayedDrink]())
-        
-        private var drinks: [Drink]
-        private var displayedDrinks: [DisplayedDrink] {
-            var resultDrinks = [DisplayedDrink]()
-            for drink in drinks {
-                let displayedDrink = Drinks.ViewModel.DisplayedDrink(name: drink.name, text: drink.text, price: drink.price, size: drink.size, temp: drink.temp, imageUrl: drink.imageUrl, image: drink.image)
-                resultDrinks.append(displayedDrink)
-            }
-            return resultDrinks
-        }
-        
-        init(_ drinks: [Drink] = [Drink]()) {
-            self.drinks = drinks
-            dynamicDrinks.value = displayedDrinks
-        }
-        
-        func getDisplayedDrinks() -> [DisplayedDrink] {
-            return displayedDrinks
-        }
-        
-        mutating func updateDisplayedDrinks(_ drinks: [Drink]) {
-            self.drinks = drinks
-            dynamicDrinks.value = displayedDrinks
         }
     }
 }

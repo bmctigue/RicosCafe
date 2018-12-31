@@ -13,15 +13,17 @@ extension Drinks {
         
         private var service: ServiceProtocol
         private var viewModel: Drinks.ViewModel
+        private var presenter: Drinks.Presenter
         
-        init(_ service: ServiceProtocol, viewModel: Drinks.ViewModel) {
+        init(_ service: ServiceProtocol, viewModel: Drinks.ViewModel, presenter: Drinks.Presenter) {
             self.service = service
             self.viewModel = viewModel
+            self.presenter = presenter
         }
         
         func fetchItems() {
-            service.fetchItems { [weak self] drinks in
-                self?.viewModel.updateDisplayedDrinks(drinks as! [Drink])
+            service.fetchItems { [weak self] models in
+                self?.presenter.updateDisplayedModels(models as! [Drink])
             }
         }
     }
