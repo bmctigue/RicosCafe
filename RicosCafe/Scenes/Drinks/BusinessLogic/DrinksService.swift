@@ -7,38 +7,29 @@
 //
 
 import UIKit
-import Unbox
 
 extension Drinks {
-    final class Service: ServiceProtocol {        
+    final class Service<Adapter: DataAdapter>: ServiceProtocol {
         
         private var store: StoreProtocol
+        private var dataAdapter: Adapter
         
-        init(_ store: StoreProtocol) {
+        init(_ store: StoreProtocol, dataAdapter: Adapter) {
             self.store = store
+            self.dataAdapter = dataAdapter
         }
         
         func fetchItems(completionHandler: @escaping ([Any]) -> Void) {
             store.fetchData { [weak self] result in
                 switch(result) {
                     case .success(let data):
-                        let items = self?.itemsFromData(data) ?? []
+                        let items = self?.dataAdapter.itemsFromData(data) ?? []
                         completionHandler(items)
                     case .error(let error):
                         print("drinks error: \(error.localizedDescription)")
                         completionHandler([])
                 }
             }
-        }
-        
-        func itemsFromData(_ data: Data) -> [Drink] {
-            var items = [Drink]()
-            do {
-                items = try unbox(data: data) as [Drink]
-            } catch {
-                print("drinks data could not be unboxed - \(error.localizedDescription)")
-            }
-            return items
         }
     }
 }

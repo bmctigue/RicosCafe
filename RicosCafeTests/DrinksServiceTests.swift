@@ -12,12 +12,14 @@ import XCTest
 class DrinksServiceTests: XCTestCase {
     
     let assetName = Builder.App.drinksAssetName
+    lazy var dataAdapter = UnboxDataAdapter<Drink>()
 
     func testService() {
         let expectation = self.expectation(description: "fetchItems")
         var results = [Drink]()
         let store = LocalStore(assetName)
-        let sut = Drinks.Service(store)
+        
+        let sut = Drinks.Service(store, dataAdapter: dataAdapter)
         sut.fetchItems { drinks in
             results = drinks as! [Drink]
             expectation.fulfill()
@@ -30,7 +32,7 @@ class DrinksServiceTests: XCTestCase {
         let expectation = self.expectation(description: "fetchItems")
         var results = [Drink]()
         let store = LocalStore("badAssetName")
-        let sut = Drinks.Service(store)
+        let sut = Drinks.Service(store, dataAdapter: dataAdapter)
         sut.fetchItems { drinks in
             results = drinks as! [Drink]
             expectation.fulfill()

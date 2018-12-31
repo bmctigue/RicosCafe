@@ -20,6 +20,9 @@
 		A83EC02C21D41BCC001AF8CB /* DrinksViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83EC02B21D41BCC001AF8CB /* DrinksViewModelTests.swift */; };
 		A84BCE0221D7C85300FD2362 /* TableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A84BCE0121D7C85300FD2362 /* TableViewDataSource.swift */; };
 		A84BCE0421D7C9E600FD2362 /* TableViewDataSourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A84BCE0321D7C9E600FD2362 /* TableViewDataSourceTests.swift */; };
+		A85CF61C21D9987700733513 /* DataAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A85CF61B21D9987700733513 /* DataAdapter.swift */; };
+		A85CF61E21D9992400733513 /* UnboxDataAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A85CF61D21D9992400733513 /* UnboxDataAdapter.swift */; };
+		A85CF62021D9A2E000733513 /* UnboxDataAdapterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A85CF61F21D9A2E000733513 /* UnboxDataAdapterTests.swift */; };
 		A863A41321AF07E500E73566 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A863A41221AF07E500E73566 /* AppDelegate.swift */; };
 		A863A41A21AF07E700E73566 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A863A41921AF07E700E73566 /* Assets.xcassets */; };
 		A863A41D21AF07E700E73566 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A863A41B21AF07E700E73566 /* LaunchScreen.storyboard */; };
@@ -71,6 +74,9 @@
 		A83EC02B21D41BCC001AF8CB /* DrinksViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinksViewModelTests.swift; sourceTree = "<group>"; };
 		A84BCE0121D7C85300FD2362 /* TableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewDataSource.swift; sourceTree = "<group>"; };
 		A84BCE0321D7C9E600FD2362 /* TableViewDataSourceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewDataSourceTests.swift; sourceTree = "<group>"; };
+		A85CF61B21D9987700733513 /* DataAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataAdapter.swift; sourceTree = "<group>"; };
+		A85CF61D21D9992400733513 /* UnboxDataAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnboxDataAdapter.swift; sourceTree = "<group>"; };
+		A85CF61F21D9A2E000733513 /* UnboxDataAdapterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnboxDataAdapterTests.swift; sourceTree = "<group>"; };
 		A863A40F21AF07E500E73566 /* RicosCafe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RicosCafe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A863A41221AF07E500E73566 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A863A41921AF07E700E73566 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -237,6 +243,7 @@
 				A8F379CF21D67D0E003A03FE /* DrinksServiceTests.swift */,
 				A84BCE0321D7C9E600FD2362 /* TableViewDataSourceTests.swift */,
 				A8FE3E9221D9372D008F8B08 /* DrinksBuilderTests.swift */,
+				A85CF61F21D9A2E000733513 /* UnboxDataAdapterTests.swift */,
 			);
 			path = RicosCafeTests;
 			sourceTree = "<group>";
@@ -317,6 +324,8 @@
 			children = (
 				A8F379D221D68E06003A03FE /* LocalStore.swift */,
 				A84BCE0121D7C85300FD2362 /* TableViewDataSource.swift */,
+				A85CF61B21D9987700733513 /* DataAdapter.swift */,
+				A85CF61D21D9992400733513 /* UnboxDataAdapter.swift */,
 			);
 			path = BusinessLogic;
 			sourceTree = "<group>";
@@ -520,6 +529,8 @@
 				A807F79421D2EE7D009D00B5 /* DynamicValue.swift in Sources */,
 				A83EC02A21D3F7DE001AF8CB /* Protocols.swift in Sources */,
 				A8E5BB7D21D5B19600AEFC36 /* DrinksInteractor.swift in Sources */,
+				A85CF61E21D9992400733513 /* UnboxDataAdapter.swift in Sources */,
+				A85CF61C21D9987700733513 /* DataAdapter.swift in Sources */,
 				A863A41321AF07E500E73566 /* AppDelegate.swift in Sources */,
 				A863A44C21AF0E2900E73566 /* TabBarBuilder.swift in Sources */,
 				A83EC02621D3F513001AF8CB /* DrinkViewModel.swift in Sources */,
@@ -542,6 +553,7 @@
 				A83EC02C21D41BCC001AF8CB /* DrinksViewModelTests.swift in Sources */,
 				A8F379CC21D664AF003A03FE /* LocalStoreTests.swift in Sources */,
 				A863A45421AF138500E73566 /* TabBarBuilderTests.swift in Sources */,
+				A85CF62021D9A2E000733513 /* UnboxDataAdapterTests.swift in Sources */,
 				A863A44E21AF100A00E73566 /* AppBuilderTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
