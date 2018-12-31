@@ -23,19 +23,22 @@ extension Drinks {
             store.fetchData { [weak self] result in
                 switch(result) {
                     case .success(let data):
-                        print(data)
-                        self?.dataAdapter.itemsFromData(data) { adapterResult in
-                            switch(adapterResult) {
-                            case .success(let items):
-                                completionHandler(items)
-                            case .error(let error):
-                                print("conversion error for data: \(error.localizedDescription)")
-                                completionHandler([])
-                            }
-                        }
+                        self?.itemsFromData(data: data, completionHandler: completionHandler)
                     case .error(let error):
                         print("drinks error: \(error.localizedDescription)")
                         completionHandler([])
+                }
+            }
+        }
+        
+        private func itemsFromData(data: Data, completionHandler: @escaping ([Any]) -> Void) {
+            self.dataAdapter.itemsFromData(data) { adapterResult in
+                switch(adapterResult) {
+                case .success(let items):
+                    completionHandler(items)
+                case .error(let error):
+                    print("conversion error for data: \(error.localizedDescription)")
+                    completionHandler([])
                 }
             }
         }
