@@ -11,9 +11,9 @@ import UIKit
 extension Builder {
     final class TabBar: BaseBuilder {
         
-        private let tabBarController = UITabBarController()
+        private lazy var tabBarController = UITabBarController()
+        private lazy var controllers = [UIViewController]()
         private let builders: [TabBuilder]
-        private var controllers: [UIViewController] = []
         
         init(with builders: [TabBuilder]) {
             self.builders = builders
