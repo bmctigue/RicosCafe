@@ -9,7 +9,7 @@
 import UIKit
 
 extension Drinks {
-    final class Service<Adapter: DataAdapter>: ServiceProtocol {
+    final class Service<Adapter: DataAdapterProtocol>: ServiceProtocol {
         
         private var store: StoreProtocol
         private var dataAdapter: Adapter
@@ -23,8 +23,16 @@ extension Drinks {
             store.fetchData { [weak self] result in
                 switch(result) {
                     case .success(let data):
-                        let items = self?.dataAdapter.itemsFromData(data) ?? []
-                        completionHandler(items)
+                        print(data)
+                        self?.dataAdapter.itemsFromData(data) { adapterResult in
+                            switch(adapterResult) {
+                            case .success(let items):
+                                completionHandler(items)
+                            case .error(let error):
+                                print("conversion error for data: \(error.localizedDescription)")
+                                completionHandler([])
+                            }
+                        }
                     case .error(let error):
                         print("drinks error: \(error.localizedDescription)")
                         completionHandler([])

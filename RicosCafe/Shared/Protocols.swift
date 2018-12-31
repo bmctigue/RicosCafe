@@ -45,3 +45,21 @@ protocol StoreProtocol {
 protocol InteractorProtocol {
     func fetchItems()
 }
+
+enum DataAdapterError: Error {
+    case conversionFailed
+}
+
+enum DataAdapter {
+    enum Result<Model> {
+        case success([Model])
+        case error(DataAdapterError)
+    }
+}
+
+protocol DataAdapterProtocol {
+    associatedtype Model
+    func itemsFromData(_ data: Data, completionHandler: @escaping (DataAdapter.Result<Model>) -> Void)
+}
+
+

@@ -9,14 +9,15 @@
 import Foundation
 import Unbox
 
-final class UnboxDataAdapter<Model: Unboxable>: DataAdapter {
-    func itemsFromData(_ data: Data) -> [Model] {
+final class UnboxDataAdapter<Model: Unboxable>: DataAdapterProtocol {
+    func itemsFromData(_ data: Data, completionHandler: @escaping (DataAdapter.Result<Model>) -> Void) {
         var items = [Model]()
         do {
             items = try unbox(data: data)
+            completionHandler(.success(items))
         } catch {
+            completionHandler(.error(.conversionFailed))
             print("data could not be unboxed - \(error.localizedDescription)")
         }
-        return items
     }
 }
