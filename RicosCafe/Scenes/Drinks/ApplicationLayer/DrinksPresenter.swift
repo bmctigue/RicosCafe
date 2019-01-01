@@ -12,14 +12,15 @@ extension Drinks {
     struct Presenter {
         
         typealias Model = Drink
+        typealias Displayed = Drinks.ViewModel.DisplayedModel
         
-        var dynamicModels: DynamicValue<[Drinks.ViewModel.DisplayedModel]> = DynamicValue([Drinks.ViewModel.DisplayedModel]())
+        var dynamicModels: DynamicValue<[Displayed]> = DynamicValue([Displayed]())
         
         private var models: [Model]
-        private var displayedModels: [Drinks.ViewModel.DisplayedModel] {
-            var resultModels = [Drinks.ViewModel.DisplayedModel]()
+        private var displayedModels: [Displayed] {
+            var resultModels = [Displayed]()
             for model in models {
-                let displayedModel = Drinks.ViewModel.DisplayedModel(name: model.name, text: model.text, price: model.price, size: model.size, temp: model.temp, imageUrl: model.imageUrl, image: model.image)
+                let displayedModel = Displayed(name: model.name, text: model.text, price: model.price, size: model.size, temp: model.temp, imageUrl: model.imageUrl, image: model.image)
                 resultModels.append(displayedModel)
             }
             return resultModels
@@ -30,7 +31,7 @@ extension Drinks {
             dynamicModels.value = displayedModels
         }
         
-        func getDisplayedModels() -> [Drinks.ViewModel.DisplayedModel] {
+        func getDisplayedModels() -> [Displayed] {
             return displayedModels
         }
         
