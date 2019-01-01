@@ -18,11 +18,11 @@ class TabBarBuilderTests: XCTestCase {
         let expectation = self.expectation(description: "run")
         let builders: [TabBuilder] =  []
         let tabBarBuilder = Builder.TabBar(with: builders)
-        tabBarBuilder.run() { [weak self] tabBarController in
+        tabBarBuilder.run { [weak self] tabBarController in
             self?.tabBarController = tabBarController
             if let controllers = tabBarController.viewControllers {
                 self?.controllersCount = controllers.count
-                for (index,_) in controllers.enumerated() {
+                for (index) in controllers.indices {
                     tabBarController.selectedIndex = index
                 }
             }

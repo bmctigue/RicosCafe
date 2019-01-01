@@ -17,7 +17,7 @@ class TableViewDataSourceTests: XCTestCase {
     
     override func setUp() {
         let data = ["Rodrigo", "Cavalcante", "Testing", "Delegate", "Datasource"]
-        tableViewDatasource = TableViewDataSource(models: data, reuseIdentifier: "Cell") { (model: String, cell:UITableViewCell) in
+        tableViewDatasource = TableViewDataSource(models: data, reuseIdentifier: "Cell") { (model: String, cell: UITableViewCell) in
             cell.textLabel?.text = model
         }
         tableView = UITableView()

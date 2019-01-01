@@ -20,10 +20,10 @@ class LocalStoreTests: XCTestCase {
         let sut = LocalStore(assetName)
         let request = Request()
         sut.fetchData(request) {[weak self] result in
-            switch(result) {
+            switch result {
             case .success(let data):
                 self?.fetchedData = data
-            case .error(_):
+            case .error:
                 XCTFail()
             }
             expectation.fulfill()
@@ -37,7 +37,7 @@ class LocalStoreTests: XCTestCase {
         let sut = LocalStore("badAssetName")
         let request = Request()
         sut.fetchData(request) {[weak self] result in
-            switch(result) {
+            switch result {
             case .success(let data):
                 self?.fetchedData = data
             case .error(let error):

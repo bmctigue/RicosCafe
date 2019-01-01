@@ -22,19 +22,19 @@ final class Service<Adapter: DataAdapterProtocol>: ServiceProtocol {
     
     func fetchItems(_ request: Request, completionHandler: @escaping ([Model]) -> Void) {
         store.fetchData(request) { [weak self] result in
-            switch(result) {
-                case .success(let data):
-                    self?.itemsFromData(data: data, completionHandler: completionHandler)
-                case .error(let error):
-                    print("drinks error: \(error.localizedDescription)")
-                    completionHandler([])
+            switch result {
+            case .success(let data):
+                self?.itemsFromData(data: data, completionHandler: completionHandler)
+            case .error(let error):
+                print("drinks error: \(error.localizedDescription)")
+                completionHandler([])
             }
         }
     }
     
     private func itemsFromData(data: Data, completionHandler: @escaping ([Model]) -> Void) {
         self.dataAdapter.itemsFromData(data) { adapterResult in
-            switch(adapterResult) {
+            switch adapterResult {
             case .success(let items):
                 completionHandler(items)
             case .error(let error):

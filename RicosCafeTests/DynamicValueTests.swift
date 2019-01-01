@@ -11,9 +11,9 @@ import XCTest
 
 class DynamicValueTests: XCTestCase {
     
-    let values = [1,2,3]
+    let values = [1, 2, 3]
     var newValues: [Int] = []
-    var notifyValues: [Int] = [1,2,3,4,5]
+    var notifyValues: [Int] = [1, 2, 3, 4, 5]
     
     override func setUp() {
         newValues = []
@@ -26,7 +26,7 @@ class DynamicValueTests: XCTestCase {
             self?.newValues = dynamic.value
             expectation.fulfill()
         }
-        dynamic.value = [1,2,3,4]
+        dynamic.value = [1, 2, 3, 4]
         waitForExpectations(timeout: 3.0, handler: nil)
         XCTAssert(newValues.count == 4)
         
@@ -42,7 +42,7 @@ class DynamicValueTests: XCTestCase {
                 expectation.fulfill()
             }
         }
-        dynamic.value = [1,2,3,4,5]
+        dynamic.value = [1, 2, 3, 4, 5]
         waitForExpectations(timeout: 3.0, handler: nil)
         XCTAssert(newValues.count == 5)
     }

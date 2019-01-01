@@ -9,7 +9,7 @@
 import Foundation
 
 extension Drinks {
-    final class Interactor<ServProtocol:ServiceProtocol>: InteractorProtocol {
+    final class Interactor<ServProtocol: ServiceProtocol>: InteractorProtocol {
         
         private var service: ServProtocol
         private var presenter: Drinks.Presenter

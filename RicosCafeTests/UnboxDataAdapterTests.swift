@@ -26,17 +26,17 @@ class UnboxDataAdapterTests: XCTestCase {
         let request = Request()
         
         store.fetchData(request) {[weak self] result in
-            switch(result) {
+            switch result {
             case .success(let data):
                 self?.sut.itemsFromData(data) { adapterResult in
-                    switch(adapterResult) {
+                    switch adapterResult {
                     case .success(let items):
                         self?.items = items
-                    case .error(_):
+                    case .error:
                         XCTFail()
                     }
                 }
-            case .error(_):
+            case .error:
                 XCTFail()
             }
             expectation.fulfill()
@@ -51,23 +51,23 @@ class UnboxDataAdapterTests: XCTestCase {
         let request = Request()
         
         store.fetchData(request) {[weak self] result in
-            switch(result) {
+            switch result {
             case .success(let data):
                 self?.sut.itemsFromData(data) { adapterResult in
-                    switch(adapterResult) {
+                    switch adapterResult {
                     case .success(let items):
                         self?.items = items
-                    case .error(_):
+                    case .error:
                         XCTFail()
                     }
                 }
             case .error(let error):
                 let data = Data()
                 self?.sut.itemsFromData(data) { adapterResult in
-                    switch(adapterResult) {
+                    switch adapterResult {
                     case .success(let items):
                         self?.items = items
-                    case .error(_):
+                    case .error:
                         self?.error = error
                     }
                 }

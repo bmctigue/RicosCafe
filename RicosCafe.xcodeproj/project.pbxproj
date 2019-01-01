@@ -348,6 +348,7 @@
 				A863A40C21AF07E500E73566 /* Frameworks */,
 				A863A40D21AF07E500E73566 /* Resources */,
 				95FA3380400A274AAC1F85A4 /* [CP] Embed Pods Frameworks */,
+				A8756B9C21DC2C28009F8382 /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -504,6 +505,24 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RicosCafe/Pods-RicosCafe-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		A8756B9C21DC2C28009F8382 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
 		E47F0A06FCD6A0D7A66E6885 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;

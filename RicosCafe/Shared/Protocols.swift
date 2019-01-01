@@ -45,7 +45,3 @@ protocol ServiceProtocol {
 protocol InteractorProtocol {
     func fetchItems(_ request: Request)
 }
-
-
-
-
