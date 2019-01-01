@@ -17,7 +17,7 @@ extension Drinks {
         var dynamicModels: DynamicValue<[ViewModel]> = DynamicValue([ViewModel]())
         
         private var models: [Model]
-        private var displayedModels: [ViewModel] {
+        private var viewModels: [ViewModel] {
             var resultModels = [ViewModel]()
             for model in models {
                 let displayedModel = ViewModel(name: model.name, text: model.text, price: model.price, size: model.size, temp: model.temp, imageUrl: model.imageUrl, image: model.image)
@@ -28,16 +28,16 @@ extension Drinks {
         
         init(_ models: [Model] = [Model]()) {
             self.models = models
-            dynamicModels.value = displayedModels
+            dynamicModels.value = viewModels
         }
         
-        func getDisplayedModels() -> [ViewModel] {
-            return displayedModels
+        func getViewModels() -> [ViewModel] {
+            return viewModels
         }
         
-        func updateDisplayedModels(_ response: Response<Model>) {
+        func updateViewModels(_ response: Response<Model>) {
             self.models = response.models
-            dynamicModels.value = displayedModels
+            dynamicModels.value = viewModels
         }
     }
 }

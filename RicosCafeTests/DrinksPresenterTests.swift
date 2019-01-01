@@ -16,7 +16,7 @@ class DrinksPresenterTests: XCTestCase {
     
     func testDisplayedDrinks() {
         let presenter = Drinks.Presenter()
-        XCTAssert(presenter.getDisplayedModels().count == 0)
+        XCTAssert(presenter.getViewModels().count == 0)
     }
     
     func testInitWithDisplayedDrinks() {
@@ -30,7 +30,7 @@ class DrinksPresenterTests: XCTestCase {
             expectation.fulfill()
         }
         waitForExpectations(timeout: 3.0, handler: nil)
-        XCTAssert(presenter.getDisplayedModels().count == models.count)
+        XCTAssert(presenter.getViewModels().count == models.count)
         XCTAssert(resultDrinks.count == models.count)
     }
 
@@ -45,9 +45,8 @@ class DrinksPresenterTests: XCTestCase {
             expectation.fulfill()
         }
         let response = Response(models: models)
-        presenter.updateDisplayedModels(response)
+        presenter.updateViewModels(response)
         waitForExpectations(timeout: 3.0, handler: nil)
         XCTAssert(resultDrinks.count == models.count)
     }
-
 }

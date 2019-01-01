@@ -22,7 +22,7 @@ extension Drinks {
         func fetchItems(_ request: Request) {
             service.fetchItems(request) { [weak self] models in
                 let response = Response(models: models as! [Drink])
-                self?.presenter.updateDisplayedModels(response)
+                self?.presenter.updateViewModels(response)
             }
         }
     }
