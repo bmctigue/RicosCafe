@@ -9,7 +9,7 @@
 import UIKit
 
 extension Drinks {
-    struct Presenter {
+    class Presenter {
         
         typealias Model = Drink
         typealias Displayed = Drinks.ViewModel.DisplayedModel
@@ -35,7 +35,7 @@ extension Drinks {
             return displayedModels
         }
         
-        mutating func updateDisplayedModels(_ response: Response<Model>) {
+        func updateDisplayedModels(_ response: Response<Model>) {
             self.models = response.models
             dynamicModels.value = displayedModels
         }

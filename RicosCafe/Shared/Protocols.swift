@@ -23,22 +23,24 @@ protocol TabBuilder: VCBuilder {
     func getTitle() -> String
 }
 
-protocol ServiceProtocol {
+protocol DataAdapterProtocol {
     associatedtype Model
-    func fetchItems(_ request: Request, completionHandler: @escaping ([Model]) -> Void)
+    func itemsFromData(_ data: Data, completionHandler: @escaping (DataAdapter.Result<Model>) -> Void)
 }
 
 protocol StoreProtocol {
     func fetchData(_ request: Request, completionHandler: @escaping (Store.Result) -> Void)
 }
 
+protocol ServiceProtocol {
+    associatedtype Model
+    func fetchItems(_ request: Request, completionHandler: @escaping ([Model]) -> Void)
+}
+
 protocol InteractorProtocol {
     func fetchItems(_ request: Request)
 }
 
-protocol DataAdapterProtocol {
-    associatedtype Model
-    func itemsFromData(_ data: Data, completionHandler: @escaping (DataAdapter.Result<Model>) -> Void)
-}
+
 
 
