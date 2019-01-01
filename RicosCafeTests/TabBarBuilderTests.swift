@@ -33,4 +33,27 @@ class TabBarBuilderTests: XCTestCase {
         XCTAssert(controllersCount == builders.count)
         XCTAssert(itemsCount == builders.count)
     }
+    
+    func testBuilderOneViewController() {
+        let expectation = self.expectation(description: "run")
+        let drinksStore = LocalStore(Builder.App.drinksAssetName)
+        let drinksBuilder = Drinks.Builder(with: "Test", title: "Test", store: drinksStore)
+        let builders: [TabBuilder] =  [drinksBuilder]
+        let tabBarBuilder = Builder.TabBar(with: builders)
+        tabBarBuilder.run { [weak self] tabBarController in
+            self?.tabBarController = tabBarController
+            if let controllers = tabBarController.viewControllers {
+                self?.controllersCount = controllers.count
+                for (index) in controllers.indices {
+                    tabBarController.selectedIndex = index
+                }
+            }
+            expectation.fulfill()
+        }
+        waitForExpectations(timeout: 3.0, handler: nil)
+        let itemsCount = tabBarController?.tabBar.items?.count ?? 0
+        XCTAssert(controllersCount == 1)
+        XCTAssert(controllersCount == builders.count)
+        XCTAssert(itemsCount == builders.count)
+    }
 }
