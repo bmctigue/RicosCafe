@@ -10,14 +10,12 @@ import UIKit
 
 extension Drinks {
     struct ViewModel {
-        struct DisplayedModel {
-            let name: String
-            let text: String
-            let price: String
-            let size: DrinkSizeType
-            let temp: DrinkTempType
-            let imageUrl: String
-            let image: String
-        }
+        let name: String
+        let text: String
+        let price: String
+        let size: DrinkSizeType
+        let temp: DrinkTempType
+        let imageUrl: String
+        let image: String
     }
 }

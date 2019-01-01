@@ -22,7 +22,7 @@ class DrinksPresenterTests: XCTestCase {
     func testInitWithDisplayedDrinks() {
         let models = [drink1,drink2]
         let presenter = Drinks.Presenter(models)
-        var resultDrinks = [Drinks.ViewModel.DisplayedModel]()
+        var resultDrinks = [Drinks.ViewModel]()
         let expectation = self.expectation(description: "testUpdateDisplayedModels")
         let dynamicModels = presenter.dynamicModels
         dynamicModels.addAndNotify(observer: self) {
@@ -37,7 +37,7 @@ class DrinksPresenterTests: XCTestCase {
     func testUpdateDisplayedDrinks() {
         let models = [drink1,drink2]
         let presenter = Drinks.Presenter()
-        var resultDrinks = [Drinks.ViewModel.DisplayedModel]()
+        var resultDrinks = [Drinks.ViewModel]()
         let expectation = self.expectation(description: "testUpdateDisplayedModels")
         let dynamicModels = presenter.dynamicModels
         dynamicModels.addObserver(self) {

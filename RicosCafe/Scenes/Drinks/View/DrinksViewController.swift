@@ -12,12 +12,10 @@ extension Drinks {
     final class ViewController: UIViewController {
         
         private var interactor: InteractorProtocol
-        private var viewModel: Drinks.ViewModel
         private var presenter: Drinks.Presenter
         
-        init(with interactor: InteractorProtocol, viewModel: Drinks.ViewModel, presenter: Drinks.Presenter) {
+        init(with interactor: InteractorProtocol, presenter: Drinks.Presenter) {
             self.interactor = interactor
-            self.viewModel = viewModel
             self.presenter = presenter
             super.init(nibName: nil, bundle: nil)
         }

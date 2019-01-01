@@ -12,15 +12,15 @@ extension Drinks {
     class Presenter {
         
         typealias Model = Drink
-        typealias Displayed = Drinks.ViewModel.DisplayedModel
+        typealias ViewModel = Drinks.ViewModel
         
-        var dynamicModels: DynamicValue<[Displayed]> = DynamicValue([Displayed]())
+        var dynamicModels: DynamicValue<[ViewModel]> = DynamicValue([ViewModel]())
         
         private var models: [Model]
-        private var displayedModels: [Displayed] {
-            var resultModels = [Displayed]()
+        private var displayedModels: [ViewModel] {
+            var resultModels = [ViewModel]()
             for model in models {
-                let displayedModel = Displayed(name: model.name, text: model.text, price: model.price, size: model.size, temp: model.temp, imageUrl: model.imageUrl, image: model.image)
+                let displayedModel = ViewModel(name: model.name, text: model.text, price: model.price, size: model.size, temp: model.temp, imageUrl: model.imageUrl, image: model.image)
                 resultModels.append(displayedModel)
             }
             return resultModels
@@ -31,7 +31,7 @@ extension Drinks {
             dynamicModels.value = displayedModels
         }
         
-        func getDisplayedModels() -> [Displayed] {
+        func getDisplayedModels() -> [ViewModel] {
             return displayedModels
         }
         
