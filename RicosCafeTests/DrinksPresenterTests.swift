@@ -44,7 +44,8 @@ class DrinksPresenterTests: XCTestCase {
             resultDrinks = dynamicModels.value
             expectation.fulfill()
         }
-        presenter.updateDisplayedModels(models)
+        let response = Response(models: models)
+        presenter.updateDisplayedModels(response)
         waitForExpectations(timeout: 3.0, handler: nil)
         XCTAssert(resultDrinks.count == models.count)
     }
