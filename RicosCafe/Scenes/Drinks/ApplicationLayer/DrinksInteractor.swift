@@ -9,13 +9,13 @@
 import Foundation
 
 extension Drinks {
-    final class Interactor: InteractorProtocol {
+    final class Interactor<ServProtocol:ServiceProtocol>: InteractorProtocol {
         
-        private var service: ServiceProtocol
+        private var service: ServProtocol
         private var viewModel: Drinks.ViewModel
         private var presenter: Drinks.Presenter
         
-        init(_ service: ServiceProtocol, viewModel: Drinks.ViewModel, presenter: Drinks.Presenter) {
+        init(_ service: ServProtocol, viewModel: Drinks.ViewModel, presenter: Drinks.Presenter) {
             self.service = service
             self.viewModel = viewModel
             self.presenter = presenter

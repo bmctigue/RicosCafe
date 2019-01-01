@@ -11,9 +11,11 @@ import UIKit
 extension Drinks {
     struct Presenter {
         
+        typealias Model = Drink
+        
         var dynamicModels: DynamicValue<[Drinks.ViewModel.DisplayedModel]> = DynamicValue([Drinks.ViewModel.DisplayedModel]())
         
-        private var models: [Drink]
+        private var models: [Model]
         private var displayedModels: [Drinks.ViewModel.DisplayedModel] {
             var resultModels = [Drinks.ViewModel.DisplayedModel]()
             for model in models {
@@ -23,7 +25,7 @@ extension Drinks {
             return resultModels
         }
         
-        init(_ models: [Drink] = [Drink]()) {
+        init(_ models: [Model] = [Model]()) {
             self.models = models
             dynamicModels.value = displayedModels
         }

@@ -24,7 +24,8 @@ protocol TabBuilder: VCBuilder {
 }
 
 protocol ServiceProtocol {
-    func fetchItems(_ request: Request, completionHandler: @escaping ([Any]) -> Void)
+    associatedtype Model
+    func fetchItems(_ request: Request, completionHandler: @escaping ([Model]) -> Void)
 }
 
 protocol StoreProtocol {

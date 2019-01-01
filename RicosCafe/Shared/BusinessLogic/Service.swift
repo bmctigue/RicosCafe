@@ -10,6 +10,8 @@ import UIKit
 
 final class Service<Adapter: DataAdapterProtocol>: ServiceProtocol {
     
+    typealias Model = Any
+    
     private var store: StoreProtocol
     private var dataAdapter: Adapter
     
@@ -18,7 +20,7 @@ final class Service<Adapter: DataAdapterProtocol>: ServiceProtocol {
         self.dataAdapter = dataAdapter
     }
     
-    func fetchItems(_ request: Request, completionHandler: @escaping ([Any]) -> Void) {
+    func fetchItems(_ request: Request, completionHandler: @escaping ([Model]) -> Void) {
         store.fetchData(request) { [weak self] result in
             switch(result) {
                 case .success(let data):
@@ -30,7 +32,7 @@ final class Service<Adapter: DataAdapterProtocol>: ServiceProtocol {
         }
     }
     
-    private func itemsFromData(data: Data, completionHandler: @escaping ([Any]) -> Void) {
+    private func itemsFromData(data: Data, completionHandler: @escaping ([Model]) -> Void) {
         self.dataAdapter.itemsFromData(data) { adapterResult in
             switch(adapterResult) {
             case .success(let items):
