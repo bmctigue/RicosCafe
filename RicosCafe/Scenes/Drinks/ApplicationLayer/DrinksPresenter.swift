@@ -35,7 +35,7 @@ extension Drinks {
             return displayedModels
         }
         
-        mutating func updateDisplayedModels(_ response: Response<Drink>) {
+        mutating func updateDisplayedModels(_ response: Response<Model>) {
             self.models = response.models
             dynamicModels.value = displayedModels
         }
