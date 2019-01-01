@@ -24,15 +24,15 @@ protocol TabBuilder: VCBuilder {
 }
 
 protocol ServiceProtocol {
-    func fetchItems(completionHandler: @escaping ([Any]) -> Void)
+    func fetchItems(_ request: Request, completionHandler: @escaping ([Any]) -> Void)
 }
 
 protocol StoreProtocol {
-    func fetchData(completionHandler: @escaping (Store.Result) -> Void)
+    func fetchData(_ request: Request, completionHandler: @escaping (Store.Result) -> Void)
 }
 
 protocol InteractorProtocol {
-    func fetchItems()
+    func fetchItems(_ request: Request)
 }
 
 protocol DataAdapterProtocol {

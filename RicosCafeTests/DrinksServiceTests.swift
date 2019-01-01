@@ -18,9 +18,10 @@ class DrinksServiceTests: XCTestCase {
         let expectation = self.expectation(description: "fetchItems")
         var results = [Drink]()
         let store = LocalStore(assetName)
+        let request = Request()
         
         let sut = Drinks.Service(store, dataAdapter: dataAdapter)
-        sut.fetchItems { drinks in
+        sut.fetchItems(request) { drinks in
             results = drinks as! [Drink]
             expectation.fulfill()
         }
@@ -33,7 +34,8 @@ class DrinksServiceTests: XCTestCase {
         var results = [Drink]()
         let store = LocalStore("badAssetName")
         let sut = Drinks.Service(store, dataAdapter: dataAdapter)
-        sut.fetchItems { drinks in
+        let request = Request()
+        sut.fetchItems(request) { drinks in
             results = drinks as! [Drink]
             expectation.fulfill()
         }

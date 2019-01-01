@@ -19,8 +19,8 @@ extension Drinks {
             self.dataAdapter = dataAdapter
         }
         
-        func fetchItems(completionHandler: @escaping ([Any]) -> Void) {
-            store.fetchData { [weak self] result in
+        func fetchItems(_ request: Request, completionHandler: @escaping ([Any]) -> Void) {
+            store.fetchData(request) { [weak self] result in
                 switch(result) {
                     case .success(let data):
                         self?.itemsFromData(data: data, completionHandler: completionHandler)

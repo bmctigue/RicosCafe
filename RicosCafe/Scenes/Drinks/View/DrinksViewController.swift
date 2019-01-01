@@ -35,7 +35,8 @@ extension Drinks {
                 print(dynamicModels.value)
             }
             
-            interactor.fetchItems()
+            let request = Request()
+            interactor.fetchItems(request)
         }
 
     }

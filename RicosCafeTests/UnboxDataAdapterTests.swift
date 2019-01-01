@@ -23,8 +23,9 @@ class UnboxDataAdapterTests: XCTestCase {
     func testAdapter() {
         let expectation = self.expectation(description: "adapter")
         let store = LocalStore(assetName)
+        let request = Request()
         
-        store.fetchData {[weak self] result in
+        store.fetchData(request) {[weak self] result in
             switch(result) {
             case .success(let data):
                 self?.sut.itemsFromData(data) { adapterResult in
@@ -47,8 +48,9 @@ class UnboxDataAdapterTests: XCTestCase {
     func testAdapterBadData() {
         let expectation = self.expectation(description: "adapter")
         let store = LocalStore("badAssetName")
+        let request = Request()
         
-        store.fetchData {[weak self] result in
+        store.fetchData(request) {[weak self] result in
             switch(result) {
             case .success(let data):
                 self?.sut.itemsFromData(data) { adapterResult in

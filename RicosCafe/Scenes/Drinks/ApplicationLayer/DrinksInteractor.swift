@@ -21,8 +21,8 @@ extension Drinks {
             self.presenter = presenter
         }
         
-        func fetchItems() {
-            service.fetchItems { [weak self] models in
+        func fetchItems(_ request: Request) {
+            service.fetchItems(request) { [weak self] models in
                 self?.presenter.updateDisplayedModels(models as! [Drink])
             }
         }
