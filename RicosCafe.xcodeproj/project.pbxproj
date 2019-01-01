@@ -328,8 +328,8 @@
 		A8F379D121D68E06003A03FE /* BusinessLogic */ = {
 			isa = PBXGroup;
 			children = (
-				A85CF61D21D9992400733513 /* UnboxDataAdapter.swift */,
 				A8F379D221D68E06003A03FE /* LocalStore.swift */,
+				A85CF61D21D9992400733513 /* UnboxDataAdapter.swift */,
 				A8DE069721DBD28E007F912F /* Service.swift */,
 				A84BCE0121D7C85300FD2362 /* TableViewDataSource.swift */,
 			);
