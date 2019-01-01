@@ -11,19 +11,25 @@ import XCTest
 
 class TabBarBuilderTests: XCTestCase {
     
+    var tabBarController: UITabBarController?
+    var controllersCount = 0
+    
     func testBuilderNoViewControllers() {
+        let expectation = self.expectation(description: "run")
         let builders: [TabBuilder] =  []
         let tabBarBuilder = Builder.TabBar(with: builders)
-        tabBarBuilder.run()
-        let tabBarController = tabBarBuilder.getTabBar()
-        var controllersCount = 0
-        if let controllers = tabBarController.viewControllers {
-            controllersCount = controllers.count
-            for (index,_) in controllers.enumerated() {
-                tabBarController.selectedIndex = index
+        tabBarBuilder.run() { [weak self] tabBarController in
+            self?.tabBarController = tabBarController
+            if let controllers = tabBarController.viewControllers {
+                self?.controllersCount = controllers.count
+                for (index,_) in controllers.enumerated() {
+                    tabBarController.selectedIndex = index
+                }
             }
+            expectation.fulfill()
         }
-        let itemsCount = tabBarController.tabBar.items?.count ?? 0
+        waitForExpectations(timeout: 3.0, handler: nil)
+        let itemsCount = tabBarController?.tabBar.items?.count ?? 0
         XCTAssert(controllersCount == builders.count)
         XCTAssert(itemsCount == builders.count)
     }

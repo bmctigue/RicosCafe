@@ -20,9 +20,10 @@ enum Builder {
         }
         
         func run() {
-            tabBarBuilder.run()
-            self.window?.rootViewController = tabBarBuilder.getTabBar()
-            self.window?.makeKeyAndVisible()
+            tabBarBuilder.run() { [weak self] tabBarController in
+                self?.window?.rootViewController = tabBarController
+                self?.window?.makeKeyAndVisible()
+            }
         }
     }
 }

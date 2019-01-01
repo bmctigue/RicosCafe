@@ -11,20 +11,13 @@ import XCTest
 
 class AppBuilderTests: XCTestCase {
     
+    var buildersCount = 0
+    
     func testAppBuilder() {
         let window = UIWindow(frame: UIScreen.main.bounds)
         let builder = Builder.App(with: window)
         builder.run()
-        let tabBarBuilder = builder.getTabBarBuilder()
-        let tabBar = tabBarBuilder.getTabBar()
-        let builders = tabBarBuilder.getBuilders()
-        let controllersCount = tabBar.viewControllers?.count ?? 0
-        XCTAssert(controllersCount == builders.count)
-    }
-}
-
-extension Builder.App {
-    func getTabBarBuilder() -> Builder.TabBar {
-        return tabBarBuilder
+        buildersCount = builder.configureBuilders().count
+        XCTAssert(buildersCount > 0)
     }
 }

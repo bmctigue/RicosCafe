@@ -9,6 +9,7 @@
 import UIKit
 
 typealias VCBuilderBlock = ((UIViewController) -> Void)
+typealias TabBarBuilderBlock = ((UITabBarController) -> Void)
 
 protocol BaseBuilder: class {
     func run()
@@ -16,6 +17,10 @@ protocol BaseBuilder: class {
 
 protocol VCBuilder: class {
     func run(completionHandler: VCBuilderBlock)
+}
+
+protocol TabBarBuilder: class {
+    func run(completionHandler: TabBarBuilderBlock)
 }
 
 protocol TabBuilder: VCBuilder {

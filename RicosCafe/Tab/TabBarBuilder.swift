@@ -9,7 +9,7 @@
 import UIKit
 
 extension Builder {
-    final class TabBar: BaseBuilder {
+    final class TabBar: TabBarBuilder {
         
         private lazy var tabBarController = UITabBarController()
         private lazy var controllers = [UIViewController]()
@@ -19,7 +19,7 @@ extension Builder {
             self.builders = builders
         }
         
-        func run() {
+        func run(completionHandler: TabBarBuilderBlock) {
             for builder in builders {
                 addController(builder: builder)
             }
@@ -30,6 +30,8 @@ extension Builder {
                 updateTabImage(tab: index, imageName: builder.getImageName())
                 updateTabTitle(tab: index, title: builder.getTitle())
             }
+            
+            completionHandler(tabBarController)
         }
         
         private func addController(builder: TabBuilder) {
@@ -45,14 +47,6 @@ extension Builder {
         
         private func updateTabTitle(tab: Int, title: String) {
             self.tabBarController.tabBar.items?[tab].title = title
-        }
-        
-        func getTabBar() -> UITabBarController {
-            return tabBarController
-        }
-        
-        func getBuilders() -> [TabBuilder] {
-            return builders
         }
     }
 }
