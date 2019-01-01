@@ -16,7 +16,7 @@ enum Drinks {
         
         private var store: StoreProtocol
         private lazy var dataAdapter = UnboxDataAdapter<Drink>()
-        private lazy var service = Drinks.Service(store, dataAdapter: dataAdapter)
+        private lazy var service = Service(store, dataAdapter: dataAdapter)
         private lazy var viewModel = Drinks.ViewModel()
         private lazy var presenter = Drinks.Presenter([])
         private lazy var interactor = Drinks.Interactor(service, viewModel: viewModel, presenter: presenter)

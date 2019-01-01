@@ -9,7 +9,7 @@
 import XCTest
 @testable import RicosCafe
 
-class DrinksServiceTests: XCTestCase {
+class ServiceTests: XCTestCase {
     
     let assetName = Builder.App.drinksAssetName
     lazy var dataAdapter = UnboxDataAdapter<Drink>()
@@ -20,7 +20,7 @@ class DrinksServiceTests: XCTestCase {
         let store = LocalStore(assetName)
         let request = Request()
         
-        let sut = Drinks.Service(store, dataAdapter: dataAdapter)
+        let sut = Service(store, dataAdapter: dataAdapter)
         sut.fetchItems(request) { drinks in
             results = drinks as! [Drink]
             expectation.fulfill()
@@ -33,7 +33,7 @@ class DrinksServiceTests: XCTestCase {
         let expectation = self.expectation(description: "fetchItems")
         var results = [Drink]()
         let store = LocalStore("badAssetName")
-        let sut = Drinks.Service(store, dataAdapter: dataAdapter)
+        let sut = Service(store, dataAdapter: dataAdapter)
         let request = Request()
         sut.fetchItems(request) { drinks in
             results = drinks as! [Drink]
