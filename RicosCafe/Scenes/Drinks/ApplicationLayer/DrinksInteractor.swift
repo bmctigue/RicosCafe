@@ -11,17 +11,20 @@ import Foundation
 extension Drinks {
     final class Interactor<ServProtocol: ServiceProtocol>: InteractorProtocol {
         
-        private var service: ServProtocol
-        private var presenter: Drinks.Presenter
+        typealias Model = Drink
+        typealias Presenter =  Drinks.Presenter
         
-        init(_ service: ServProtocol, presenter: Drinks.Presenter) {
+        private var service: ServProtocol
+        private var presenter: Presenter
+        
+        init(_ service: ServProtocol, presenter: Presenter) {
             self.service = service
             self.presenter = presenter
         }
         
         func fetchItems(_ request: Request) {
             service.fetchItems(request) { [weak self] models in
-                let response = Response(models: models as! [Drink])
+                let response = Response(models: models as! [Model])
                 self?.presenter.updateViewModels(response)
             }
         }
