@@ -9,35 +9,24 @@
 import UIKit
 
 extension Drinks {
-    class Presenter {
-        
+    struct Presenter: PresenterProtocol {
         typealias Model = Drink
         typealias ViewModel = Drinks.ViewModel
-        
+        var models: [Model]
         var dynamicModels: DynamicValue<[ViewModel]> = DynamicValue([ViewModel]())
-        
-        private var models: [Model]
-        private var viewModels: [ViewModel] {
-            var resultModels = [ViewModel]()
-            for model in models {
-                let displayedModel = ViewModel(name: model.name, text: model.text, price: model.price, size: model.size, temp: model.temp, imageUrl: model.imageUrl, image: model.image)
-                resultModels.append(displayedModel)
-            }
-            return resultModels
-        }
         
         init(_ models: [Model] = [Model]()) {
             self.models = models
             dynamicModels.value = viewModels
         }
         
-        func getViewModels() -> [ViewModel] {
-            return viewModels
-        }
-        
-        func updateViewModels(_ response: Response<Model>) {
-            self.models = response.models
-            dynamicModels.value = viewModels
+        var viewModels: [ViewModel] {
+            var resultModels = [ViewModel]()
+            for model in models {
+                let displayedModel = ViewModel(name: model.name, text: model.text, price: model.price, size: model.size, temp: model.temp, imageUrl: model.imageUrl, image: model.image)
+                resultModels.append(displayedModel)
+            }
+            return resultModels
         }
     }
 }
