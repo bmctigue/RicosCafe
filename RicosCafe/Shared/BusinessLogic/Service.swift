@@ -10,8 +10,6 @@ import UIKit
 
 final class Service<Adapter: DataAdapterProtocol>: ServiceProtocol {
     
-    typealias Model = Any
-    
     private var store: StoreProtocol
     private var dataAdapter: Adapter
     
@@ -20,25 +18,25 @@ final class Service<Adapter: DataAdapterProtocol>: ServiceProtocol {
         self.dataAdapter = dataAdapter
     }
     
-    func fetchItems(_ request: Request, completionHandler: @escaping ([Model]) -> Void) {
-        store.fetchData(request) { [weak self] result in
-            switch result {
+    func fetchItems(_ request: Request, completionHandler: @escaping ([Any]) -> Void) {
+        store.fetchData(request) { [weak self] dataResult in
+            switch dataResult {
             case .success(let data):
                 self?.itemsFromData(data: data, completionHandler: completionHandler)
             case .error(let error):
-                print("drinks error: \(error.localizedDescription)")
+                print("data fetch error: \(error.localizedDescription)")
                 completionHandler([])
             }
         }
     }
     
-    private func itemsFromData(data: Data, completionHandler: @escaping ([Model]) -> Void) {
+    private func itemsFromData(data: Data, completionHandler: @escaping ([Any]) -> Void) {
         self.dataAdapter.itemsFromData(data) { adapterResult in
             switch adapterResult {
             case .success(let items):
                 completionHandler(items)
             case .error(let error):
-                print("conversion error for data: \(error.localizedDescription)")
+                print("adapter conversion error for data: \(error.localizedDescription)")
                 completionHandler([])
             }
         }
