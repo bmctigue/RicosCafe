@@ -9,7 +9,7 @@
 import Foundation
 import Unbox
 
-final class UnboxDataAdapter<Model: Unboxable>: DataAdapterProtocol {
+struct UnboxDataAdapter<Model: Unboxable>: DataAdapterProtocol {
     func itemsFromData(_ data: Data, completionHandler: @escaping (DataAdapter.Result<Model>) -> Void) {
         var items = [Model]()
         do {

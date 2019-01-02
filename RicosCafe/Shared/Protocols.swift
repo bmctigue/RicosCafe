@@ -37,14 +37,12 @@ protocol StoreProtocol {
     func fetchData(_ request: Request, completionHandler: @escaping (Store.Result) -> Void)
 }
 
-protocol ServiceProtocol {
+protocol ServiceProtocol: class {
     associatedtype Model
     func fetchItems(_ request: Request, completionHandler: @escaping ([Model]) -> Void)
 }
 
 protocol InteractorProtocol: class {
-    typealias Model = Drink
-    typealias Presenter =  Drinks.Presenter
     func fetchItems(_ request: Request)
 }
 

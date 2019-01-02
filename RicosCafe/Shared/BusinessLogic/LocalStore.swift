@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class LocalStore: StoreProtocol {
+struct LocalStore: StoreProtocol {
     
     private var assetName: String
     
