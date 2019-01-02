@@ -20,6 +20,8 @@
 		A83EC02C21D41BCC001AF8CB /* DrinksPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83EC02B21D41BCC001AF8CB /* DrinksPresenterTests.swift */; };
 		A84A827321DD15B4001A9472 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A84A827221DD15B4001A9472 /* LoadingViewController.swift */; };
 		A84A827521DD1644001A9472 /* UIViewController+AddRemove.swift in Sources */ = {isa = PBXBuildFile; fileRef = A84A827421DD1644001A9472 /* UIViewController+AddRemove.swift */; };
+		A84A827821DD1771001A9472 /* DrinksTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A84A827621DD1771001A9472 /* DrinksTableViewController.swift */; };
+		A84A827921DD1771001A9472 /* DrinksTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A84A827721DD1771001A9472 /* DrinksTableViewController.xib */; };
 		A84BCE0221D7C85300FD2362 /* TableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A84BCE0121D7C85300FD2362 /* TableViewDataSource.swift */; };
 		A84BCE0421D7C9E600FD2362 /* TableViewDataSourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A84BCE0321D7C9E600FD2362 /* TableViewDataSourceTests.swift */; };
 		A84E508C21DA707A002989F5 /* DrinksPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A84E508B21DA707A002989F5 /* DrinksPresenter.swift */; };
@@ -78,6 +80,8 @@
 		A83EC02B21D41BCC001AF8CB /* DrinksPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinksPresenterTests.swift; sourceTree = "<group>"; };
 		A84A827221DD15B4001A9472 /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
 		A84A827421DD1644001A9472 /* UIViewController+AddRemove.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+AddRemove.swift"; sourceTree = "<group>"; };
+		A84A827621DD1771001A9472 /* DrinksTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinksTableViewController.swift; sourceTree = "<group>"; };
+		A84A827721DD1771001A9472 /* DrinksTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DrinksTableViewController.xib; sourceTree = "<group>"; };
 		A84BCE0121D7C85300FD2362 /* TableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewDataSource.swift; sourceTree = "<group>"; };
 		A84BCE0321D7C9E600FD2362 /* TableViewDataSourceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewDataSourceTests.swift; sourceTree = "<group>"; };
 		A84E508B21DA707A002989F5 /* DrinksPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinksPresenter.swift; sourceTree = "<group>"; };
@@ -178,6 +182,8 @@
 			children = (
 				A807F79721D2F1FF009D00B5 /* DrinksViewController.swift */,
 				A807F79821D2F1FF009D00B5 /* DrinksViewController.xib */,
+				A84A827621DD1771001A9472 /* DrinksTableViewController.swift */,
+				A84A827721DD1771001A9472 /* DrinksTableViewController.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -463,6 +469,7 @@
 				A863A45221AF127E00E73566 /* Main.storyboard in Resources */,
 				A863A41D21AF07E700E73566 /* LaunchScreen.storyboard in Resources */,
 				A863A41A21AF07E700E73566 /* Assets.xcassets in Resources */,
+				A84A827921DD1771001A9472 /* DrinksTableViewController.xib in Resources */,
 				A807F79A21D2F1FF009D00B5 /* DrinksViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -579,6 +586,7 @@
 				A8DE069821DBD28E007F912F /* Service.swift in Sources */,
 				A84E508C21DA707A002989F5 /* DrinksPresenter.swift in Sources */,
 				A807F79621D2F0C7009D00B5 /* DrinksBuilder.swift in Sources */,
+				A84A827821DD1771001A9472 /* DrinksTableViewController.swift in Sources */,
 				A84BCE0221D7C85300FD2362 /* TableViewDataSource.swift in Sources */,
 				A807F79921D2F1FF009D00B5 /* DrinksViewController.swift in Sources */,
 				A8F379D321D68E07003A03FE /* LocalStore.swift in Sources */,

@@ -11,12 +11,10 @@ import UIKit
 extension Drinks {
     final class ViewController: UIViewController {
         
-        private var interactor: InteractorProtocol
-        private var presenter: Drinks.Presenter
+        private var tableViewController: DrinksTableViewController
         
-        init(with interactor: InteractorProtocol, presenter: Drinks.Presenter) {
-            self.interactor = interactor
-            self.presenter = presenter
+        init(with tableViewController: DrinksTableViewController) {
+            self.tableViewController = tableViewController
             super.init(nibName: nil, bundle: nil)
         }
         
@@ -27,14 +25,7 @@ extension Drinks {
         override func viewDidLoad() {
             super.viewDidLoad()
             self.view.backgroundColor = UIColor.lightGray
-            
-            let dynamicModels = presenter.dynamicModels
-            dynamicModels.addObserver(self) {
-                print(dynamicModels.value)
-            }
-            
-            let request = Request()
-            interactor.fetchItems(request)
+            add(tableViewController)
         }
 
     }
