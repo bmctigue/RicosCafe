@@ -18,6 +18,8 @@
 		A83EC02621D3F513001AF8CB /* DrinkViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83EC02521D3F513001AF8CB /* DrinkViewModel.swift */; };
 		A83EC02A21D3F7DE001AF8CB /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83EC02921D3F7DE001AF8CB /* Protocols.swift */; };
 		A83EC02C21D41BCC001AF8CB /* DrinksPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83EC02B21D41BCC001AF8CB /* DrinksPresenterTests.swift */; };
+		A84A827321DD15B4001A9472 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A84A827221DD15B4001A9472 /* LoadingViewController.swift */; };
+		A84A827521DD1644001A9472 /* UIViewController+AddRemove.swift in Sources */ = {isa = PBXBuildFile; fileRef = A84A827421DD1644001A9472 /* UIViewController+AddRemove.swift */; };
 		A84BCE0221D7C85300FD2362 /* TableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A84BCE0121D7C85300FD2362 /* TableViewDataSource.swift */; };
 		A84BCE0421D7C9E600FD2362 /* TableViewDataSourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A84BCE0321D7C9E600FD2362 /* TableViewDataSourceTests.swift */; };
 		A84E508C21DA707A002989F5 /* DrinksPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A84E508B21DA707A002989F5 /* DrinksPresenter.swift */; };
@@ -74,6 +76,8 @@
 		A83EC02521D3F513001AF8CB /* DrinkViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkViewModel.swift; sourceTree = "<group>"; };
 		A83EC02921D3F7DE001AF8CB /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
 		A83EC02B21D41BCC001AF8CB /* DrinksPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinksPresenterTests.swift; sourceTree = "<group>"; };
+		A84A827221DD15B4001A9472 /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
+		A84A827421DD1644001A9472 /* UIViewController+AddRemove.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+AddRemove.swift"; sourceTree = "<group>"; };
 		A84BCE0121D7C85300FD2362 /* TableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewDataSource.swift; sourceTree = "<group>"; };
 		A84BCE0321D7C9E600FD2362 /* TableViewDataSourceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewDataSourceTests.swift; sourceTree = "<group>"; };
 		A84E508B21DA707A002989F5 /* DrinksPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinksPresenter.swift; sourceTree = "<group>"; };
@@ -196,6 +200,15 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		A84A827121DD1582001A9472 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A84A827221DD15B4001A9472 /* LoadingViewController.swift */,
+				A84A827421DD1644001A9472 /* UIViewController+AddRemove.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		A863A40621AF07E500E73566 = {
 			isa = PBXGroup;
 			children = (
@@ -316,10 +329,11 @@
 		A863A44621AF0C0A00E73566 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				A8F379D121D68E06003A03FE /* BusinessLogic */,
+				A84A827121DD1582001A9472 /* View */,
 				A8DE069521DBC685007F912F /* Structs.swift */,
 				A8DE069321DBC446007F912F /* Enumerations.swift */,
 				A83EC02921D3F7DE001AF8CB /* Protocols.swift */,
-				A8F379D121D68E06003A03FE /* BusinessLogic */,
 				A807F78D21D2ECA1009D00B5 /* Binder */,
 			);
 			path = Shared;
@@ -554,12 +568,14 @@
 				A83EC02A21D3F7DE001AF8CB /* Protocols.swift in Sources */,
 				A8E5BB7D21D5B19600AEFC36 /* DrinksInteractor.swift in Sources */,
 				A85CF61E21D9992400733513 /* UnboxDataAdapter.swift in Sources */,
+				A84A827321DD15B4001A9472 /* LoadingViewController.swift in Sources */,
 				A863A41321AF07E500E73566 /* AppDelegate.swift in Sources */,
 				A8DE069421DBC446007F912F /* Enumerations.swift in Sources */,
 				A863A44C21AF0E2900E73566 /* TabBarBuilder.swift in Sources */,
 				A83EC02621D3F513001AF8CB /* DrinkViewModel.swift in Sources */,
 				A863A44A21AF0D9200E73566 /* AppBuilder.swift in Sources */,
 				A8DE069621DBC685007F912F /* Structs.swift in Sources */,
+				A84A827521DD1644001A9472 /* UIViewController+AddRemove.swift in Sources */,
 				A8DE069821DBD28E007F912F /* Service.swift in Sources */,
 				A84E508C21DA707A002989F5 /* DrinksPresenter.swift in Sources */,
 				A807F79621D2F0C7009D00B5 /* DrinksBuilder.swift in Sources */,
