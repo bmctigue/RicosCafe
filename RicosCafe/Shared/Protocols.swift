@@ -42,7 +42,9 @@ protocol ServiceProtocol {
     func fetchItems(_ request: Request, completionHandler: @escaping ([Model]) -> Void)
 }
 
-protocol InteractorProtocol {
+protocol InteractorProtocol: class {
+    typealias Model = Drink
+    typealias Presenter =  Drinks.Presenter
     func fetchItems(_ request: Request)
 }
 
