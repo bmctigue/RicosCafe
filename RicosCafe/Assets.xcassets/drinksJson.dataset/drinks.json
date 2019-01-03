@@ -6,7 +6,7 @@
       "size": 0,
       "temp": 0,
       "image_url": "http://google.com/images/small_black_coffee",
-      "image": ""
+      "image": "coffee"
     },
     {
       "name": "Latte",
@@ -15,7 +15,7 @@
       "size": 1,
       "temp": 0,
       "image_url": "http://google.com/images/medium_latte",
-      "image": ""
+      "image": "latte"
     },
     {
       "name": "English Breakfast Tea",
@@ -24,15 +24,15 @@
       "size": 0,
       "temp": 0,
       "image_url": "http://google.com/images/english_breakfast _tea",
-      "image": ""
+      "image": "tea"
     },
     {
       "name": "Cold Brew",
-      "text": "Cold and refreshing black coffee",
+      "text": "Refreshing black coffee",
       "price": "1.99",
       "size": 0,
       "temp": 1,
       "image_url": "http://google.com/images/cold_brew",
-      "image": ""
+      "image": "iced_coffee"
     }
 ]

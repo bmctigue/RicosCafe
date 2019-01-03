@@ -11,10 +11,14 @@ import UIKit
 class DrinksTableViewController: UIViewController {
     typealias ViewModel = Drinks.ViewModel
     
+    static let rowHeight: CGFloat = 74.0
+    let cellName = "DrinkCell"
+    
     @IBOutlet weak var tableView: UITableView!
     
     var viewModels = [ViewModel]()
     var tableViewDatasource: TableViewDataSource<ViewModel>!
+    lazy var loadingViewController = LoadingViewController()
     
     private var interactor: InteractorProtocol
     private var presenter: Drinks.Presenter
@@ -24,26 +28,26 @@ class DrinksTableViewController: UIViewController {
         self.presenter = presenter
         super.init(nibName: nil, bundle: nil)
     }
-    
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.tableViewDatasource = TableViewDataSource(models: viewModels, reuseIdentifier: "Cell") { (model: ViewModel, cell: UITableViewCell) in
-            cell.textLabel?.text = model.name
-            cell.detailTextLabel?.text = model.text
+        self.tableView.rowHeight = UITableView.automaticDimension
+        self.tableView.estimatedRowHeight = DrinksTableViewController.rowHeight
+        self.tableView.register(UINib(nibName: "DrinkTableViewCell", bundle: nil), forCellReuseIdentifier: cellName)
+        
+        self.tableViewDatasource = TableViewDataSource(models: viewModels, reuseIdentifier: cellName) { (model: ViewModel, cell: UITableViewCell) in
+            let cell = cell as! DrinkTableViewCell
+            cell.viewModel = model
         }
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
-        tableView.dataSource = tableViewDatasource
+        self.tableView.dataSource = tableViewDatasource
         
         let dynamicModels = presenter.dynamicModels
         dynamicModels.addObserver(self) { [weak self] in
-            print(dynamicModels.value)
             self?.updateTableView(dynamicModels.value)
+            self?.loadingViewController.remove()
         }
         
+        add(loadingViewController)
         let request = Request()
         interactor.fetchItems(request)
     }
@@ -51,5 +55,9 @@ class DrinksTableViewController: UIViewController {
     func updateTableView(_ models: [ViewModel]) {
         self.tableViewDatasource.models = models
         self.tableView.reloadData()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
 }

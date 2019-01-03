@@ -22,6 +22,8 @@
 		A84A827521DD1644001A9472 /* UIViewController+AddRemove.swift in Sources */ = {isa = PBXBuildFile; fileRef = A84A827421DD1644001A9472 /* UIViewController+AddRemove.swift */; };
 		A84A827821DD1771001A9472 /* DrinksTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A84A827621DD1771001A9472 /* DrinksTableViewController.swift */; };
 		A84A827921DD1771001A9472 /* DrinksTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A84A827721DD1771001A9472 /* DrinksTableViewController.xib */; };
+		A84A827C21DD253F001A9472 /* DrinkTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A84A827A21DD253F001A9472 /* DrinkTableViewCell.swift */; };
+		A84A827D21DD253F001A9472 /* DrinkTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A84A827B21DD253F001A9472 /* DrinkTableViewCell.xib */; };
 		A84BCE0221D7C85300FD2362 /* TableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A84BCE0121D7C85300FD2362 /* TableViewDataSource.swift */; };
 		A84BCE0421D7C9E600FD2362 /* TableViewDataSourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A84BCE0321D7C9E600FD2362 /* TableViewDataSourceTests.swift */; };
 		A84E508C21DA707A002989F5 /* DrinksPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A84E508B21DA707A002989F5 /* DrinksPresenter.swift */; };
@@ -82,6 +84,8 @@
 		A84A827421DD1644001A9472 /* UIViewController+AddRemove.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+AddRemove.swift"; sourceTree = "<group>"; };
 		A84A827621DD1771001A9472 /* DrinksTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinksTableViewController.swift; sourceTree = "<group>"; };
 		A84A827721DD1771001A9472 /* DrinksTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DrinksTableViewController.xib; sourceTree = "<group>"; };
+		A84A827A21DD253F001A9472 /* DrinkTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkTableViewCell.swift; sourceTree = "<group>"; };
+		A84A827B21DD253F001A9472 /* DrinkTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DrinkTableViewCell.xib; sourceTree = "<group>"; };
 		A84BCE0121D7C85300FD2362 /* TableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewDataSource.swift; sourceTree = "<group>"; };
 		A84BCE0321D7C9E600FD2362 /* TableViewDataSourceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewDataSourceTests.swift; sourceTree = "<group>"; };
 		A84E508B21DA707A002989F5 /* DrinksPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinksPresenter.swift; sourceTree = "<group>"; };
@@ -184,6 +188,8 @@
 				A807F79821D2F1FF009D00B5 /* DrinksViewController.xib */,
 				A84A827621DD1771001A9472 /* DrinksTableViewController.swift */,
 				A84A827721DD1771001A9472 /* DrinksTableViewController.xib */,
+				A84A827A21DD253F001A9472 /* DrinkTableViewCell.swift */,
+				A84A827B21DD253F001A9472 /* DrinkTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -471,6 +477,7 @@
 				A863A41A21AF07E700E73566 /* Assets.xcassets in Resources */,
 				A84A827921DD1771001A9472 /* DrinksTableViewController.xib in Resources */,
 				A807F79A21D2F1FF009D00B5 /* DrinksViewController.xib in Resources */,
+				A84A827D21DD253F001A9472 /* DrinkTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -577,6 +584,7 @@
 				A85CF61E21D9992400733513 /* UnboxDataAdapter.swift in Sources */,
 				A84A827321DD15B4001A9472 /* LoadingViewController.swift in Sources */,
 				A863A41321AF07E500E73566 /* AppDelegate.swift in Sources */,
+				A84A827C21DD253F001A9472 /* DrinkTableViewCell.swift in Sources */,
 				A8DE069421DBC446007F912F /* Enumerations.swift in Sources */,
 				A863A44C21AF0E2900E73566 /* TabBarBuilder.swift in Sources */,
 				A83EC02621D3F513001AF8CB /* DrinkViewModel.swift in Sources */,

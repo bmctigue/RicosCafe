@@ -27,6 +27,5 @@ extension Drinks {
             self.view.backgroundColor = UIColor.lightGray
             add(tableViewController)
         }
-
     }
 }
