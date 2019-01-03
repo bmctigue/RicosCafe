@@ -38,7 +38,11 @@ class DrinksTableViewController: UIViewController {
         
         self.tableViewDatasource = TableViewDataSource(models: viewModels, reuseIdentifier: cellName) { (model: ViewModel, cell: UITableViewCell) in
             let cell = cell as! DrinkTableViewCell
-            cell.viewModel = model
+            let viewModel = model
+            cell.nameLabel.text = viewModel.name
+            cell.descriptionLabel.text = viewModel.text
+            cell.priceLabel.text = viewModel.formattedPrice
+            cell.cellImageView.image = viewModel.image.isEmpty ? nil : UIImage(named: viewModel.image)
         }
         self.tableView.dataSource = tableViewDatasource
         

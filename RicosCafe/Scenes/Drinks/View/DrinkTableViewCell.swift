@@ -16,17 +16,6 @@ class DrinkTableViewCell: UITableViewCell {
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var cellImageView: UIImageView!
     
-    var viewModel: ViewModel? {
-        didSet {
-            if let viewModel = viewModel {
-                nameLabel.text = viewModel.name
-                descriptionLabel.text = viewModel.text
-                priceLabel.text = viewModel.formattedPrice
-                cellImageView.image = viewModel.image.isEmpty ? nil : UIImage(named: viewModel.image)
-            }
-        }
-    }
-    
     override func layoutSubviews() {
         cellImageView.layer.cornerRadius = 8
     }
