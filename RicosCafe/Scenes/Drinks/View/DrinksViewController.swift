@@ -8,24 +8,22 @@
 
 import UIKit
 
-extension Drinks {
-    final class ViewController: UIViewController {
-        
-        private var tableViewController: DrinksTableViewController
-        
-        init(with tableViewController: DrinksTableViewController) {
-            self.tableViewController = tableViewController
-            super.init(nibName: nil, bundle: nil)
-        }
-        
-        override func viewDidLoad() {
-            super.viewDidLoad()
-            self.view.backgroundColor = UIColor.lightGray
-            add(tableViewController)
-        }
-        
-        required init?(coder aDecoder: NSCoder) {
-            return nil
-        }
+final class DrinksViewController: UIViewController {
+    
+    private var tableViewController: DrinksTableViewController
+    
+    init(with tableViewController: DrinksTableViewController) {
+        self.tableViewController = tableViewController
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.view.backgroundColor = UIColor.lightGray
+        add(tableViewController)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        return nil
     }
 }

@@ -12,13 +12,13 @@ import XCTest
 class DrinksBuilderTests: XCTestCase {
     
     lazy var store = LocalStore(Builder.App.drinksAssetName)
-    var resultController: Drinks.ViewController?
+    var resultController: DrinksViewController?
 
     func testDrinksBuilder() {
         let expectation = self.expectation(description: "run")
         let sut = Drinks.Builder.init(with: "test", title: "test", store: store)
         sut.run { controller in 
-            resultController = controller as? Drinks.ViewController
+            resultController = controller as? DrinksViewController
             expectation.fulfill()
         }
         waitForExpectations(timeout: 3.0, handler: nil)

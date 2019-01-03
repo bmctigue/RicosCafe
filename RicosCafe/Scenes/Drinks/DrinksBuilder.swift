@@ -36,7 +36,7 @@ enum Drinks {
         }
         
         func run(completionHandler: VCBuilderBlock) {
-            let controller = Drinks.ViewController(with: tableViewController)
+            let controller = DrinksViewController(with: tableViewController)
             completionHandler(controller)
         }
     }
