@@ -17,5 +17,9 @@ extension Drinks {
         let temp: DrinkTempType
         let imageUrl: String
         let image: String
+        
+        var formattedPrice: String {
+            return "$\(price)"
+        }
     }
 }

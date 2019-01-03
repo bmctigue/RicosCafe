@@ -21,7 +21,7 @@ class DrinkTableViewCell: UITableViewCell {
             if let viewModel = viewModel {
                 nameLabel.text = viewModel.name
                 descriptionLabel.text = viewModel.text
-                priceLabel.text = "$\(viewModel.price)"
+                priceLabel.text = viewModel.formattedPrice
                 cellImageView.image = viewModel.image.isEmpty ? nil : UIImage(named: viewModel.image)
             }
         }
