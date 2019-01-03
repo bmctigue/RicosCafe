@@ -13,6 +13,7 @@ class DrinksTableViewController: UIViewController {
     
     static let rowHeight: CGFloat = 74.0
     let cellName = "DrinkCell"
+    let cellNibName = "DrinkTableViewCell"
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -33,7 +34,7 @@ class DrinksTableViewController: UIViewController {
         super.viewDidLoad()
         self.tableView.rowHeight = UITableView.automaticDimension
         self.tableView.estimatedRowHeight = DrinksTableViewController.rowHeight
-        self.tableView.register(UINib(nibName: "DrinkTableViewCell", bundle: nil), forCellReuseIdentifier: cellName)
+        self.tableView.register(UINib(nibName: cellNibName, bundle: nil), forCellReuseIdentifier: cellName)
         
         self.tableViewDatasource = TableViewDataSource(models: viewModels, reuseIdentifier: cellName) { (model: ViewModel, cell: UITableViewCell) in
             let cell = cell as! DrinkTableViewCell
