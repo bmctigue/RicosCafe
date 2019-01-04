@@ -6,7 +6,7 @@
   "data" : [
     {
       "idiom" : "universal",
-      "filename" : "drinks.json"
+      "filename" : "productsJson.json"
     }
   ]
 }

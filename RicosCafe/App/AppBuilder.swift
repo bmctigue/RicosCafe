@@ -30,18 +30,18 @@ enum Builder {
 
 extension Builder.App {
     
-    static let drinksAssetName = "drinksJson"
+    static let productsAssetName = "productsJson"
     
     private static let drinksImageName = "drinks"
     private static let foodImageName = "food"
     private static let dessertImageName = "dessert"
     
-    private static let drinksTitle = "Products"
+    private static let drinksTitle = "Drinks"
     private static let foodTitle = "Food"
     private static let dessertTitle = "Dessert"
     
     func configureBuilders() -> [TabBuilder] {
-        let drinksStore = LocalStore(Builder.App.drinksAssetName)
+        let drinksStore = LocalStore(Builder.App.productsAssetName)
         let drinksBuilder = Products.Builder(with: Builder.App.drinksImageName, title: Builder.App.drinksTitle, store: drinksStore)
         return [drinksBuilder]
     }

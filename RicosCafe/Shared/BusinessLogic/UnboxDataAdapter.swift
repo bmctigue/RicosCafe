@@ -17,7 +17,6 @@ struct UnboxDataAdapter<Model: Unboxable>: DataAdapterProtocol {
             completionHandler(.success(items))
         } catch {
             completionHandler(.error(.conversionFailed))
-            print("data could not be unboxed - \(error.localizedDescription)")
         }
     }
 }

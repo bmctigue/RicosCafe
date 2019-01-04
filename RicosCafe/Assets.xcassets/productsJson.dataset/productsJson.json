@@ -1,0 +1,42 @@
+[
+    {
+      "name": "Black Coffee",
+      "text": "Rich and delicious",
+      "price": "1.99",
+      "type": 0,
+      "size": 0,
+      "temp": 0,
+      "image_url": "http://google.com/images/small_black_coffee",
+      "image": "coffee"
+    },
+    {
+      "name": "Latte",
+      "text": "Milky and smooth",
+      "price": "2.99",
+      "type": 0,
+      "size": 1,
+      "temp": 0,
+      "image_url": "http://google.com/images/medium_latte",
+      "image": "latte"
+    },
+    {
+      "name": "English Breakfast Tea",
+      "text": "Warm and inviting",
+      "price": "0.99",
+      "type": 0,
+      "size": 0,
+      "temp": 0,
+      "image_url": "http://google.com/images/english_breakfast _tea",
+      "image": "tea"
+    },
+    {
+      "name": "Cold Brew",
+      "text": "Cold and refreshing black coffee",
+      "price": "1.99",
+      "type": 0,
+      "size": 0,
+      "temp": 1,
+      "image_url": "http://google.com/images/cold_brew",
+      "image": "iced_coffee"
+    }
+]

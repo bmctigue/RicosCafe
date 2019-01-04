@@ -9,6 +9,12 @@
 import UIKit
 import Unbox
 
+enum ProductType: Int, UnboxableEnum {
+    case drink
+    case entree
+    case dessert
+}
+
 enum ProductSizeType: Int, UnboxableEnum {
     case small
     case medium
@@ -25,6 +31,7 @@ struct Product {
     var name: String
     var text: String
     var price: String
+    var type: ProductType
     var size: ProductSizeType
     var temp: ProductTempType
     var imageUrl: String
@@ -36,6 +43,7 @@ extension Product: Unboxable {
         self.name = try unboxer.unbox(key: "name")
         self.text = try unboxer.unbox(key: "text")
         self.price = try unboxer.unbox(key: "price")
+        self.type = try unboxer.unbox(key: "type")
         self.size = try unboxer.unbox(key: "size")
         self.temp = try unboxer.unbox(key: "temp")
         self.imageUrl = try unboxer.unbox(key: "image_url")
