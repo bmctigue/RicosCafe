@@ -11,7 +11,7 @@ import XCTest
 
 class LocalStoreTests: XCTestCase {
     
-    let assetName = "drinksJson"
+    let assetName = "productsJson"
     var fetchedData: Data?
     var error: StoreError?
     

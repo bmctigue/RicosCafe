@@ -11,7 +11,7 @@ import XCTest
 
 class UnboxDataAdapterTests: XCTestCase {
     
-    let assetName = "drinksJson"
+    let assetName = "productsJson"
     var error: StoreError?
     var items: [Product] = [Product]()
     lazy var sut = UnboxDataAdapter<Product>()

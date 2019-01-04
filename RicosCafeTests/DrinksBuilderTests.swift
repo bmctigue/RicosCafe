@@ -11,12 +11,12 @@ import XCTest
 
 class ProductsBuilderTests: XCTestCase {
     
-    lazy var store = LocalStore(Builder.App.drinksAssetName)
+    lazy var store = LocalStore(Builder.App.productsAssetName)
     var resultController: ProductsViewController?
 
     func testProductsBuilder() {
         let expectation = self.expectation(description: "run")
-        let sut = Products.Builder.init(with: "test", title: "test", store: store)
+        let sut = Products.Builder.init(with: "test", title: "test", store: store, state: .drinks)
         sut.run { controller in 
             resultController = controller as? ProductsViewController
             expectation.fulfill()

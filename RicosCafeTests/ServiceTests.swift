@@ -11,7 +11,7 @@ import XCTest
 
 class ServiceTests: XCTestCase {
     
-    let assetName = Builder.App.drinksAssetName
+    let assetName = Builder.App.productsAssetName
     lazy var dataAdapter = UnboxDataAdapter<Product>()
 
     func testService() {
