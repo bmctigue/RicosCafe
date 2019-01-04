@@ -38,10 +38,12 @@ extension Products {
         func filterModelsByState(_ models: [Model], state: AppState) -> [Model] {
             var filteredModels = [Model]()
             switch state {
-            case .drinks:
+            case .drink:
                 filteredModels = models.filter { $0.type == .drink }
             case .entree:
                 filteredModels = models.filter { $0.type == .entree }
+            case .dessert:
+                filteredModels = models.filter { $0.type == .dessert }
             }
             return filteredModels
         }

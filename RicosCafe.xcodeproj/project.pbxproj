@@ -298,9 +298,9 @@
 			isa = PBXGroup;
 			children = (
 				A807F79521D2F0C7009D00B5 /* ProductsBuilder.swift */,
+				A807F78F21D2ED2A009D00B5 /* View */,
 				A807F79021D2ED2A009D00B5 /* ApplicationLayer */,
 				A807F78E21D2ED2A009D00B5 /* BusinessLogic */,
-				A807F78F21D2ED2A009D00B5 /* View */,
 			);
 			path = Products;
 			sourceTree = "<group>";
@@ -325,11 +325,11 @@
 		A863A44621AF0C0A00E73566 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				A8F379D121D68E06003A03FE /* BusinessLogic */,
-				A84A827121DD1582001A9472 /* View */,
-				A8DE069521DBC685007F912F /* Structs.swift */,
 				A8DE069321DBC446007F912F /* Enumerations.swift */,
+				A8DE069521DBC685007F912F /* Structs.swift */,
 				A83EC02921D3F7DE001AF8CB /* Protocols.swift */,
+				A84A827121DD1582001A9472 /* View */,
+				A8F379D121D68E06003A03FE /* BusinessLogic */,
 				A807F78D21D2ECA1009D00B5 /* Binder */,
 			);
 			path = Shared;

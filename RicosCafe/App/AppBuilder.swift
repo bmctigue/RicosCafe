@@ -41,10 +41,10 @@ extension Builder.App {
     private static let dessertTitle = "Dessert"
     
     func configureBuilders() -> [TabBuilder] {
-        let drinksStore = LocalStore(Builder.App.productsAssetName)
-        let drinksBuilder = Products.Builder(with: Builder.App.drinksImageName, title: Builder.App.drinksTitle, store: drinksStore, state: .drinks)
-        let foodStore = LocalStore(Builder.App.productsAssetName)
-        let foodBuilder = Products.Builder(with: Builder.App.foodImageName, title: Builder.App.foodTitle, store: foodStore, state: .entree)
-        return [drinksBuilder, foodBuilder]
+        let store = LocalStore(Builder.App.productsAssetName)
+        let drinksBuilder = Products.Builder(with: Builder.App.drinksImageName, title: Builder.App.drinksTitle, store: store, state: .drink)
+        let foodBuilder = Products.Builder(with: Builder.App.foodImageName, title: Builder.App.foodTitle, store: store, state: .entree)
+        let dessertBuilder = Products.Builder(with: Builder.App.dessertImageName, title: Builder.App.dessertTitle, store: store, state: .dessert)
+        return [drinksBuilder, foodBuilder, dessertBuilder]
     }
 }

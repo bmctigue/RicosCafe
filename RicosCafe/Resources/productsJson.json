@@ -68,5 +68,35 @@
       "temp": 0,
       "image_url": "http://google.com/images/chicken_panini",
       "image": "chicken_panini"
+    },
+    {
+      "name": "Cookies",
+      "text": "Delicious chocolate chip cookies",
+      "price": "1.99",
+      "type": 2,
+      "size": 0,
+      "temp": 0,
+      "image_url": "http://google.com/images/cookies",
+      "image": "cookies"
+    },
+    {
+      "name": "Carrot Carrot",
+      "text": "Rich carrot cake with cream cheese icing",
+      "price": "2.99",
+      "type": 2,
+      "size": 0,
+      "temp": 0,
+      "image_url": "http://google.com/images/carrot_cake",
+      "image": "carrot_cake"
+    },
+    {
+      "name": "Chocolate Cake",
+      "text": "Rich chocolate cake with truffel frosting",
+      "price": "3.99",
+      "type": 2,
+      "size": 0,
+      "temp": 0,
+      "image_url": "http://google.com/images/chocolate_cake",
+      "image": "chocolate_cake"
     }
 ]

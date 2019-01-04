@@ -9,8 +9,9 @@
 import Foundation
 
 enum AppState {
-    case drinks
+    case drink
     case entree
+    case dessert
 }
 
 enum StoreError: Error {
