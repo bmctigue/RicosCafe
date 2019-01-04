@@ -36,7 +36,10 @@ extension Builder {
         
         private func addController(builder: TabBuilder) {
             builder.run(completionHandler: { controller in
-                controllers.append(controller)
+                let navigationController = UINavigationController()
+                navigationController.add(controller)
+                controller.title = builder.getTitle()
+                controllers.append(navigationController)
             })
         }
         
