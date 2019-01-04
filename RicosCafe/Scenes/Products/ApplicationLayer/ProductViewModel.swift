@@ -13,8 +13,6 @@ extension Products {
         let name: String
         let text: String
         let price: String
-        let size: ProductSizeType
-        let temp: ProductTempType
         let imageUrl: String
         let image: String
         
