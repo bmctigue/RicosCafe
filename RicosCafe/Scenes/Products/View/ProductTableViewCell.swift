@@ -1,5 +1,5 @@
 //
-//  DrinkTableViewCell.swift
+//  ProductTableViewCell.swift
 //  RicosCafe
 //
 //  Created by Bruce McTigue on 1/2/19.
@@ -8,8 +8,8 @@
 
 import UIKit
 
-class DrinkTableViewCell: UITableViewCell {
-    typealias ViewModel = Drinks.ViewModel
+class ProductTableViewCell: UITableViewCell {
+    typealias ViewModel = Products.ViewModel
     
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!

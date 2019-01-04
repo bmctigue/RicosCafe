@@ -1,5 +1,5 @@
 //
-//  DrinksPresenter.swift
+//  ProductsPresenter.swift
 //  RicosCafe
 //
 //  Created by Bruce McTigue on 12/31/18.
@@ -8,10 +8,10 @@
 
 import UIKit
 
-extension Drinks {
+extension Products {
     struct Presenter: PresenterProtocol {
-        typealias Model = Drink
-        typealias ViewModel = Drinks.ViewModel
+        typealias Model = Product
+        typealias ViewModel = Products.ViewModel
         var models: [Model]
         var dynamicModels: DynamicValue<[ViewModel]> = DynamicValue([ViewModel]())
         

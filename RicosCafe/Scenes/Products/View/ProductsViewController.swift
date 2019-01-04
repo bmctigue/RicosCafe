@@ -1,5 +1,5 @@
 //
-//  DrinksViewController.swift
+//  ProductsViewController.swift
 //  RicosCafe
 //
 //  Created by Bruce McTigue on 12/25/18.
@@ -8,11 +8,11 @@
 
 import UIKit
 
-final class DrinksViewController: UIViewController {
+final class ProductsViewController: UIViewController {
     
-    private var tableViewController: DrinksTableViewController
+    private var tableViewController: ProductsTableViewController
     
-    init(with tableViewController: DrinksTableViewController) {
+    init(with tableViewController: ProductsTableViewController) {
         self.tableViewController = tableViewController
         super.init(nibName: nil, bundle: nil)
     }

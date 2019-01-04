@@ -1,5 +1,5 @@
 //
-//  DrinksService.swift
+//  ProductsService.swift
 //  RicosCafe
 //
 //  Created by Bruce McTigue on 12/28/18.

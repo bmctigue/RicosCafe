@@ -1,5 +1,5 @@
 //
-//  DrinkStoreTests.swift
+//  ProductStoreTests.swift
 //  RicosCafeTests
 //
 //  Created by Bruce McTigue on 12/28/18.

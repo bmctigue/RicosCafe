@@ -1,5 +1,5 @@
 //
-//  Drink.swift
+//  Product.swift
 //  RicosCafe
 //
 //  Created by Bruce McTigue on 12/26/18.
@@ -9,29 +9,29 @@
 import UIKit
 import Unbox
 
-enum DrinkSizeType: Int, UnboxableEnum {
+enum ProductSizeType: Int, UnboxableEnum {
     case small
     case medium
     case large
 }
 
-enum DrinkTempType: Int, UnboxableEnum {
+enum ProductTempType: Int, UnboxableEnum {
     case hot
     case cold
     case frozen
 }
 
-struct Drink {
+struct Product {
     var name: String
     var text: String
     var price: String
-    var size: DrinkSizeType
-    var temp: DrinkTempType
+    var size: ProductSizeType
+    var temp: ProductTempType
     var imageUrl: String
     var image: String
 }
 
-extension Drink: Unboxable {
+extension Product: Unboxable {
     init(unboxer: Unboxer) throws {
         self.name = try unboxer.unbox(key: "name")
         self.text = try unboxer.unbox(key: "text")

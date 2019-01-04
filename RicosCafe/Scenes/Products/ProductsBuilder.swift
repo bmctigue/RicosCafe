@@ -1,5 +1,5 @@
 //
-//  DrinksBuilder.swift
+//  ProductsBuilder.swift
 //  RicosCafe
 //
 //  Created by Bruce McTigue on 12/25/18.
@@ -8,18 +8,18 @@
 
 import Foundation
 
-enum Drinks {
+enum Products {
     final class Builder: TabBuilder {
         
         private var imageName: String
         private var title: String
         
         private var store: StoreProtocol
-        private lazy var dataAdapter = UnboxDataAdapter<Drink>()
+        private lazy var dataAdapter = UnboxDataAdapter<Product>()
         private lazy var service = Service(store, dataAdapter: dataAdapter)
-        private lazy var presenter = Drinks.Presenter([])
-        private lazy var interactor = Drinks.Interactor(service, presenter: presenter)
-        private lazy var tableViewController = DrinksTableViewController(with: interactor, presenter: presenter)
+        private lazy var presenter = Products.Presenter([])
+        private lazy var interactor = Products.Interactor(service, presenter: presenter)
+        private lazy var tableViewController = ProductsTableViewController(with: interactor, presenter: presenter)
         
         init(with imageName: String, title: String, store: StoreProtocol) {
             self.imageName = imageName
@@ -36,7 +36,7 @@ enum Drinks {
         }
         
         func run(completionHandler: VCBuilderBlock) {
-            let controller = DrinksViewController(with: tableViewController)
+            let controller = ProductsViewController(with: tableViewController)
             completionHandler(controller)
         }
     }

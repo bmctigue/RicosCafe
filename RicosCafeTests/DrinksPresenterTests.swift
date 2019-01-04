@@ -1,5 +1,5 @@
 //
-//  DrinksPresenterTests.swift
+//  ProductsPresenterTests.swift
 //  RicosCafeTests
 //
 //  Created by Bruce McTigue on 12/26/18.
@@ -9,44 +9,44 @@
 import XCTest
 @testable import RicosCafe
 
-class DrinksPresenterTests: XCTestCase {
+class ProductsPresenterTests: XCTestCase {
     
-    let drink1 = Drink(name: "Drink1", text: "Drink1", price: "1.99", size: .small, temp: .hot, imageUrl: "", image: "")
-    let drink2 = Drink(name: "Drink2", text: "Drink2", price: "2.99", size: .medium, temp: .hot, imageUrl: "", image: "")
+    let drink1 = Product(name: "Product1", text: "Product1", price: "1.99", size: .small, temp: .hot, imageUrl: "", image: "")
+    let drink2 = Product(name: "Product2", text: "Product2", price: "2.99", size: .medium, temp: .hot, imageUrl: "", image: "")
     
-    func testDisplayedDrinks() {
-        let presenter = Drinks.Presenter()
+    func testDisplayedProducts() {
+        let presenter = Products.Presenter()
         XCTAssert(presenter.viewModels.count == 0)
     }
     
-    func testInitWithDisplayedDrinks() {
+    func testInitWithDisplayedProducts() {
         let models = [drink1, drink2]
-        let presenter = Drinks.Presenter(models)
-        var resultDrinks = [Drinks.ViewModel]()
+        let presenter = Products.Presenter(models)
+        var resultProducts = [Products.ViewModel]()
         let expectation = self.expectation(description: "testUpdateViewModels")
         let dynamicModels = presenter.dynamicModels
         dynamicModels.addAndNotify(observer: self) {
-            resultDrinks = dynamicModels.value
+            resultProducts = dynamicModels.value
             expectation.fulfill()
         }
         waitForExpectations(timeout: 3.0, handler: nil)
         XCTAssert(presenter.viewModels.count == models.count)
-        XCTAssert(resultDrinks.count == models.count)
+        XCTAssert(resultProducts.count == models.count)
     }
 
-    func testUpdateDisplayedDrinks() {
+    func testUpdateDisplayedProducts() {
         let models = [drink1, drink2]
-        var presenter = Drinks.Presenter()
-        var resultDrinks = [Drinks.ViewModel]()
+        var presenter = Products.Presenter()
+        var resultProducts = [Products.ViewModel]()
         let expectation = self.expectation(description: "testUpdateViewModels")
         let dynamicModels = presenter.dynamicModels
         dynamicModels.addObserver(self) {
-            resultDrinks = dynamicModels.value
+            resultProducts = dynamicModels.value
             expectation.fulfill()
         }
         let response = Response(models: models)
         presenter.updateViewModels(response)
         waitForExpectations(timeout: 3.0, handler: nil)
-        XCTAssert(resultDrinks.count == models.count)
+        XCTAssert(resultProducts.count == models.count)
     }
 }

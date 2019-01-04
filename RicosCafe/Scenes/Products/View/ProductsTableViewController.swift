@@ -1,5 +1,5 @@
 //
-//  DrinksTableViewController.swift
+//  ProductsTableViewController.swift
 //  RicosCafe
 //
 //  Created by Bruce McTigue on 1/2/19.
@@ -8,12 +8,12 @@
 
 import UIKit
 
-class DrinksTableViewController: UIViewController {
-    typealias ViewModel = Drinks.ViewModel
+class ProductsTableViewController: UIViewController {
+    typealias ViewModel = Products.ViewModel
     
     static let rowHeight: CGFloat = 74.0
-    let cellName = "DrinkCell"
-    let cellNibName = "DrinkTableViewCell"
+    let cellName = "ProductCell"
+    let cellNibName = "ProductTableViewCell"
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -22,9 +22,9 @@ class DrinksTableViewController: UIViewController {
     lazy var loadingViewController = LoadingViewController()
     
     private var interactor: InteractorProtocol
-    private var presenter: Drinks.Presenter
+    private var presenter: Products.Presenter
     
-    init(with interactor: InteractorProtocol, presenter: Drinks.Presenter) {
+    init(with interactor: InteractorProtocol, presenter: Products.Presenter) {
         self.interactor = interactor
         self.presenter = presenter
         super.init(nibName: nil, bundle: nil)
@@ -33,11 +33,11 @@ class DrinksTableViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.rowHeight = UITableView.automaticDimension
-        self.tableView.estimatedRowHeight = DrinksTableViewController.rowHeight
+        self.tableView.estimatedRowHeight = ProductsTableViewController.rowHeight
         self.tableView.register(UINib(nibName: cellNibName, bundle: nil), forCellReuseIdentifier: cellName)
         
         self.tableViewDatasource = TableViewDataSource(models: viewModels, reuseIdentifier: cellName) { (model: ViewModel, cell: UITableViewCell) in
-            let cell = cell as! DrinkTableViewCell
+            let cell = cell as! ProductTableViewCell
             cell.nameLabel.text = model.name
             cell.descriptionLabel.text = model.text
             cell.priceLabel.text = model.formattedPrice

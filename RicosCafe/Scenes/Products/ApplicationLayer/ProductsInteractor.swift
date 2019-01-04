@@ -1,5 +1,5 @@
 //
-//  DrinksInteractor.swift
+//  ProductsInteractor.swift
 //  RicosCafe
 //
 //  Created by Bruce McTigue on 12/27/18.
@@ -8,11 +8,11 @@
 
 import Foundation
 
-extension Drinks {
+extension Products {
     final class Interactor<ServProtocol: ServiceProtocol>: InteractorProtocol {
         
-        typealias Model = Drink
-        typealias Presenter =  Drinks.Presenter
+        typealias Model = Product
+        typealias Presenter =  Products.Presenter
         
         private var service: ServProtocol
         private var presenter: Presenter

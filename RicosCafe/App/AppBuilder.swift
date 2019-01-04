@@ -36,13 +36,13 @@ extension Builder.App {
     private static let foodImageName = "food"
     private static let dessertImageName = "dessert"
     
-    private static let drinksTitle = "Drinks"
+    private static let drinksTitle = "Products"
     private static let foodTitle = "Food"
     private static let dessertTitle = "Dessert"
     
     func configureBuilders() -> [TabBuilder] {
         let drinksStore = LocalStore(Builder.App.drinksAssetName)
-        let drinksBuilder = Drinks.Builder(with: Builder.App.drinksImageName, title: Builder.App.drinksTitle, store: drinksStore)
+        let drinksBuilder = Products.Builder(with: Builder.App.drinksImageName, title: Builder.App.drinksTitle, store: drinksStore)
         return [drinksBuilder]
     }
 }

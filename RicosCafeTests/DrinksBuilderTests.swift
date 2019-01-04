@@ -1,5 +1,5 @@
 //
-//  DrinksBuilderTests.swift
+//  ProductsBuilderTests.swift
 //  RicosCafeTests
 //
 //  Created by Bruce McTigue on 12/30/18.
@@ -9,16 +9,16 @@
 import XCTest
 @testable import RicosCafe
 
-class DrinksBuilderTests: XCTestCase {
+class ProductsBuilderTests: XCTestCase {
     
     lazy var store = LocalStore(Builder.App.drinksAssetName)
-    var resultController: DrinksViewController?
+    var resultController: ProductsViewController?
 
-    func testDrinksBuilder() {
+    func testProductsBuilder() {
         let expectation = self.expectation(description: "run")
-        let sut = Drinks.Builder.init(with: "test", title: "test", store: store)
+        let sut = Products.Builder.init(with: "test", title: "test", store: store)
         sut.run { controller in 
-            resultController = controller as? DrinksViewController
+            resultController = controller as? ProductsViewController
             expectation.fulfill()
         }
         waitForExpectations(timeout: 3.0, handler: nil)

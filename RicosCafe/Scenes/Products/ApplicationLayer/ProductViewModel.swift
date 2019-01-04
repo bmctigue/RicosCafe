@@ -1,5 +1,5 @@
 //
-//  DrinkViewModel.swift
+//  ProductViewModel.swift
 //  RicosCafe
 //
 //  Created by Bruce McTigue on 12/26/18.
@@ -8,13 +8,13 @@
 
 import UIKit
 
-extension Drinks {
+extension Products {
     struct ViewModel {
         let name: String
         let text: String
         let price: String
-        let size: DrinkSizeType
-        let temp: DrinkTempType
+        let size: ProductSizeType
+        let temp: ProductTempType
         let imageUrl: String
         let image: String
         

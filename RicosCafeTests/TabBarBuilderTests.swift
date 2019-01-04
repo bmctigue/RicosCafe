@@ -37,7 +37,7 @@ class TabBarBuilderTests: XCTestCase {
     func testBuilderOneViewController() {
         let expectation = self.expectation(description: "run")
         let drinksStore = LocalStore(Builder.App.drinksAssetName)
-        let drinksBuilder = Drinks.Builder(with: "Test", title: "Test", store: drinksStore)
+        let drinksBuilder = Products.Builder(with: "Test", title: "Test", store: drinksStore)
         let builders: [TabBuilder] =  [drinksBuilder]
         let tabBarBuilder = Builder.TabBar(with: builders)
         tabBarBuilder.run { [weak self] tabBarController in
