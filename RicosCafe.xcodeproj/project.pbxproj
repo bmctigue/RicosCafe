@@ -266,12 +266,12 @@
 				A863A42921AF07E700E73566 /* Info.plist */,
 				A863A44D21AF100A00E73566 /* AppBuilderTests.swift */,
 				A863A45321AF138500E73566 /* TabBarBuilderTests.swift */,
-				A807F79B21D2FEDC009D00B5 /* DynamicValueTests.swift */,
+				A8FE3E9221D9372D008F8B08 /* DrinksBuilderTests.swift */,
 				A83EC02B21D41BCC001AF8CB /* DrinksPresenterTests.swift */,
+				A807F79B21D2FEDC009D00B5 /* DynamicValueTests.swift */,
 				A8F379CB21D664AF003A03FE /* LocalStoreTests.swift */,
 				A8F379CF21D67D0E003A03FE /* ServiceTests.swift */,
 				A84BCE0321D7C9E600FD2362 /* TableViewDataSourceTests.swift */,
-				A8FE3E9221D9372D008F8B08 /* DrinksBuilderTests.swift */,
 				A85CF61F21D9A2E000733513 /* UnboxDataAdapterTests.swift */,
 			);
 			path = RicosCafeTests;

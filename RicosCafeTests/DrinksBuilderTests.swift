@@ -16,7 +16,7 @@ class ProductsBuilderTests: XCTestCase {
 
     func testProductsBuilder() {
         let expectation = self.expectation(description: "run")
-        let sut = Products.Builder.init(with: "test", title: "test", store: store, state: .drinks)
+        let sut = Products.Builder.init(with: "test", title: "test", store: store, state: .drink)
         sut.run { controller in 
             resultController = controller as? ProductsViewController
             expectation.fulfill()

@@ -35,7 +35,7 @@ extension Products {
             }
         }
         
-        func filterModelsByState(_ models: [Model], state: AppState) -> [Model] {
+        private func filterModelsByState(_ models: [Model], state: AppState) -> [Model] {
             var filteredModels = [Model]()
             switch state {
             case .drink:
