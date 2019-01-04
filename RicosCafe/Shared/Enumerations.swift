@@ -8,6 +8,11 @@
 
 import Foundation
 
+enum AppState {
+    case drinks
+    case entree
+}
+
 enum StoreError: Error {
     case fetchDataFailed
 }

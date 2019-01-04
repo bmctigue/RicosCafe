@@ -42,7 +42,9 @@ extension Builder.App {
     
     func configureBuilders() -> [TabBuilder] {
         let drinksStore = LocalStore(Builder.App.productsAssetName)
-        let drinksBuilder = Products.Builder(with: Builder.App.drinksImageName, title: Builder.App.drinksTitle, store: drinksStore)
-        return [drinksBuilder]
+        let drinksBuilder = Products.Builder(with: Builder.App.drinksImageName, title: Builder.App.drinksTitle, store: drinksStore, state: .drinks)
+        let foodStore = LocalStore(Builder.App.productsAssetName)
+        let foodBuilder = Products.Builder(with: Builder.App.foodImageName, title: Builder.App.foodTitle, store: foodStore, state: .entree)
+        return [drinksBuilder, foodBuilder]
     }
 }

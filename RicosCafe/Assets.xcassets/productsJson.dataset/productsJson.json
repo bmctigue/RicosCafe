@@ -38,5 +38,35 @@
       "temp": 1,
       "image_url": "http://google.com/images/cold_brew",
       "image": "iced_coffee"
+    },
+    {
+      "name": "Breakfast Burrito",
+      "text": "Scrambled eggs and bacon wrapped in a burrito",
+      "price": "7.99",
+      "type": 1,
+      "size": 0,
+      "temp": 0,
+      "image_url": "http://google.com/images/breakfast_burrito",
+      "image": "breakfast_burrito"
+    },
+    {
+      "name": "Fruit Plate",
+      "text": "Assorted fresh fruit",
+      "price": "6.99",
+      "type": 1,
+      "size": 0,
+      "temp": 0,
+      "image_url": "http://google.com/images/fruit_plate",
+      "image": "fruit_plate"
+    },
+    {
+      "name": "Chicken Panini",
+      "text": "Sliced chicken in a warm panini",
+      "price": "9.99",
+      "type": 1,
+      "size": 0,
+      "temp": 0,
+      "image_url": "http://google.com/images/chicken_panini",
+      "image": "chicken_panini"
     }
 ]

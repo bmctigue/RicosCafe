@@ -16,17 +16,34 @@ extension Products {
         
         private var service: ServProtocol
         private var presenter: Presenter
+        private var state: AppState
         
-        init(_ service: ServProtocol, presenter: Presenter) {
+        init(_ service: ServProtocol, presenter: Presenter, state: AppState) {
             self.service = service
             self.presenter = presenter
+            self.state = state
         }
         
         func fetchItems(_ request: Request) {
             service.fetchItems(request) { [weak self] models in
-                let response = Response(models: models as! [Model])
-                self?.presenter.updateViewModels(response)
+                let models = models as! [Model]
+                if let self = self {
+                    let filteredModels = self.filterModelsByState(models, state: self.state)
+                    let response = Response(models: filteredModels)
+                    self.presenter.updateViewModels(response)
+                }
             }
+        }
+        
+        func filterModelsByState(_ models: [Model], state: AppState) -> [Model] {
+            var filteredModels = [Model]()
+            switch state {
+            case .drinks:
+                filteredModels = models.filter { $0.type == .drink }
+            case .entree:
+                filteredModels = models.filter { $0.type == .entree }
+            }
+            return filteredModels
         }
     }
 }
