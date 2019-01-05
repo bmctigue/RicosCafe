@@ -13,9 +13,13 @@ enum Builder {
         
         private var window: UIWindow?
         private (set) var tabBarBuilder: Builder.TabBar!
+        private var colorTheme: ColorTheme
+        private var colorManager: ColorManager
         
         init(with window: UIWindow?) {
             self.window = window
+            self.colorTheme = BlueColorTheme()
+            self.colorManager = ColorManager(colorTheme)
             self.tabBarBuilder = Builder.TabBar(with: configureBuilders())
         }
         

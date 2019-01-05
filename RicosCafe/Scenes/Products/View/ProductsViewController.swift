@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import ChameleonFramework
 
 final class ProductsViewController: UIViewController {
     
@@ -25,5 +26,9 @@ final class ProductsViewController: UIViewController {
     
     required init?(coder aDecoder: NSCoder) {
         return nil
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return UIStatusBarStyleContrast
     }
 }

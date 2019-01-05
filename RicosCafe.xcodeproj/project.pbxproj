@@ -39,6 +39,8 @@
 		A863A45221AF127E00E73566 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A863A45121AF127E00E73566 /* Main.storyboard */; };
 		A863A45421AF138500E73566 /* TabBarBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A863A45321AF138500E73566 /* TabBarBuilderTests.swift */; };
 		A88A2D2021E0203500137749 /* ProductsInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88A2D1F21E0203500137749 /* ProductsInteractorTests.swift */; };
+		A88A2D2221E026B700137749 /* ColorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88A2D2121E026B700137749 /* ColorManager.swift */; };
+		A88A2D2521E02B3B00137749 /* BlueColorTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88A2D2421E02B3B00137749 /* BlueColorTheme.swift */; };
 		A8A4094521D51DB000C8C755 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = A8A4094421D51DB000C8C755 /* Podfile */; };
 		A8DE069421DBC446007F912F /* Enumerations.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8DE069321DBC446007F912F /* Enumerations.swift */; };
 		A8DE069621DBC685007F912F /* Structs.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8DE069521DBC685007F912F /* Structs.swift */; };
@@ -108,7 +110,9 @@
 		A863A45121AF127E00E73566 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		A863A45321AF138500E73566 /* TabBarBuilderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarBuilderTests.swift; sourceTree = "<group>"; };
 		A88A2D1F21E0203500137749 /* ProductsInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsInteractorTests.swift; sourceTree = "<group>"; };
-		A8A4094421D51DB000C8C755 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; };
+		A88A2D2121E026B700137749 /* ColorManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorManager.swift; sourceTree = "<group>"; };
+		A88A2D2421E02B3B00137749 /* BlueColorTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueColorTheme.swift; sourceTree = "<group>"; };
+		A8A4094421D51DB000C8C755 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A8DE069321DBC446007F912F /* Enumerations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enumerations.swift; sourceTree = "<group>"; };
 		A8DE069521DBC685007F912F /* Structs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Structs.swift; sourceTree = "<group>"; };
 		A8DE069721DBD28E007F912F /* Service.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
@@ -311,8 +315,10 @@
 		A863A44421AF0BDB00E73566 /* App */ = {
 			isa = PBXGroup;
 			children = (
-				A863A41B21AF07E700E73566 /* LaunchScreen.storyboard */,
 				A863A44921AF0D9200E73566 /* AppBuilder.swift */,
+				A863A41B21AF07E700E73566 /* LaunchScreen.storyboard */,
+				A88A2D2121E026B700137749 /* ColorManager.swift */,
+				A88A2D2321E02B1F00137749 /* Colors */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -336,6 +342,14 @@
 				A807F78D21D2ECA1009D00B5 /* Binder */,
 			);
 			path = Shared;
+			sourceTree = "<group>";
+		};
+		A88A2D2321E02B1F00137749 /* Colors */ = {
+			isa = PBXGroup;
+			children = (
+				A88A2D2421E02B3B00137749 /* BlueColorTheme.swift */,
+			);
+			path = Colors;
 			sourceTree = "<group>";
 		};
 		A8F379D121D68E06003A03FE /* BusinessLogic */ = {
@@ -510,10 +524,12 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-RicosCafe/Pods-RicosCafe-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ChameleonFramework/ChameleonFramework.framework",
 				"${BUILT_PRODUCTS_DIR}/Unbox/Unbox.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ChameleonFramework.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Unbox.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -526,13 +542,9 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 			);
 			name = SwiftLint;
-			outputFileListPaths = (
-			);
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -574,11 +586,13 @@
 				A84A827C21DD253F001A9472 /* ProductTableViewCell.swift in Sources */,
 				A8DE069421DBC446007F912F /* Enumerations.swift in Sources */,
 				A863A44C21AF0E2900E73566 /* TabBarBuilder.swift in Sources */,
+				A88A2D2521E02B3B00137749 /* BlueColorTheme.swift in Sources */,
 				A83EC02621D3F513001AF8CB /* ProductViewModel.swift in Sources */,
 				A863A44A21AF0D9200E73566 /* AppBuilder.swift in Sources */,
 				A8DE069621DBC685007F912F /* Structs.swift in Sources */,
 				A84A827521DD1644001A9472 /* UIViewController+AddRemove.swift in Sources */,
 				A8DE069821DBD28E007F912F /* Service.swift in Sources */,
+				A88A2D2221E026B700137749 /* ColorManager.swift in Sources */,
 				A84E508C21DA707A002989F5 /* ProductsPresenter.swift in Sources */,
 				A807F79621D2F0C7009D00B5 /* ProductsBuilder.swift in Sources */,
 				A84A827821DD1771001A9472 /* ProductsTableViewController.swift in Sources */,

@@ -60,3 +60,8 @@ extension PresenterProtocol {
         self.dynamicModels.value = viewModels
     }
 }
+
+protocol ColorTheme {
+    func primaryColor() -> UIColor
+    func secondaryColor() -> UIColor
+}
