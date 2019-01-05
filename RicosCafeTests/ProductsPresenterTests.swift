@@ -24,7 +24,7 @@ class ProductsPresenterTests: XCTestCase {
         let presenter = Products.Presenter(models)
         var resultProducts = [Products.ViewModel]()
         let expectation = self.expectation(description: "testUpdateViewModels")
-        let dynamicModels = presenter.dynamicModels
+        let dynamicModels = presenter.getDynamicModels()
         dynamicModels.addAndNotify(observer: self) {
             resultProducts = dynamicModels.value
             expectation.fulfill()
@@ -39,7 +39,7 @@ class ProductsPresenterTests: XCTestCase {
         var presenter = Products.Presenter()
         var resultProducts = [Products.ViewModel]()
         let expectation = self.expectation(description: "testUpdateViewModels")
-        let dynamicModels = presenter.dynamicModels
+        let dynamicModels = presenter.getDynamicModels()
         dynamicModels.addObserver(self) {
             resultProducts = dynamicModels.value
             expectation.fulfill()

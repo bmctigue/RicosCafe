@@ -12,8 +12,8 @@ extension Products {
     struct Presenter: PresenterProtocol {
         typealias Model = Product
         typealias ViewModel = Products.ViewModel
-        var models: [Model]
-        var dynamicModels: DynamicValue<[ViewModel]> = DynamicValue([ViewModel]())
+        private var models: [Model]
+        private var dynamicModels: DynamicValue<[ViewModel]> = DynamicValue([ViewModel]())
         
         init(_ models: [Model] = [Model]()) {
             self.models = models
@@ -27,6 +27,19 @@ extension Products {
                 resultModels.append(displayedModel)
             }
             return resultModels
+        }
+        
+        mutating func updateViewModels(_ response: Response<Model>) {
+            self.models = response.models
+            self.dynamicModels.value = viewModels
+        }
+        
+        func getDynamicModels() -> DynamicValue<[ViewModel]> {
+            return dynamicModels
+        }
+        
+        func getModels() -> [Model] {
+            return models
         }
     }
 }

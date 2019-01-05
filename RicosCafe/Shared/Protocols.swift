@@ -49,16 +49,6 @@ protocol InteractorProtocol: class {
 protocol PresenterProtocol {
     associatedtype Model
     associatedtype ViewModel
-    var models: [Model] { get set }
-    var viewModels: [ViewModel] { get }
-    var dynamicModels: DynamicValue<[ViewModel]> { get set }
-}
-
-extension PresenterProtocol {
-    mutating func updateViewModels(_ response: Response<Model>) {
-        self.models = response.models
-        self.dynamicModels.value = viewModels
-    }
 }
 
 protocol ColorTheme {

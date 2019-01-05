@@ -45,7 +45,7 @@ class ProductsTableViewController: UIViewController {
         }
         self.tableView.dataSource = tableViewDatasource
         
-        let dynamicModels = presenter.dynamicModels
+        let dynamicModels = presenter.getDynamicModels()
         dynamicModels.addObserver(self) { [weak self] in
             self?.updateTableView(dynamicModels.value)
             self?.loadingViewController.remove()

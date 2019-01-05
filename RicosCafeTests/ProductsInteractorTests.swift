@@ -23,7 +23,7 @@ class ProductsInteractorTests: XCTestCase {
         let expectation = self.expectation(description: "fetch")
         let presenter = Products.Presenter([])
         let interactor = Products.Interactor(service, presenter: presenter, state: .drink)
-        let dynamicModels = presenter.dynamicModels
+        let dynamicModels = presenter.getDynamicModels()
         dynamicModels.addObserver(self) { [weak self] in
             self?.viewModels = dynamicModels.value
             expectation.fulfill()
@@ -37,7 +37,7 @@ class ProductsInteractorTests: XCTestCase {
         let expectation = self.expectation(description: "fetch")
         let presenter = Products.Presenter([])
         let interactor = Products.Interactor(service, presenter: presenter, state: .entree)
-        let dynamicModels = presenter.dynamicModels
+        let dynamicModels = presenter.getDynamicModels()
         dynamicModels.addObserver(self) { [weak self] in
             self?.viewModels = dynamicModels.value
             expectation.fulfill()
@@ -51,7 +51,7 @@ class ProductsInteractorTests: XCTestCase {
         let expectation = self.expectation(description: "fetch")
         let presenter = Products.Presenter([])
         let interactor = Products.Interactor(service, presenter: presenter, state: .dessert)
-        let dynamicModels = presenter.dynamicModels
+        let dynamicModels = presenter.getDynamicModels()
         dynamicModels.addObserver(self) { [weak self] in
             self?.viewModels = dynamicModels.value
             expectation.fulfill()
