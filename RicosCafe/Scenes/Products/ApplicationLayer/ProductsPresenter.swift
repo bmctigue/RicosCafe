@@ -23,7 +23,7 @@ extension Products {
         var viewModels: [ViewModel] {
             var resultModels = [ViewModel]()
             for model in models {
-                let displayedModel = ViewModel(name: model.name, text: model.text, price: model.price, imageUrl: model.imageUrl, image: model.image)
+                let displayedModel = ViewModel(productId: model.productId, name: model.name, text: model.text, price: model.price, imageUrl: model.imageUrl, image: model.image)
                 resultModels.append(displayedModel)
             }
             return resultModels

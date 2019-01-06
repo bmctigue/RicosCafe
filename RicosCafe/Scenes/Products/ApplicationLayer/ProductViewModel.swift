@@ -10,6 +10,7 @@ import UIKit
 
 extension Products {
     struct ViewModel {
+        let productId: String
         let name: String
         let text: String
         let price: String

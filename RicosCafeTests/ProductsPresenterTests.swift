@@ -11,8 +11,8 @@ import XCTest
 
 class ProductsPresenterTests: XCTestCase {
     
-    let drink1 = Product(name: "Product1", text: "Product1", price: "1.99", type: .drink, size: .small, temp: .hot, imageUrl: "", image: "")
-    let drink2 = Product(name: "Product2", text: "Product2", price: "2.99", type: .drink, size: .medium, temp: .hot, imageUrl: "", image: "")
+    let drink1 = Product(productId: "1", name: "Product1", text: "Product1", price: "1.99", type: .drink, imageUrl: "", image: "")
+    let drink2 = Product(productId: "2", name: "Product2", text: "Product2", price: "2.99", type: .drink, imageUrl: "", image: "")
     
     func testDisplayedProducts() {
         let presenter = Products.Presenter()
