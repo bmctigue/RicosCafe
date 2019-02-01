@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Tiguer
 
 extension Builder {
     final class TabBar: TabBarBuilder {

@@ -7,17 +7,9 @@
 //
 
 import UIKit
+import Tiguer
 
-typealias VCBuilderBlock = ((UIViewController) -> Void)
 typealias TabBarBuilderBlock = ((UITabBarController) -> Void)
-
-protocol BaseBuilder: class {
-    func run()
-}
-
-protocol VCBuilder: class {
-    func run(completionHandler: VCBuilderBlock)
-}
 
 protocol TabBarBuilder: class {
     func run(completionHandler: TabBarBuilderBlock)
@@ -26,29 +18,6 @@ protocol TabBarBuilder: class {
 protocol TabBuilder: VCBuilder {
     func getImageName() -> String
     func getTitle() -> String
-}
-
-protocol DataAdapterProtocol {
-    associatedtype Model
-    func itemsFromData(_ data: Data, completionHandler: @escaping (DataAdapter.Result<Model>) -> Void)
-}
-
-protocol StoreProtocol {
-    func fetchData(_ request: Request, completionHandler: @escaping (Store.Result) -> Void)
-}
-
-protocol ServiceProtocol: class {
-    associatedtype Model
-    func fetchItems(_ request: Request, completionHandler: @escaping ([Model]) -> Void)
-}
-
-protocol InteractorProtocol: class {
-    func fetchItems(_ request: Request)
-}
-
-protocol PresenterProtocol {
-    associatedtype Model
-    associatedtype ViewModel
 }
 
 protocol ColorTheme {

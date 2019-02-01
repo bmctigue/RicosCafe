@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Tiguer
 
 extension Products {
     struct Presenter: PresenterProtocol {

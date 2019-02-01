@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Tiguer
 
 extension Products {
     final class Interactor<ServProtocol: ServiceProtocol>: InteractorProtocol {
@@ -29,7 +30,7 @@ extension Products {
                 let models = models as! [Model]
                 if let self = self {
                     let filteredModels = self.filterModelsByState(models, state: self.state)
-                    let response = Response(models: filteredModels)
+                    let response = Response(filteredModels)
                     self.presenter.updateViewModels(response)
                 }
             }

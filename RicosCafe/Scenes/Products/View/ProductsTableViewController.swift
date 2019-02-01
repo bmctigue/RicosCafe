@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Tiguer
 
 class ProductsTableViewController: UIViewController {
     typealias ViewModel = Products.ViewModel

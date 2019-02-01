@@ -7,11 +7,14 @@
 //
 
 import UIKit
+import Promis
+import Tiguer
 
 final class Service<Adapter: DataAdapterProtocol>: ServiceProtocol {
     
     private var store: StoreProtocol
     private var dataAdapter: Adapter
+    private var products: [Product] = []
     
     init(_ store: StoreProtocol, dataAdapter: Adapter) {
         self.store = store
@@ -19,26 +22,39 @@ final class Service<Adapter: DataAdapterProtocol>: ServiceProtocol {
     }
     
     func fetchItems(_ request: Request, completionHandler: @escaping ([Any]) -> Void) {
-        store.fetchData(request) { [weak self] dataResult in
-            switch dataResult {
-            case .success(let data):
-                self?.itemsFromData(data: data, completionHandler: completionHandler)
-            case .error(let error):
-                print("data fetch error: \(error.localizedDescription)")
+        typealias Model = Product
+        let dataUrlGenerator = LocalDataUrlGenerator(request)
+        if products.isEmpty {
+            if let url = dataUrlGenerator.url() {
+                store.fetchData(url).thenWithResult { [weak self] (storeResult: Store.Result) -> Future<DataAdapter.Result<Model>> in
+                    switch storeResult {
+                    case .success(let data):
+                        return (self!.dataAdapter.itemsFromData(data) as! Future<DataAdapter.Result<Model>>)
+                    }
+                    }.finally(queue: .main) { future in
+                        switch future.state {
+                        case .result(let adapterResult):
+                            switch adapterResult {
+                            case .success(let items):
+                                completionHandler(items)
+                            }
+                        case .error(let error):
+                            print("data fetch error: \(error.localizedDescription)")
+                            completionHandler([])
+                        case .cancelled:
+                            print("future is in a cancelled state")
+                            completionHandler([])
+                        case .unresolved:
+                            print("this really cannot be if any chaining block is executed")
+                            completionHandler([])
+                        }
+                }
+            } else {
+                print("data fetch error: url was not valid")
                 completionHandler([])
             }
-        }
-    }
-    
-    private func itemsFromData(data: Data, completionHandler: @escaping ([Any]) -> Void) {
-        self.dataAdapter.itemsFromData(data) { adapterResult in
-            switch adapterResult {
-            case .success(let items):
-                completionHandler(items)
-            case .error(let error):
-                print("adapter conversion error for data: \(error.localizedDescription)")
-                completionHandler([])
-            }
+        } else {
+            completionHandler(products)
         }
     }
 }

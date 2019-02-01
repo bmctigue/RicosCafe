@@ -1,6 +1,6 @@
 //
 //  LoadingViewController.swift
-//  RicosCafe
+//  Tiguer
 //
 //  Created by John Sundell on 1/2/19.
 //  Copyright © 2019 tiguer. All rights reserved.
@@ -8,17 +8,17 @@
 
 import UIKit
 
-class LoadingViewController: UIViewController {
+public class LoadingViewController: UIViewController {
     private lazy var activityIndicator = UIActivityIndicatorView(style: .whiteLarge)
     private lazy var alphaBackgroundView = UIView()
     
-    override func viewDidLoad() {
+    override public func viewDidLoad() {
         super.viewDidLoad()
         self.addActivityIndicator()
         self.addTranspBackground()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
+    override public func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         // We use a 0.5 second delay to not show an activity indicator

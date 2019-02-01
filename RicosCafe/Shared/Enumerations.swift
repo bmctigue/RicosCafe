@@ -13,25 +13,3 @@ enum AppState {
     case entree
     case dessert
 }
-
-enum StoreError: Error {
-    case fetchDataFailed
-}
-
-enum Store {
-    enum Result {
-        case success(Data)
-        case error(StoreError)
-    }
-}
-
-enum DataAdapterError: Error {
-    case conversionFailed
-}
-
-enum DataAdapter {
-    enum Result<Model> {
-        case success([Model])
-        case error(DataAdapterError)
-    }
-}

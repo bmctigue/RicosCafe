@@ -8,15 +8,19 @@
 
 import Foundation
 import Unbox
+import Promis
+import Tiguer
 
 struct UnboxDataAdapter<Model: Unboxable>: DataAdapterProtocol {
-    func itemsFromData(_ data: Data, completionHandler: @escaping (DataAdapter.Result<Model>) -> Void) {
-        var items = [Model]()
+    typealias Model = Product
+    func itemsFromData(_ data: Data) -> Future<DataAdapter.Result<Model>> {
+        let promise = Promise<DataAdapter.Result<Model>>()
         do {
-            items = try unbox(data: data)
-            completionHandler(.success(items))
+            let items: [Product] = try unbox(data: data)
+            promise.setResult(.success(items))
         } catch {
-            completionHandler(.error(.conversionFailed))
+            promise.setError(DataAdapterError.conversionFailed)
         }
+        return promise.future
     }
 }

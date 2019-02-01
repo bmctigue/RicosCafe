@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Tiguer
 
 enum Builder {
     final class App: BaseBuilder {

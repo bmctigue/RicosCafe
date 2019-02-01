@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Tiguer
 
 enum Products {
     final class Builder: TabBuilder {

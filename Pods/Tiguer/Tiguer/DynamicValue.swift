@@ -1,6 +1,6 @@
 //
 //  DynamicValue.swift
-//  RicosCafe
+//  Tiguer
 //
 //  Created by Bruce McTigue on 12/25/18.
 //  Copyright © 2018 tiguer. All rights reserved.
@@ -8,10 +8,11 @@
 
 import Foundation
 
-typealias CompletionHandler = (() -> Void)
-class DynamicValue<T> {
+public typealias CompletionHandler = (() -> Void)
+
+public class DynamicValue<T> {
     
-    var value: T {
+    public var value: T {
         didSet {
             self.notify()
         }
@@ -19,7 +20,7 @@ class DynamicValue<T> {
     
     private var observers = [String: CompletionHandler]()
     
-    init(_ value: T) {
+    public init(_ value: T) {
         self.value = value
     }
     

@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		4EEDB8E721DA1C07BC3D20A7 /* Pods_RicosCafe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6B5D51E2A4209FC56C29D3C /* Pods_RicosCafe.framework */; };
 		7EBBF7D68FD3CB1B4B970B1F /* Pods_RicosCafeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93C94E689EF63B6BBFAF10C6 /* Pods_RicosCafeTests.framework */; };
-		A807F79421D2EE7D009D00B5 /* DynamicValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = A807F79321D2EE7D009D00B5 /* DynamicValue.swift */; };
 		A807F79621D2F0C7009D00B5 /* ProductsBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A807F79521D2F0C7009D00B5 /* ProductsBuilder.swift */; };
 		A807F79921D2F1FF009D00B5 /* ProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A807F79721D2F1FF009D00B5 /* ProductsViewController.swift */; };
 		A807F79A21D2F1FF009D00B5 /* ProductsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A807F79821D2F1FF009D00B5 /* ProductsViewController.xib */; };
@@ -18,13 +17,10 @@
 		A83EC02621D3F513001AF8CB /* ProductViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83EC02521D3F513001AF8CB /* ProductViewModel.swift */; };
 		A83EC02A21D3F7DE001AF8CB /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83EC02921D3F7DE001AF8CB /* Protocols.swift */; };
 		A83EC02C21D41BCC001AF8CB /* ProductsPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83EC02B21D41BCC001AF8CB /* ProductsPresenterTests.swift */; };
-		A84A827321DD15B4001A9472 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A84A827221DD15B4001A9472 /* LoadingViewController.swift */; };
-		A84A827521DD1644001A9472 /* UIViewController+AddRemove.swift in Sources */ = {isa = PBXBuildFile; fileRef = A84A827421DD1644001A9472 /* UIViewController+AddRemove.swift */; };
 		A84A827821DD1771001A9472 /* ProductsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A84A827621DD1771001A9472 /* ProductsTableViewController.swift */; };
 		A84A827921DD1771001A9472 /* ProductsTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A84A827721DD1771001A9472 /* ProductsTableViewController.xib */; };
 		A84A827C21DD253F001A9472 /* ProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A84A827A21DD253F001A9472 /* ProductTableViewCell.swift */; };
 		A84A827D21DD253F001A9472 /* ProductTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A84A827B21DD253F001A9472 /* ProductTableViewCell.xib */; };
-		A84BCE0221D7C85300FD2362 /* TableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A84BCE0121D7C85300FD2362 /* TableViewDataSource.swift */; };
 		A84BCE0421D7C9E600FD2362 /* TableViewDataSourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A84BCE0321D7C9E600FD2362 /* TableViewDataSourceTests.swift */; };
 		A84E508C21DA707A002989F5 /* ProductsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A84E508B21DA707A002989F5 /* ProductsPresenter.swift */; };
 		A85CF61E21D9992400733513 /* UnboxDataAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A85CF61D21D9992400733513 /* UnboxDataAdapter.swift */; };
@@ -43,13 +39,12 @@
 		A88A2D2521E02B3B00137749 /* BlueColorTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88A2D2421E02B3B00137749 /* BlueColorTheme.swift */; };
 		A8A4094521D51DB000C8C755 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = A8A4094421D51DB000C8C755 /* Podfile */; };
 		A8DE069421DBC446007F912F /* Enumerations.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8DE069321DBC446007F912F /* Enumerations.swift */; };
-		A8DE069621DBC685007F912F /* Structs.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8DE069521DBC685007F912F /* Structs.swift */; };
 		A8DE069821DBD28E007F912F /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8DE069721DBD28E007F912F /* Service.swift */; };
 		A8E5BB7D21D5B19600AEFC36 /* ProductsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E5BB7C21D5B19500AEFC36 /* ProductsInteractor.swift */; };
 		A8F379CC21D664AF003A03FE /* LocalStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F379CB21D664AF003A03FE /* LocalStoreTests.swift */; };
 		A8F379D021D67D0E003A03FE /* ServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F379CF21D67D0E003A03FE /* ServiceTests.swift */; };
-		A8F379D321D68E07003A03FE /* LocalStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F379D221D68E06003A03FE /* LocalStore.swift */; };
 		A8FE3E9321D9372D008F8B08 /* ProductsBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FE3E9221D9372D008F8B08 /* ProductsBuilderTests.swift */; };
+		A8FFA4042204FBD600E4BC7A /* LocalDataUrlGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FFA4032204FBD600E4BC7A /* LocalDataUrlGenerator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,7 +69,6 @@
 		7A4EB740CD80F10564FCE66F /* Pods-RicosCafe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RicosCafe.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RicosCafe/Pods-RicosCafe.debug.xcconfig"; sourceTree = "<group>"; };
 		8BA05BA28DAF99607C194EAE /* Pods-RicosCafeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RicosCafeTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RicosCafeTests/Pods-RicosCafeTests.release.xcconfig"; sourceTree = "<group>"; };
 		93C94E689EF63B6BBFAF10C6 /* Pods_RicosCafeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RicosCafeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A807F79321D2EE7D009D00B5 /* DynamicValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicValue.swift; sourceTree = "<group>"; };
 		A807F79521D2F0C7009D00B5 /* ProductsBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsBuilder.swift; sourceTree = "<group>"; };
 		A807F79721D2F1FF009D00B5 /* ProductsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsViewController.swift; sourceTree = "<group>"; };
 		A807F79821D2F1FF009D00B5 /* ProductsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductsViewController.xib; sourceTree = "<group>"; };
@@ -83,13 +77,10 @@
 		A83EC02521D3F513001AF8CB /* ProductViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewModel.swift; sourceTree = "<group>"; };
 		A83EC02921D3F7DE001AF8CB /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
 		A83EC02B21D41BCC001AF8CB /* ProductsPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsPresenterTests.swift; sourceTree = "<group>"; };
-		A84A827221DD15B4001A9472 /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
-		A84A827421DD1644001A9472 /* UIViewController+AddRemove.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+AddRemove.swift"; sourceTree = "<group>"; };
 		A84A827621DD1771001A9472 /* ProductsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsTableViewController.swift; sourceTree = "<group>"; };
 		A84A827721DD1771001A9472 /* ProductsTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductsTableViewController.xib; sourceTree = "<group>"; };
 		A84A827A21DD253F001A9472 /* ProductTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTableViewCell.swift; sourceTree = "<group>"; };
 		A84A827B21DD253F001A9472 /* ProductTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductTableViewCell.xib; sourceTree = "<group>"; };
-		A84BCE0121D7C85300FD2362 /* TableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewDataSource.swift; sourceTree = "<group>"; };
 		A84BCE0321D7C9E600FD2362 /* TableViewDataSourceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewDataSourceTests.swift; sourceTree = "<group>"; };
 		A84E508B21DA707A002989F5 /* ProductsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsPresenter.swift; sourceTree = "<group>"; };
 		A85CF61D21D9992400733513 /* UnboxDataAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnboxDataAdapter.swift; sourceTree = "<group>"; };
@@ -114,13 +105,12 @@
 		A88A2D2421E02B3B00137749 /* BlueColorTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueColorTheme.swift; sourceTree = "<group>"; };
 		A8A4094421D51DB000C8C755 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A8DE069321DBC446007F912F /* Enumerations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enumerations.swift; sourceTree = "<group>"; };
-		A8DE069521DBC685007F912F /* Structs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Structs.swift; sourceTree = "<group>"; };
 		A8DE069721DBD28E007F912F /* Service.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		A8E5BB7C21D5B19500AEFC36 /* ProductsInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductsInteractor.swift; sourceTree = "<group>"; };
 		A8F379CB21D664AF003A03FE /* LocalStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStoreTests.swift; sourceTree = "<group>"; };
 		A8F379CF21D67D0E003A03FE /* ServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceTests.swift; sourceTree = "<group>"; };
-		A8F379D221D68E06003A03FE /* LocalStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalStore.swift; sourceTree = "<group>"; };
 		A8FE3E9221D9372D008F8B08 /* ProductsBuilderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsBuilderTests.swift; sourceTree = "<group>"; };
+		A8FFA4032204FBD600E4BC7A /* LocalDataUrlGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDataUrlGenerator.swift; sourceTree = "<group>"; };
 		D6B5D51E2A4209FC56C29D3C /* Pods_RicosCafe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RicosCafe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F402D9E639BBF7F4619C55AF /* Pods-RicosCafeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RicosCafeTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RicosCafeTests/Pods-RicosCafeTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -172,14 +162,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		A807F78D21D2ECA1009D00B5 /* Binder */ = {
-			isa = PBXGroup;
-			children = (
-				A807F79321D2EE7D009D00B5 /* DynamicValue.swift */,
-			);
-			path = Binder;
-			sourceTree = "<group>";
-		};
 		A807F78E21D2ED2A009D00B5 /* BusinessLogic */ = {
 			isa = PBXGroup;
 			children = (
@@ -216,15 +198,6 @@
 				A83EC02121D3EFF2001AF8CB /* Product.swift */,
 			);
 			path = Models;
-			sourceTree = "<group>";
-		};
-		A84A827121DD1582001A9472 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				A84A827221DD15B4001A9472 /* LoadingViewController.swift */,
-				A84A827421DD1644001A9472 /* UIViewController+AddRemove.swift */,
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		A863A40621AF07E500E73566 = {
@@ -335,11 +308,9 @@
 			isa = PBXGroup;
 			children = (
 				A8DE069321DBC446007F912F /* Enumerations.swift */,
-				A8DE069521DBC685007F912F /* Structs.swift */,
 				A83EC02921D3F7DE001AF8CB /* Protocols.swift */,
-				A84A827121DD1582001A9472 /* View */,
 				A8F379D121D68E06003A03FE /* BusinessLogic */,
-				A807F78D21D2ECA1009D00B5 /* Binder */,
+				A8FFA4032204FBD600E4BC7A /* LocalDataUrlGenerator.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -355,10 +326,8 @@
 		A8F379D121D68E06003A03FE /* BusinessLogic */ = {
 			isa = PBXGroup;
 			children = (
-				A8F379D221D68E06003A03FE /* LocalStore.swift */,
 				A85CF61D21D9992400733513 /* UnboxDataAdapter.swift */,
 				A8DE069721DBD28E007F912F /* Service.swift */,
-				A84BCE0121D7C85300FD2362 /* TableViewDataSource.swift */,
 			);
 			path = BusinessLogic;
 			sourceTree = "<group>";
@@ -525,11 +494,13 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-RicosCafe/Pods-RicosCafe-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/ChameleonFramework/ChameleonFramework.framework",
+				"${BUILT_PRODUCTS_DIR}/Promis/Promis.framework",
 				"${BUILT_PRODUCTS_DIR}/Unbox/Unbox.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ChameleonFramework.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Promis.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Unbox.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -577,11 +548,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				A83EC02221D3EFF2001AF8CB /* Product.swift in Sources */,
-				A807F79421D2EE7D009D00B5 /* DynamicValue.swift in Sources */,
 				A83EC02A21D3F7DE001AF8CB /* Protocols.swift in Sources */,
 				A8E5BB7D21D5B19600AEFC36 /* ProductsInteractor.swift in Sources */,
+				A8FFA4042204FBD600E4BC7A /* LocalDataUrlGenerator.swift in Sources */,
 				A85CF61E21D9992400733513 /* UnboxDataAdapter.swift in Sources */,
-				A84A827321DD15B4001A9472 /* LoadingViewController.swift in Sources */,
 				A863A41321AF07E500E73566 /* AppDelegate.swift in Sources */,
 				A84A827C21DD253F001A9472 /* ProductTableViewCell.swift in Sources */,
 				A8DE069421DBC446007F912F /* Enumerations.swift in Sources */,
@@ -589,16 +559,12 @@
 				A88A2D2521E02B3B00137749 /* BlueColorTheme.swift in Sources */,
 				A83EC02621D3F513001AF8CB /* ProductViewModel.swift in Sources */,
 				A863A44A21AF0D9200E73566 /* AppBuilder.swift in Sources */,
-				A8DE069621DBC685007F912F /* Structs.swift in Sources */,
-				A84A827521DD1644001A9472 /* UIViewController+AddRemove.swift in Sources */,
 				A8DE069821DBD28E007F912F /* Service.swift in Sources */,
 				A88A2D2221E026B700137749 /* ColorManager.swift in Sources */,
 				A84E508C21DA707A002989F5 /* ProductsPresenter.swift in Sources */,
 				A807F79621D2F0C7009D00B5 /* ProductsBuilder.swift in Sources */,
 				A84A827821DD1771001A9472 /* ProductsTableViewController.swift in Sources */,
-				A84BCE0221D7C85300FD2362 /* TableViewDataSource.swift in Sources */,
 				A807F79921D2F1FF009D00B5 /* ProductsViewController.swift in Sources */,
-				A8F379D321D68E07003A03FE /* LocalStore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
