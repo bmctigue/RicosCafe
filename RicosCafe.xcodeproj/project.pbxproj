@@ -165,6 +165,7 @@
 		A807F78E21D2ED2A009D00B5 /* BusinessLogic */ = {
 			isa = PBXGroup;
 			children = (
+				A8DE069721DBD28E007F912F /* Service.swift */,
 				A85CF61D21D9992400733513 /* UnboxDataAdapter.swift */,
 			);
 			path = BusinessLogic;
@@ -310,7 +311,6 @@
 			children = (
 				A8DE069321DBC446007F912F /* Enumerations.swift */,
 				A83EC02921D3F7DE001AF8CB /* Protocols.swift */,
-				A8F379D121D68E06003A03FE /* BusinessLogic */,
 				A8FFA4032204FBD600E4BC7A /* LocalDataUrlGenerator.swift */,
 			);
 			path = Shared;
@@ -322,14 +322,6 @@
 				A88A2D2421E02B3B00137749 /* BlueColorTheme.swift */,
 			);
 			path = Colors;
-			sourceTree = "<group>";
-		};
-		A8F379D121D68E06003A03FE /* BusinessLogic */ = {
-			isa = PBXGroup;
-			children = (
-				A8DE069721DBD28E007F912F /* Service.swift */,
-			);
-			path = BusinessLogic;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
