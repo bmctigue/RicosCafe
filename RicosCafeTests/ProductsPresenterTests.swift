@@ -8,6 +8,7 @@
 
 import XCTest
 @testable import RicosCafe
+@testable import Tiguer
 
 class ProductsPresenterTests: XCTestCase {
     
@@ -44,7 +45,7 @@ class ProductsPresenterTests: XCTestCase {
             resultProducts = dynamicModels.value
             expectation.fulfill()
         }
-        let response = Response(models: models)
+        let response = Response(models)
         presenter.updateViewModels(response)
         waitForExpectations(timeout: 3.0, handler: nil)
         XCTAssert(resultProducts.count == models.count)

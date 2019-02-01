@@ -8,6 +8,7 @@
 
 import XCTest
 @testable import RicosCafe
+@testable import Tiguer
 
 class ProductsBuilderTests: XCTestCase {
     

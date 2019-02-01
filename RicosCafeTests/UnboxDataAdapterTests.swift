@@ -8,6 +8,7 @@
 
 import XCTest
 @testable import RicosCafe
+@testable import Tiguer
 
 class UnboxDataAdapterTests: XCTestCase {
     
@@ -22,61 +23,26 @@ class UnboxDataAdapterTests: XCTestCase {
 
     func testAdapter() {
         let expectation = self.expectation(description: "adapter")
-        let store = LocalStore(assetName)
-        let request = Request()
-        
-        store.fetchData(request) {[weak self] result in
-            switch result {
-            case .success(let data):
-                self?.sut.itemsFromData(data) { adapterResult in
+        if let asset = NSDataAsset(name: assetName, bundle: Bundle.main) {
+            sut.itemsFromData(asset.data).finally(queue: .main) { future in
+                switch future.state {
+                case .result(let adapterResult):
                     switch adapterResult {
                     case .success(let items):
-                        self?.items = items
-                    case .error:
-                        XCTFail()
+                        self.items = items
                     }
+                case .error(let error):
+                    print(error)
+                    XCTFail()
+                case .cancelled:
+                    XCTFail()
+                case .unresolved:
+                    XCTFail()
                 }
-            case .error:
-                XCTFail()
+                expectation.fulfill()
             }
-            expectation.fulfill()
         }
         waitForExpectations(timeout: 3.0, handler: nil)
         XCTAssert(items.count > 0)
     }
-    
-    func testAdapterBadData() {
-        let expectation = self.expectation(description: "adapter")
-        let store = LocalStore("badAssetName")
-        let request = Request()
-        
-        store.fetchData(request) {[weak self] result in
-            switch result {
-            case .success(let data):
-                self?.sut.itemsFromData(data) { adapterResult in
-                    switch adapterResult {
-                    case .success(let items):
-                        self?.items = items
-                    case .error:
-                        XCTFail()
-                    }
-                }
-            case .error(let error):
-                let data = Data()
-                self?.sut.itemsFromData(data) { adapterResult in
-                    switch adapterResult {
-                    case .success(let items):
-                        self?.items = items
-                    case .error:
-                        self?.error = error
-                    }
-                }
-                self?.error = error
-            }
-            expectation.fulfill()
-        }
-        waitForExpectations(timeout: 3.0, handler: nil)
-        XCTAssertNotNil(error)
-    }
-
 }
