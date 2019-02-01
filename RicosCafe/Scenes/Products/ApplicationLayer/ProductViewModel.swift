@@ -20,5 +20,9 @@ extension Products {
         var formattedPrice: String {
             return "$\(price)"
         }
+        
+        var cellImage: UIImage? {
+             return image.isEmpty ? nil : UIImage(named: image)
+        }
     }
 }
