@@ -1,9 +1,11 @@
 PODS:
+  - Cache (5.2.0)
   - ChameleonFramework/Default (2.1.0)
   - ChameleonFramework/Swift (2.1.0):
     - ChameleonFramework/Default
-  - Promis (2.0.0)
+  - Promis (2.0.1)
   - Tiguer (0.0.1):
+    - Cache
     - Promis
   - Unbox (3.0.0)
 
@@ -14,6 +16,7 @@ DEPENDENCIES:
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - Cache
     - Promis
     - Unbox
 
@@ -28,15 +31,16 @@ CHECKOUT OPTIONS:
     :commit: 6dd284bde21ea2e7f9fd89bc36f40df16e16369d
     :git: https://github.com/ViccAlexander/Chameleon.git
   Tiguer:
-    :commit: 1faa802da2edeffd19554429210cb0f7123dbcf8
+    :commit: 49f5543208703d564984573e7d5399c474957f44
     :git: https://github.com/bmctigue/Tiguer.git
 
 SPEC CHECKSUMS:
+  Cache: 807c5d86d01a177f06ede9865add3aea269bbfd4
   ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
-  Promis: 92878a15a9d146622b1815e137638e2c0be974ff
-  Tiguer: a93aa1b464d2402cf12cdd75f372c2e62b3890d2
+  Promis: ba663b5d73bb22948ec6143928fdf0e896364976
+  Tiguer: e041ce3e134c5d1379ac460af96e961c83ba87cf
   Unbox: 9ed33b2a31f7a8a049f54b94d40c4a52a28c4d9d
 
-PODFILE CHECKSUM: 01b0ab1c94f8619dcb3b4576db72ee84db78837b
+PODFILE CHECKSUM: 26fae5e1771b69323d71cc4e5e2a5d9bd318411f
 
-COCOAPODS: 1.5.2
+COCOAPODS: 1.6.0

@@ -23,9 +23,9 @@ class ProductsTableViewController: UIViewController {
     lazy var loadingViewController = LoadingViewController()
     
     private var interactor: InteractorProtocol
-    private var presenter: Products.Presenter
+    private var presenter: Products.Presenter<Product, Products.ViewModel>
     
-    init(with interactor: InteractorProtocol, presenter: Products.Presenter) {
+    init(with interactor: InteractorProtocol, presenter: Products.Presenter<Product, Products.ViewModel>) {
         self.interactor = interactor
         self.presenter = presenter
         super.init(nibName: nil, bundle: nil)
@@ -54,7 +54,11 @@ class ProductsTableViewController: UIViewController {
         
         add(loadingViewController)
         let request = Request()
-        interactor.fetchItems(request)
+        
+        let urlGenerator = LocalDataUrlGenerator(request)
+        if let url = urlGenerator.url() {
+            interactor.fetchItems(request, url: url)
+        }
     }
     
     func updateTableView(_ models: [ViewModel]) {

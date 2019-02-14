@@ -11,8 +11,6 @@ import Promis
 
 public typealias VCBuilderBlock = ((UIViewController) -> Void)
 
-public let forceKey = "force"
-
 public protocol BaseBuilder: class {
     func run()
 }
@@ -22,26 +20,32 @@ public protocol VCBuilder: class {
 }
 
 public protocol StoreProtocol {
-    func fetchData(_ url: URL) -> Future<Store.Result>
+    func fetchData(_ url: URL, bundle: Bundle) -> Future<Store.Result>
 }
 
-public protocol DataAdapterProtocol {
+extension StoreProtocol {
+    func fetchData(_ url: URL) -> Future<Store.Result> {
+        return fetchData(url, bundle: Bundle.main)
+    }
+}
+
+public protocol DataAdapterProtocol: class {
     associatedtype Model
-    func itemsFromData(_ data: Data) -> Future<DataAdapter.Result<Model>>
+    func itemsFromData(_ data: Data) -> Future<DataAdapterResult.Result<Model>>
 }
 
 public protocol ServiceProtocol: class {
     associatedtype Model
-    func fetchItems(_ request: Request, completionHandler: @escaping ([Model]) -> Void)
+    func fetchItems(_ request: Request, url: URL, completionHandler: @escaping ([Model]) -> Void)
 }
 
 public protocol InteractorProtocol: class {
-    func fetchItems(_ request: Request)
+    func fetchItems(_ request: Request, url: URL)
 }
 
-public protocol PresenterProtocol {
+public protocol PresenterProtocol: class {
     associatedtype Model
-    associatedtype ViewModel
+    func updateViewModels(_ response: Response<Model>)
 }
 
 public protocol NetworkSession {
@@ -59,9 +63,20 @@ extension URLGenerator {
             return nil
         }
         var queryItems = [URLQueryItem]()
-        for (key, value) in request.params where key != forceKey {
+        for (key, value) in request.params where key != Tiguer.Constants.forceKey {
             queryItems.append(URLQueryItem(name: key, value: value))
         }
         return queryItems
     }
+}
+
+public protocol CacheProtocol {
+    associatedtype CacheObject
+    func setObject<CacheObject>(_ object: CacheObject, key: String)
+    func getObject<CacheObject>(_ key: String) -> CacheObject?
+    func removeObject(_ key: String)
+}
+
+public protocol StoryboardFactoryProtocol {
+    func create(name: String, bundle: Bundle) -> UIStoryboard
 }

@@ -13,7 +13,7 @@ import XCTest
 class ServiceTests: XCTestCase {
     
     let assetName = Builder.App.productsAssetName
-    lazy var dataAdapter = UnboxDataAdapter<Product>()
+    lazy var dataAdapter = Products.UnboxDataAdapter<Product>()
 
     func testService() {
         let expectation = self.expectation(description: "fetchItems")
@@ -21,8 +21,10 @@ class ServiceTests: XCTestCase {
         let store = LocalStore(assetName)
         let request = Request()
         
-        let sut = Service(store, dataAdapter: dataAdapter)
-        sut.fetchItems(request) { drinks in
+        let sut = Products.Service<Product, Products.UnboxDataAdapter>(store, dataAdapter: dataAdapter, cacheKey: Products.Builder.cacheKey)
+        let urlGenerator = LocalDataUrlGenerator(request)
+        let url = urlGenerator.url()!
+        sut.fetchItems(request, url: url) { drinks in
             results = drinks as! [Product]
             expectation.fulfill()
         }
@@ -34,9 +36,11 @@ class ServiceTests: XCTestCase {
         let expectation = self.expectation(description: "fetchItems")
         var results = [Product]()
         let store = LocalStore("badAssetName")
-        let sut = Service(store, dataAdapter: dataAdapter)
+        let sut = Products.Service<Product, Products.UnboxDataAdapter>(store, dataAdapter: dataAdapter, cacheKey: Products.Builder.cacheKey)
         let request = Request()
-        sut.fetchItems(request) { drinks in
+        let urlGenerator = LocalDataUrlGenerator(request)
+        let url = urlGenerator.url()!
+        sut.fetchItems(request, url: url) { drinks in
             results = drinks as! [Product]
             expectation.fulfill()
         }

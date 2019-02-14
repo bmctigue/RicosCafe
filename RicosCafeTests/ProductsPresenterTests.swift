@@ -16,13 +16,13 @@ class ProductsPresenterTests: XCTestCase {
     let drink2 = Product(productId: "2", name: "Product2", text: "Product2", price: "2.99", type: .drink, imageUrl: "", image: "")
     
     func testDisplayedProducts() {
-        let presenter = Products.Presenter()
+        let presenter = Products.Presenter<Product, Products.ViewModel>()
         XCTAssert(presenter.viewModels.count == 0)
     }
     
     func testInitWithDisplayedProducts() {
         let models = [drink1, drink2]
-        let presenter = Products.Presenter(models)
+        let presenter = Products.Presenter<Product, Products.ViewModel>(models)
         var resultProducts = [Products.ViewModel]()
         let expectation = self.expectation(description: "testUpdateViewModels")
         let dynamicModels = presenter.getDynamicModels()
@@ -37,7 +37,7 @@ class ProductsPresenterTests: XCTestCase {
 
     func testUpdateDisplayedProducts() {
         let models = [drink1, drink2]
-        var presenter = Products.Presenter()
+        let presenter = Products.Presenter<Product, Products.ViewModel>()
         var resultProducts = [Products.ViewModel]()
         let expectation = self.expectation(description: "testUpdateViewModels")
         let dynamicModels = presenter.getDynamicModels()

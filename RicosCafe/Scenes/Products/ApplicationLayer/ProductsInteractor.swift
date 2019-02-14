@@ -10,26 +10,20 @@ import Foundation
 import Tiguer
 
 extension Products {
-    final class Interactor<ServProtocol: ServiceProtocol>: InteractorProtocol {
+    final class Interactor<Model, Presenter: PresenterProtocol, Service: ServiceProtocol>: Tiguer.Interactor<Model, Presenter, Service> {
         
-        typealias Model = Product
-        typealias Presenter =  Products.Presenter
-        
-        private var service: ServProtocol
-        private var presenter: Presenter
         private var state: AppState
         
-        init(_ service: ServProtocol, presenter: Presenter, state: AppState) {
-            self.service = service
-            self.presenter = presenter
+        init(_ presenter: Presenter, service: Service, state: AppState) {
             self.state = state
+            super.init(presenter, service: service)
         }
         
-        func fetchItems(_ request: Request) {
-            service.fetchItems(request) { [weak self] models in
+        override func fetchItems(_ request: Request, url: URL) {
+            service.fetchItems(request, url: url) { [weak self] models in
                 let models = models as! [Model]
                 if let self = self {
-                    let filteredModels = self.filterModelsByState(models, state: self.state)
+                    let filteredModels = self.filterModelsByState(models, state: self.state).map { $0 as! Presenter.Model }
                     let response = Response(filteredModels)
                     self.presenter.updateViewModels(response)
                 }
@@ -37,16 +31,17 @@ extension Products {
         }
         
         private func filterModelsByState(_ models: [Model], state: AppState) -> [Model] {
-            var filteredModels = [Model]()
+            let productModels = models as! [Product]
+            var filteredModels = [Product]()
             switch state {
             case .drink:
-                filteredModels = models.filter { $0.type == .drink }
+                filteredModels = productModels.filter { $0.type == .drink }
             case .entree:
-                filteredModels = models.filter { $0.type == .entree }
+                filteredModels = productModels.filter { $0.type == .entree }
             case .dessert:
-                filteredModels = models.filter { $0.type == .dessert }
+                filteredModels = productModels.filter { $0.type == .dessert }
             }
-            return filteredModels
+            return filteredModels as! [Model]
         }
     }
 }

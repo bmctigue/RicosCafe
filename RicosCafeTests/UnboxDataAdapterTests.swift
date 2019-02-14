@@ -15,7 +15,7 @@ class UnboxDataAdapterTests: XCTestCase {
     let assetName = "productsJson"
     var error: StoreError?
     var items: [Product] = [Product]()
-    lazy var sut = UnboxDataAdapter<Product>()
+    lazy var sut = Products.UnboxDataAdapter<Product>()
     
     override func setUp() {
         items = [Product]()

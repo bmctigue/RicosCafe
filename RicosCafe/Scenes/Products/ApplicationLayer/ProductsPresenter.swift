@@ -10,37 +10,18 @@ import UIKit
 import Tiguer
 
 extension Products {
-    struct Presenter: PresenterProtocol {
-        typealias Model = Product
-        typealias ViewModel = Products.ViewModel
-        private var models: [Model]
-        private var dynamicModels: DynamicValue<[ViewModel]> = DynamicValue([ViewModel]())
+    final class Presenter<Model, ViewModel>: Tiguer.Presenter<Model, ViewModel> {
+
+        typealias ProductViewModel = Products.ViewModel
         
-        init(_ models: [Model] = [Model]()) {
-            self.models = models
-            dynamicModels.value = viewModels
-        }
-        
-        var viewModels: [ViewModel] {
+        override var baseViewModels: [ViewModel] {
             var resultModels = [ViewModel]()
-            for model in models {
-                let displayedModel = ViewModel(productId: model.productId, name: model.name, text: model.text, price: model.price, imageUrl: model.imageUrl, image: model.image)
-                resultModels.append(displayedModel)
+            let productModels = models as! [Product]
+            for model in productModels {
+                let displayedModel = ProductViewModel(productId: model.productId, name: model.name, text: model.text, price: model.price, imageUrl: model.imageUrl, image: model.image)
+                resultModels.append(displayedModel as! ViewModel)
             }
             return resultModels
-        }
-        
-        mutating func updateViewModels(_ response: Response<Model>) {
-            self.models = response.models
-            self.dynamicModels.value = viewModels
-        }
-        
-        func getDynamicModels() -> DynamicValue<[ViewModel]> {
-            return dynamicModels
-        }
-        
-        func getModels() -> [Model] {
-            return models
         }
     }
 }

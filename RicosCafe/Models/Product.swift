@@ -9,13 +9,13 @@
 import UIKit
 import Unbox
 
-enum ProductType: Int, UnboxableEnum {
+enum ProductType: Int, Codable, UnboxableEnum {
     case drink
     case entree
     case dessert
 }
 
-struct Product {
+struct Product: Codable {
     var productId: String
     var name: String
     var text: String

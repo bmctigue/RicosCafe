@@ -11,16 +11,19 @@ import Unbox
 import Promis
 import Tiguer
 
-struct UnboxDataAdapter<Model: Unboxable>: DataAdapterProtocol {
-    typealias Model = Product
-    func itemsFromData(_ data: Data) -> Future<DataAdapter.Result<Model>> {
-        let promise = Promise<DataAdapter.Result<Model>>()
-        do {
-            let items: [Product] = try unbox(data: data)
-            promise.setResult(.success(items))
-        } catch {
-            promise.setError(DataAdapterError.conversionFailed)
+extension Products {
+    class UnboxDataAdapter<Model>: Tiguer.DataAdapter<Model> {
+        
+        override func itemsFromData(_ data: Data) -> Future<DataAdapterResult.Result<Model>> {
+            let promise = Promise<DataAdapterResult.Result<Model>>()
+            do {
+                let results: [Product] = try unbox(data: data)
+                let models = results.map { $0 as! Model }
+                promise.setResult(.success(models))
+            } catch {
+                promise.setError(DataAdapterError.conversionFailed)
+            }
+            return promise.future
         }
-        return promise.future
     }
 }
