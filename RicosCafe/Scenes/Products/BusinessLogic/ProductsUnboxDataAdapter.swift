@@ -19,7 +19,7 @@ extension Products {
             do {
                 let results: [Product] = try unbox(data: data)
                 let models = results.map { $0 as! Model }
-                promise.setResult(.success(models))
+                promise.setResult(DataAdapterResult.Result.success(models))
             } catch {
                 promise.setError(DataAdapterError.conversionFailed)
             }

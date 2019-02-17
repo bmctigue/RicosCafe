@@ -18,8 +18,8 @@ enum Products {
         
         private var state: AppState
         private var store: StoreProtocol
-        private lazy var dataAdapter = UnboxDataAdapter<Product>()
-        private lazy var service = Service<Product, UnboxDataAdapter>(store, dataAdapter: dataAdapter, cacheKey: Products.Builder.cacheKey)
+        private lazy var dataAdapter = Products.UnboxDataAdapter<Product>()
+        private lazy var service = Products.Service<Product, Products.UnboxDataAdapter>(store, dataAdapter: dataAdapter, cacheKey: Products.Builder.cacheKey)
         private lazy var presenter = Products.Presenter<Product, Products.ViewModel>([])
         private lazy var interactor = Products.Interactor<Product, Products.Presenter, Products.Service>(presenter, service: service, state: state)
         private lazy var tableViewController = ProductsTableViewController(with: interactor, presenter: presenter)

@@ -16,37 +16,34 @@ class ProductsPresenterTests: XCTestCase {
     let drink2 = Product(productId: "2", name: "Product2", text: "Product2", price: "2.99", type: .drink, imageUrl: "", image: "")
     
     func testDisplayedProducts() {
-        let presenter = Products.Presenter<Product, Products.ViewModel>()
-        XCTAssert(presenter.viewModels.count == 0)
+        let sut = Products.Presenter<Product, Products.ViewModel>([], main: SyncQueue.global, background: SyncQueue.background)
+        XCTAssert(sut.viewModels.count == 0)
     }
     
     func testInitWithDisplayedProducts() {
         let models = [drink1, drink2]
-        let presenter = Products.Presenter<Product, Products.ViewModel>(models)
-        var resultProducts = [Products.ViewModel]()
+        let sut = Products.Presenter<Product, Products.ViewModel>(models, main: SyncQueue.global, background: SyncQueue.background)
         let expectation = self.expectation(description: "testUpdateViewModels")
-        let dynamicModels = presenter.getDynamicModels()
+        let dynamicModels = sut.getDynamicModels()
         dynamicModels.addAndNotify(observer: self) {
-            resultProducts = dynamicModels.value
             expectation.fulfill()
         }
         waitForExpectations(timeout: 3.0, handler: nil)
-        XCTAssert(presenter.viewModels.count == models.count)
-        XCTAssert(resultProducts.count == models.count)
+        XCTAssert(sut.viewModels.count == models.count)
     }
 
     func testUpdateDisplayedProducts() {
         let models = [drink1, drink2]
-        let presenter = Products.Presenter<Product, Products.ViewModel>()
+        let sut = Products.Presenter<Product, Products.ViewModel>([], main: SyncQueue.global, background: SyncQueue.background)
         var resultProducts = [Products.ViewModel]()
         let expectation = self.expectation(description: "testUpdateViewModels")
-        let dynamicModels = presenter.getDynamicModels()
+        let dynamicModels = sut.getDynamicModels()
         dynamicModels.addObserver(self) {
             resultProducts = dynamicModels.value
             expectation.fulfill()
         }
         let response = Response(models)
-        presenter.updateViewModels(response)
+        sut.updateViewModels(response)
         waitForExpectations(timeout: 3.0, handler: nil)
         XCTAssert(resultProducts.count == models.count)
     }

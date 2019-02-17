@@ -13,6 +13,7 @@ import XCTest
 class ServiceTests: XCTestCase {
     
     let assetName = Builder.App.productsAssetName
+    let badAssetName = "badAssetName"
     lazy var dataAdapter = Products.UnboxDataAdapter<Product>()
 
     func testService() {
@@ -25,7 +26,7 @@ class ServiceTests: XCTestCase {
         let urlGenerator = LocalDataUrlGenerator(request)
         let url = urlGenerator.url()!
         sut.fetchItems(request, url: url) { drinks in
-            results = drinks as! [Product]
+            results = drinks
             expectation.fulfill()
         }
         waitForExpectations(timeout: 3.0, handler: nil)
@@ -35,13 +36,16 @@ class ServiceTests: XCTestCase {
     func testServiceBadAsset() {
         let expectation = self.expectation(description: "fetchItems")
         var results = [Product]()
-        let store = LocalStore("badAssetName")
+        let testBundle = Bundle(for: type(of: self))
+        let store = LocalStore(badAssetName, bundle: testBundle)
         let sut = Products.Service<Product, Products.UnboxDataAdapter>(store, dataAdapter: dataAdapter, cacheKey: Products.Builder.cacheKey)
-        let request = Request()
+        sut.updateCacheTestingState(.testing)
+        var request = Request()
+        request.params[Tiguer.Constants.forceKey] = "true"
         let urlGenerator = LocalDataUrlGenerator(request)
         let url = urlGenerator.url()!
         sut.fetchItems(request, url: url) { drinks in
-            results = drinks as! [Product]
+            results = drinks
             expectation.fulfill()
         }
         waitForExpectations(timeout: 3.0, handler: nil)

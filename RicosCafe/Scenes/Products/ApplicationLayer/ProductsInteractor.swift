@@ -10,6 +10,7 @@ import Foundation
 import Tiguer
 
 extension Products {
+    
     final class Interactor<Model, Presenter: PresenterProtocol, Service: ServiceProtocol>: Tiguer.Interactor<Model, Presenter, Service> {
         
         private var state: AppState
