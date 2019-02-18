@@ -16,13 +16,13 @@ class ProductsPresenterTests: XCTestCase {
     let drink2 = Product(productId: "2", name: "Product2", text: "Product2", price: "2.99", type: .drink, imageUrl: "", image: "")
     
     func testDisplayedProducts() {
-        let sut = Products.Presenter<Product, Products.ViewModel>([], main: SyncQueue.global, background: SyncQueue.background)
+        let sut = Products.Presenter<Product, Products.ViewModel>([], state: .drink, main: SyncQueue.global, background: SyncQueue.background)
         XCTAssert(sut.viewModels.count == 0)
     }
     
     func testInitWithDisplayedProducts() {
         let models = [drink1, drink2]
-        let sut = Products.Presenter<Product, Products.ViewModel>(models, main: SyncQueue.global, background: SyncQueue.background)
+        let sut = Products.Presenter<Product, Products.ViewModel>(models, state: .drink, main: SyncQueue.global, background: SyncQueue.background)
         let expectation = self.expectation(description: "testUpdateViewModels")
         let dynamicModels = sut.getDynamicModels()
         dynamicModels.addAndNotify(observer: self) {
@@ -34,7 +34,7 @@ class ProductsPresenterTests: XCTestCase {
 
     func testUpdateDisplayedProducts() {
         let models = [drink1, drink2]
-        let sut = Products.Presenter<Product, Products.ViewModel>([], main: SyncQueue.global, background: SyncQueue.background)
+        let sut = Products.Presenter<Product, Products.ViewModel>([], state: .drink, main: SyncQueue.global, background: SyncQueue.background)
         var resultProducts = [Products.ViewModel]()
         let expectation = self.expectation(description: "testUpdateViewModels")
         let dynamicModels = sut.getDynamicModels()
