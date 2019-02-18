@@ -31,7 +31,7 @@ CHECKOUT OPTIONS:
     :commit: 6dd284bde21ea2e7f9fd89bc36f40df16e16369d
     :git: https://github.com/ViccAlexander/Chameleon.git
   Tiguer:
-    :commit: becc53faa42ebe39a38585d60d7103b77e869e35
+    :commit: c2c167264731f72bc385c5102f4a102812267f86
     :git: https://github.com/bmctigue/Tiguer.git
 
 SPEC CHECKSUMS:
@@ -41,6 +41,6 @@ SPEC CHECKSUMS:
   Tiguer: e041ce3e134c5d1379ac460af96e961c83ba87cf
   Unbox: 9ed33b2a31f7a8a049f54b94d40c4a52a28c4d9d
 
-PODFILE CHECKSUM: 26fae5e1771b69323d71cc4e5e2a5d9bd318411f
+PODFILE CHECKSUM: 06364afdf43f7f5dd2d563d54845f2c5d8ad3478
 
 COCOAPODS: 1.6.0
