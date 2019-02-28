@@ -69,4 +69,21 @@ class ProductsInteractorTests: XCTestCase {
         waitForExpectations(timeout: 3.0, handler: nil)
         XCTAssertNotNil(viewModels.count == 3)
     }
+    
+    func testFetchItemsForOrders() {
+        let expectation = self.expectation(description: "fetch")
+        let presenter = Products.Presenter<Product, Products.ViewModel>([], state: .orders)
+        let sut = Products.Interactor<Product, Products.Presenter, Products.Service>(presenter, service: service)
+        let dynamicModels = presenter.getDynamicModels()
+        dynamicModels.addObserver(self) { [weak self] in
+            self?.viewModels = dynamicModels.value
+            expectation.fulfill()
+        }
+        let request = Request()
+        let urlGenerator = LocalDataUrlGenerator(request)
+        let url = urlGenerator.url()!
+        sut.fetchItems(request, url: url)
+        waitForExpectations(timeout: 3.0, handler: nil)
+        XCTAssertNotNil(viewModels.count == 0)
+    }
 }
