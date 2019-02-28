@@ -12,7 +12,7 @@ import Promis
 import Tiguer
 
 extension Products {
-    class UnboxDataAdapter<Model>: Tiguer.DataAdapter<Model> {
+    final class UnboxDataAdapter<Model>: Tiguer.DataAdapter<Model> {
         
         override func itemsFromData(_ data: Data) -> Future<DataAdapterResult.Result<Model>> {
             let promise = Promise<DataAdapterResult.Result<Model>>()

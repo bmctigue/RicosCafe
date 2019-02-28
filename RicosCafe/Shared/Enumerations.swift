@@ -12,4 +12,5 @@ enum AppState {
     case drink
     case entree
     case dessert
+    case orders
 }

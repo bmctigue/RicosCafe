@@ -23,6 +23,8 @@ struct Product: Codable {
     var type: ProductType
     var imageUrl: String
     var image: String
+    var ordered: Bool = false
+    var quantity: Int = 1
 }
 
 extension Product: Unboxable {

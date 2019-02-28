@@ -14,8 +14,11 @@ extension Products {
         let name: String
         let text: String
         let price: String
+        var type: ProductType
         let imageUrl: String
         let image: String
+        var ordered: Bool = false
+        var quantity: Int = 1
         
         var formattedPrice: String {
             return "$\(price)"
