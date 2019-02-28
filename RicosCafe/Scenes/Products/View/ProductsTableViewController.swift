@@ -23,9 +23,9 @@ class ProductsTableViewController: UIViewController {
     lazy var loadingViewController = LoadingViewController()
     
     private var interactor: InteractorProtocol
-    private var presenter: Products.Presenter<Product, Products.ViewModel>
+    private var presenter: Products.Presenter<Product, ViewModel>
     
-    init(with interactor: InteractorProtocol, presenter: Products.Presenter<Product, Products.ViewModel>) {
+    init(with interactor: InteractorProtocol, presenter: Products.Presenter<Product, ViewModel>) {
         self.interactor = interactor
         self.presenter = presenter
         super.init(nibName: nil, bundle: nil)
