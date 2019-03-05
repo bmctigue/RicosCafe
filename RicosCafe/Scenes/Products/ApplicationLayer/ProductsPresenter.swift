@@ -30,10 +30,12 @@ extension Products {
         }
         
         override func updatedViewModels(completionHandler: @escaping ([ViewModel]) -> Void) {
-            background.dispatch {
-                self.viewModels = self.filterModelsByState(self.viewModels, state: self.state).map { $0 }
-                self.main.dispatch {
-                    completionHandler(self.viewModels)
+            background.dispatch { [weak self] in
+                if let self = self {
+                    self.viewModels = self.filterModelsByState(self.viewModels, state: self.state).map { $0 }
+                    self.main.dispatch {
+                        completionHandler(self.viewModels)
+                    }
                 }
             }
         }
