@@ -55,7 +55,7 @@ class ProductsTableViewController: UIViewController {
         add(loadingViewController)
         let request = Request()
         
-        let urlGenerator = LocalDataUrlGenerator(request)
+        let urlGenerator = Tiguer.LocalDataUrlGenerator(request)
         if let url = urlGenerator.url() {
             interactor.fetchItems(request, url: url)
         }

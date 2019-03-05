@@ -42,7 +42,6 @@
 		A8E5BB7D21D5B19600AEFC36 /* ProductsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E5BB7C21D5B19500AEFC36 /* ProductsInteractor.swift */; };
 		A8F379D021D67D0E003A03FE /* ServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F379CF21D67D0E003A03FE /* ServiceTests.swift */; };
 		A8FE3E9321D9372D008F8B08 /* ProductsBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FE3E9221D9372D008F8B08 /* ProductsBuilderTests.swift */; };
-		A8FFA4042204FBD600E4BC7A /* LocalDataUrlGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FFA4032204FBD600E4BC7A /* LocalDataUrlGenerator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -106,7 +105,6 @@
 		A8E5BB7C21D5B19500AEFC36 /* ProductsInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductsInteractor.swift; sourceTree = "<group>"; };
 		A8F379CF21D67D0E003A03FE /* ServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceTests.swift; sourceTree = "<group>"; };
 		A8FE3E9221D9372D008F8B08 /* ProductsBuilderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsBuilderTests.swift; sourceTree = "<group>"; };
-		A8FFA4032204FBD600E4BC7A /* LocalDataUrlGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDataUrlGenerator.swift; sourceTree = "<group>"; };
 		D6B5D51E2A4209FC56C29D3C /* Pods_RicosCafe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RicosCafe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F402D9E639BBF7F4619C55AF /* Pods-RicosCafeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RicosCafeTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RicosCafeTests/Pods-RicosCafeTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -305,7 +303,6 @@
 			children = (
 				A8DE069321DBC446007F912F /* Enumerations.swift */,
 				A83EC02921D3F7DE001AF8CB /* Protocols.swift */,
-				A8FFA4032204FBD600E4BC7A /* LocalDataUrlGenerator.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -538,7 +535,6 @@
 				A83EC02221D3EFF2001AF8CB /* Product.swift in Sources */,
 				A83EC02A21D3F7DE001AF8CB /* Protocols.swift in Sources */,
 				A8E5BB7D21D5B19600AEFC36 /* ProductsInteractor.swift in Sources */,
-				A8FFA4042204FBD600E4BC7A /* LocalDataUrlGenerator.swift in Sources */,
 				A85CF61E21D9992400733513 /* ProductsUnboxDataAdapter.swift in Sources */,
 				A863A41321AF07E500E73566 /* AppDelegate.swift in Sources */,
 				A84A827C21DD253F001A9472 /* ProductTableViewCell.swift in Sources */,

@@ -23,7 +23,7 @@ class ServiceTests: XCTestCase {
         let request = Request()
         
         let sut = Products.Service<Product, Products.UnboxDataAdapter>(store, dataAdapter: dataAdapter, cacheKey: Products.Builder.cacheKey)
-        let urlGenerator = LocalDataUrlGenerator(request)
+        let urlGenerator = Tiguer.LocalDataUrlGenerator(request)
         let url = urlGenerator.url()!
         sut.fetchItems(request, url: url) { drinks in
             results = drinks
@@ -42,7 +42,7 @@ class ServiceTests: XCTestCase {
         sut.updateCacheTestingState(.testing)
         var request = Request()
         request.params[Tiguer.Constants.forceKey] = "true"
-        let urlGenerator = LocalDataUrlGenerator(request)
+        let urlGenerator = Tiguer.LocalDataUrlGenerator(request)
         let url = urlGenerator.url()!
         sut.fetchItems(request, url: url) { drinks in
             results = drinks
