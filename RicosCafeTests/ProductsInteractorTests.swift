@@ -29,9 +29,7 @@ class ProductsInteractorTests: XCTestCase {
             expectation.fulfill()
         }
         let request = Request()
-        let urlGenerator = Tiguer.LocalDataUrlGenerator(request)
-        let url = urlGenerator.url()!
-        sut.fetchItems(request, url: url)
+        sut.fetchItems(request, url: nil)
         waitForExpectations(timeout: 3.0, handler: nil)
         XCTAssertNotNil(viewModels.count == 4)
     }
@@ -46,9 +44,7 @@ class ProductsInteractorTests: XCTestCase {
             expectation.fulfill()
         }
         let request = Request()
-        let urlGenerator = Tiguer.LocalDataUrlGenerator(request)
-        let url = urlGenerator.url()!
-        sut.fetchItems(request, url: url)
+        sut.fetchItems(request, url: nil)
         waitForExpectations(timeout: 3.0, handler: nil)
         XCTAssertNotNil(viewModels.count == 3)
     }
@@ -63,9 +59,7 @@ class ProductsInteractorTests: XCTestCase {
             expectation.fulfill()
         }
         let request = Request()
-        let urlGenerator = Tiguer.LocalDataUrlGenerator(request)
-        let url = urlGenerator.url()!
-        sut.fetchItems(request, url: url)
+        sut.fetchItems(request, url: nil)
         waitForExpectations(timeout: 3.0, handler: nil)
         XCTAssertNotNil(viewModels.count == 3)
     }
@@ -80,9 +74,7 @@ class ProductsInteractorTests: XCTestCase {
             expectation.fulfill()
         }
         let request = Request()
-        let urlGenerator = Tiguer.LocalDataUrlGenerator(request)
-        let url = urlGenerator.url()!
-        sut.fetchItems(request, url: url)
+        sut.fetchItems(request, url: nil)
         waitForExpectations(timeout: 3.0, handler: nil)
         XCTAssertNotNil(viewModels.count == 0)
     }
