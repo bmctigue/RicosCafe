@@ -387,14 +387,16 @@
 				TargetAttributes = {
 					A863A40E21AF07E500E73566 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 					};
 					A863A42221AF07E700E73566 = {
 						CreatedOnToolsVersion = 10.1;
-						LastSwiftMigration = 1010;
+						LastSwiftMigration = 1020;
 						TestTargetID = A863A40E21AF07E500E73566;
 					};
 					A863A42D21AF07E700E73566 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 						TestTargetID = A863A40E21AF07E500E73566;
 					};
 				};
@@ -732,7 +734,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.tiguer.RicosCafe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -751,7 +753,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.tiguer.RicosCafe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -774,7 +776,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.tiguer.RicosCafeTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RicosCafe.app/RicosCafe";
 			};
@@ -797,7 +799,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.tiguer.RicosCafeTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RicosCafe.app/RicosCafe";
 			};
@@ -817,7 +819,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.tiguer.RicosCafeUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = RicosCafe;
 			};
@@ -837,7 +839,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.tiguer.RicosCafeUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = RicosCafe;
 			};
