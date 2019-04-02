@@ -11,13 +11,17 @@ import Foundation
 extension Tiguer {
     open class SelectionManager<Model> {
         
+        typealias CacheObject = Set<String>
+        
         let selectionKey = "\(Model.self)"
         
-        private var selections: Set<String> = []
-        private lazy var cache = BaseCache<Set<String>>()
+        private var selections: CacheObject = []
+        private lazy var cache = BaseCache<CacheObject>()
         
         public init() {
-            self.selections = cache.getObject(selectionKey) ?? []
+            cache.getObjectForKey(selectionKey) { [weak self] (object: CacheObject?) in
+                self?.selections = object ?? []
+            }
         }
         
         open func updateSelections(_ state: SelectionState) {
@@ -27,7 +31,7 @@ extension Tiguer {
             case .unSelected(let selectionId):
                 selections.remove(selectionId)
             }
-            cache.setObject(selections, key: selectionKey)
+            cache.setObject(selections, forKey: selectionKey)
         }
         
         open func getSelections() -> Set<String> {

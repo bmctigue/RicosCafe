@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "C0745473164935A0AB08CC3C4E9455E7"
+               BlueprintIdentifier = "69A4D5D11020D0A47AB7C106C1CA2E1A"
                BuildableName = "Tiguer.framework"
                BlueprintName = "Tiguer"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "C0745473164935A0AB08CC3C4E9455E7"
+            BlueprintIdentifier = "69A4D5D11020D0A47AB7C106C1CA2E1A"
             BuildableName = "Tiguer.framework"
             BlueprintName = "Tiguer"
             ReferencedContainer = "container:Pods.xcodeproj">

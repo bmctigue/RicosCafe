@@ -16,13 +16,16 @@ extension Tiguer {
         private var dataAdapter: Adapter
         private var cacheKey: String
         private var models: [Model] = []
-        private lazy var cache = BaseCache<[Model]>()
+        private lazy var cache = BaseCache<Model>()
         
         public init(_ store: StoreProtocol, dataAdapter: Adapter, cacheKey: String) {
             self.store = store
             self.dataAdapter = dataAdapter
             self.cacheKey = cacheKey
-            self.models = cache.getObject(cacheKey) ?? []
+            
+            cache.getObjectForKey(cacheKey) { [weak self] (object: [Model]?) in
+                self?.models = object ?? []
+            }
         }
         
         public func fetchItems(_ request: Request, url: URL?, completionHandler: @escaping ([Model]) -> Void) {
@@ -39,7 +42,7 @@ extension Tiguer {
                         case .result(let adapterResult):
                             switch adapterResult {
                             case .success(let items):
-                                self.cache.setObject(items, key: self.cacheKey)
+                                self.cache.setObject(items, forKey: self.cacheKey)
                                 completionHandler(items)
                             }
                         case .error(let error):
