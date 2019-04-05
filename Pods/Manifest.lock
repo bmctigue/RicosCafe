@@ -3,7 +3,7 @@ PODS:
   - ChameleonFramework/Swift (2.1.0):
     - ChameleonFramework/Default
   - Promis (2.1.0)
-  - Tiguer (0.0.15):
+  - Tiguer (0.0.16):
     - Promis
   - Unbox (3.0.0)
 
@@ -28,13 +28,13 @@ CHECKOUT OPTIONS:
     :commit: 6dd284bde21ea2e7f9fd89bc36f40df16e16369d
     :git: https://github.com/ViccAlexander/Chameleon.git
   Tiguer:
-    :commit: ce550f344102da6a81fc45b7adcca16bbe4a7e85
+    :commit: 73fd52ca75988c032334c05453604c8b5d0c5241
     :git: https://github.com/bmctigue/Tiguer.git
 
 SPEC CHECKSUMS:
   ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
   Promis: e46360c7b23daca97ea22b2ca59324d71c3fd306
-  Tiguer: b4016741ca6e6fcad9f5503c9a3181dd1d05afa7
+  Tiguer: 295c54d09e465ec4e4cbbbb7bf57e7e6691f6aa5
   Unbox: 9ed33b2a31f7a8a049f54b94d40c4a52a28c4d9d
 
 PODFILE CHECKSUM: 06364afdf43f7f5dd2d563d54845f2c5d8ad3478
